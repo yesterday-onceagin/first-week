@@ -1,0 +1,166 @@
+.dmp_theme {
+  .dataview-design-panel {
+    .design-config-group {
+      .design-config-title {
+        border-color: #1B2644;
+        color: #C7E1FF;
+        .spread-icon {
+          color: #58678E;
+        }
+      }
+      .design-config-content {
+        border-color: #1B2644;
+        // 下拉选择框
+        .myselect {
+          .myselect-head {
+            height: 30px;
+            padding-right: 28px;
+            line-height: 28px;
+            font-size: 12px;
+            .dropdown-toggle {
+              width: 28px;
+              > i {
+                top: 12px;
+              }
+            }
+            .items {
+              opacity: 0;
+            }
+          }
+          .myselect-body {
+            font-size: 12px;
+            padding: 2px 0;
+            .myselect-item {
+              height: 24px;
+              line-height: 24px;
+            }
+          }
+        }
+
+        .layout-config-column {
+          &.disabled {
+            color: #58678E;
+          }
+          .icon-radio, .icon-checkbox{
+            margin-bottom: 2px;
+            margin-right: 10px;
+          }
+          .chartbg-show-checkbox {
+            .form-group {
+              margin: 0;
+              .checkbox {
+                margin: 0;
+                span {
+                  padding-left: 5px;
+                }
+              }
+            }
+          }
+          .layout-config-color-btn {
+            border-color: #333F5F;
+            background-clip: content-box;
+            .dmpicon-triangle {
+              color: #58678E;
+            }
+
+            &.no-color {
+              background-color: #273459!important;
+              &::after {
+                position: absolute;
+                right: 2px;
+                top: 2px;
+                content: '';
+                display: block;
+                width: 26px;
+                height: 1px;
+                transform-origin: 100% 0;
+                transform: rotateZ(-45deg);
+                background: #CB3333;
+              }
+            }
+          }
+        }
+        
+        // 截取封面BTN
+        .layout-config-cover-btn {
+          line-height: 28px;
+          text-align: center;
+          border: 1px dashed #3C4B72;
+          border-radius: 2px;
+          color: #C7E0FF;
+          cursor: pointer;
+          transition: color .3s;
+          i {
+            margin: 2px 6px 0 0;
+            color: #58678E;
+          }
+          &:hover {
+            color: #24BBF9;
+          }
+          &.disabled, &.disabled:hover {
+            cursor: not-allowed;
+            color: #58678E;
+          }
+        }
+        // 封面预览图
+        .layout-config-cover-preview {
+          width: 100%;
+          margin-top: 10px;
+          height: 130px;
+          border: 1px solid #222F51;
+          position: relative;
+          overflow: hidden;
+          .layout-config-cover-loading {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            background: rgba(0,0,0,0.3);
+            span.glyphicon-spinner {
+              position: absolute;
+              transform-origin: 15px 15px;
+              left: 50%;
+              top: 50%;
+              margin: -15px 0 0 -15px;
+              font-size: 30px;
+              color: #58678E;
+            }
+          }
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+          .layout-config-cover-loading + img {
+            -webkit-filter: blur(3px);
+            filter: blur(3px);
+          }
+        }
+      }
+      input.dmp-number-input-box {
+        height: 30px;
+      }
+    }
+    .color-picker-input {
+      text-indent: 10px;
+    }
+    
+    // 颜色选择组件外围popover
+    .color-picker-popover-container {
+      box-shadow: 0 2px 10px 0 #121C33;
+      border: 0 none;
+      background: #1D2848;
+      > .arrow {
+        border-left-color: #0B2641;
+        &::after {
+          border-left-color: #0B2641;
+        }
+      }
+      .popover-content {
+        padding: 10px;
+      }
+    }
+  }
+}

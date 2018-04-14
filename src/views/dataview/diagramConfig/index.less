@@ -1,0 +1,321 @@
+.diagram-config-panel{
+  color: #C7E0FF;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .rule-tip{
+    font-size: 14px;
+    color:#24BBF9;
+    margin-left:5px;
+  }
+
+  // 改写NUMBER INPUT
+	.dmp-number-input-container .form-group .dmp-number-input-box {
+		height: 30px;
+		width: 100%;
+	}
+  // 改写myselect
+  .myselect {
+    float: left;
+    div.myselect-head .items input {
+      color: #fff;
+    }
+    .myselect-head {
+      height: 30px;
+      padding-right: 28px;
+      line-height: 28px;
+      font-size: 12px;
+      .dropdown-toggle {
+        width: 28px;
+        > i {
+          top: 12px;
+        }
+      }
+    }
+    .myselect-body {
+      font-size: 12px;
+      padding: 2px 0;
+      .myselect-item {
+        height: 24px;
+        line-height: 24px;
+      }
+    }
+    &.diagram-title-select {
+      .myselect-head .items>span { 
+        display: none;
+      }
+    }
+  }
+  // 改写sliderbar
+  .sliderbar {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+  }
+  .input-box {
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    border: 1px solid rgba(73, 143, 225, 0.12);
+    text-indent: 10px;
+  }
+  .color-theme-custom-btn {
+    transition: color .3s;
+    &:hover {
+      color: #24BBF9;
+    }
+  }
+  // 颜色输入框
+	.color-picker-input-container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    .color-picker-input {
+    	border: 1px solid rgba(73, 143, 225, 0.12);
+    	line-height: 30px;
+    	text-indent: 10px;
+    }
+	}
+  // border输入框
+  .border-input {
+    width: 85px;
+    border: 1px solid rgba(73, 143, 225, 0.12);
+    line-height: 30px;
+    height: 30px;
+    text-indent: 10px;
+    margin-left: 10px;
+    float: left;
+  }
+  // 颜色按钮
+  .layout-config-color-btn {
+    border-color: #333F5F;
+    background-clip: content-box;
+    .dmpicon-triangle {
+      color: #58678E;
+    }
+    // 补全包围边框
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: -3px;
+      top: -4px;
+      width: 30px;
+      height: 30px;
+      border: 1px solid rgba(73, 143, 225, 0.12);
+      border-left: 0 none;
+    }
+    &.no-color {
+      background-color: #273459!important;
+      &::after {
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        content: '';
+        display: block;
+        width: 26px;
+        height: 1px;
+        transform-origin: 100% 0;
+        transform: rotateZ(-45deg);
+        background: #CB3333;
+      }
+    }
+  }
+  // 一级分类
+  .title {
+    position: relative;
+    margin-bottom: 10px;
+    .edit-icon {
+      position: absolute;
+      right: 0;
+      top: 4px;
+      cursor: pointer;
+      transition: color .3s;
+      &:hover {
+        color: #24BBF9;
+      }
+    }
+    .icon-checkbox {
+    	position: absolute;
+    	right: -4px;
+    }
+    .form-group{
+      margin-bottom: 0;
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 4px;
+      > .checkbox {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  } 
+  // 设置项的行容器
+  .layout-config-column {
+    line-height: 30px;
+    font-size: 12px;
+    width: 100%;
+    height: 40px;
+    position: relative;
+    padding: 0 0 10px 94px;
+    color: #fff;
+    &.has-suffix {
+      padding-right: 26px;
+    }
+    &.double-col {
+      padding: 0 0 10px 0;
+      .layout-config-double-col-sub {
+        width: 50%;
+        height: 30px;
+        float: left;
+        position: relative;
+        padding: 0 0 0 25px;
+        &:first-child {
+          padding: 0 8px 0 25px;
+        }
+      }
+      &.sub {
+        padding: 0 0 10px 10px;
+      }
+    }
+    &.disabled {
+      color: #58678E;
+    }
+    .layout-config-column-title {
+      position: absolute;
+      left: 0;
+      line-height: 30px;
+      &.sub {
+        left: 10px;
+      }
+    }
+
+    .layout-config-column-suffix {
+      position: absolute;
+      right: 6px;
+      line-height: 30px;
+      font-size: 12px;
+      color: #fff;
+    }
+    .checkbox-container {
+      position: relative;
+      .form-group {
+        margin: 0;
+      }
+      i.icon-checkbox, div.checkbox {
+        margin: 0;
+      }
+    }
+    .timeline-carousel-config {
+      padding: 30px 0 0 40px;
+      display: block;
+    }
+    // 标题字体样式ICON
+    .diagram-title-font-style-icon {
+      line-height: 30px;
+      font-size: 12px;
+      cursor: pointer;
+      float: right;
+      margin-left: 6px;
+      padding: 0 8px;
+      color: #58678E;
+      &.bold {
+        font-weight: bold;
+      }
+      &.italic {
+        font-weight: bold;
+        font-style: italic;
+      }
+      &.underline {
+        text-decoration: underline;
+      }
+      &.active {
+        color: #24BBF9;
+      }
+    }
+    // 标题字体对齐方式ICON
+    .diagram-title-font-align-icon {
+      line-height: 30px;
+      font-size: 12px;
+      cursor: pointer;
+      float: right;
+      margin-left: 4px;
+      padding: 0 6px;
+      color: #58678E;
+      &.active {
+        color: #24BBF9;
+      }
+    }
+  }
+
+  .sub .layout-config-column .layout-config-column-title{
+    left:10px;
+  }
+  // 数据系列
+  .data-series-config-inner {
+    hr {
+      margin: 10px 0;
+      // 隐藏第一个hr 防止第一个项目colorTheme设置没有渲染导致多出的hr
+      &:first-child {
+        display: none;
+      }
+    }
+  }
+  hr {
+    margin: 0 0 10px 0;
+    border-color: #1b2644;
+  }
+
+  // Tab切换
+  .edit-tab{
+    flex:1;
+    position: relative;
+
+    .edit-tab-wrap{
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      width:100%;
+      height:100%;
+    }
+
+    .edit-tab-nav{
+      &:after{
+        clear:both;
+      }
+
+      border-bottom:1px solid #1B2644;
+
+      li{
+        float:left;
+        font-size: 14px;
+        width:50%;
+        height:30px;
+        line-height: 30px;
+        text-align: center;
+        cursor:pointer;
+
+        &.active{
+          cursor: default;
+          background-color: #202C4D;
+        }
+      }
+    } 
+  }
+}
+
+.dmp_theme .rule-tooltip{
+  .tooltip-inner{
+    background-color: #26345A;
+    padding:5px 10px;
+  }
+
+  &.bottom .tooltip-arrow {
+    border-bottom-color: #26345A;
+  }
+}
+

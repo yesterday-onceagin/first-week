@@ -1,0 +1,204 @@
+.dmp_theme {
+  
+  .legend-color-editor-dialog {
+    .dialog-dialog {
+      height: auto;
+    }
+    .dialog-content {
+      background-color: #1B2646;
+      .modal-header {
+        border-color: rgba(73, 143, 225, 0.12);
+      }
+      .btn.btn-default, button.close {
+        // background: #253357;
+      }
+    }
+  }
+  .legend-color-container {
+    ul {
+
+    }
+    .legend-color-item {
+      cursor: pointer;
+      padding: 4px 0;
+    }
+    .color-thumb-sm {
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 50%;
+      height: 14px;
+      width: 14px;
+      margin: -2px 8px 0 0;
+    }
+
+  }
+  .color-preview-container {
+    .color-thumb {
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 50%;
+      height: 24px;
+      width: 24px;
+      margin: 14px 20px 0 0;
+      .dmpicon-tick {
+        display: none;
+        font-size: 12px;
+        margin: 6px 0 0 7px;
+      }
+      &.checked {
+        box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.6);
+        .dmpicon-tick {
+          display: inline-block;
+        }
+      }
+    }
+    .title {
+      margin-bottom: 10px;
+      line-height: 24px;
+    }
+    .legend-values {
+      width: 180px;
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
+      margin-right: 12px;
+      .legend-color-container {
+        border: 1px solid rgba(73, 143, 225, 0.12);
+        // height: 180px;
+        height: 251px;
+        overflow-y: auto;
+        .legend-pane {
+          li {
+            cursor: pointer;
+            padding-left: 10px;
+          }
+          li.active {
+            background-color: #243050;
+          }
+        }
+      }
+    }
+    .legend-theme {
+      width: 240px;
+      height: 226px;
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      .theme-color-list {
+        position: relative;
+        padding-left: 16px;
+        border: 1px solid rgba(73, 143, 225, 0.12);
+        // height: 180px;
+        height: 251px;
+        ur.pane {
+          overflow-y: auto;
+          max-height: 160px;
+        }
+        .custom-color {
+          // position: absolute;
+          // right: 15px;
+          // bottom: 5px;
+          text-align: right;
+          margin: 20px;
+          cursor: pointer;
+          .color {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            vertical-align: -1px;
+            margin-right: 3px;
+          }
+        }
+        .custom-grad-color {
+          h6 {
+            text-align: right;
+            padding-right: 20px;
+            font-size: 12px;
+            color: #ccc;
+          }
+          .start-color, .end-color {
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            margin-right: 5px;
+            border-radius: 2px;
+            cursor: pointer;
+          }
+          .color-result {
+            display: inline-block;
+            width: 158px;
+            height: 16px;
+            margin-right: 5px;
+            border-radius: 2px;
+          }
+          .end-color {
+
+          }
+        }
+      }
+    }
+
+    .myselect {
+      margin-right: 12px;
+      vertical-align: top;
+      .myselect-head {
+        height: 23px;
+        line-height: 24px;
+        padding-right: 22px;
+        .dropdown-toggle i {
+          top: 10px;
+        }
+        .items input {
+          text-indent: 5px;
+        }
+      }
+    }
+    .myselect-body {
+      padding: 0;
+      margin-top: 0;
+    }
+    .apply-btn {
+      color: #fff;
+      vertical-align: top;
+      height: 24px;
+      font-size: 12px;
+      line-height: 12px;
+      min-width: auto;
+      width: 40px;
+      min-height: auto;
+      background-color: transparent;
+      border-color: rgba(73, 143, 225, 0.12);
+      &:focus {
+        border-color: rgba(73, 143, 225, 0.12);
+      }
+      &:hover {
+        border-color: #488dfb;
+      }
+    }
+  }
+}
+
+.dmp_theme.theme-white, .dmp_theme.theme-gold {
+  .color-preview-container {
+    .legend-values {
+      .legend-color-container {
+        .legend-pane {
+          li.active {
+            background-color: #EEF0F7;
+          }
+        }
+      }
+    }
+    .color-thumb.checked {
+      box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
+    }
+  }
+  .chrome-picker {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+  }
+}
+
+.dmp_theme.theme-gold {
+
+}

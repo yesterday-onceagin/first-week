@@ -1,0 +1,11 @@
+{
+  "name": "select_filter",
+  "version": "0.0.1",
+  "description": "1-3个维度, 0个数值",
+  "platform": {
+    "name": "下拉筛选",
+    "icon": "/platform/icon/table_light.png",
+    "previewImg": "/platform/preview/table_sample.jpg",
+    "description": "指标支持(1-3个维度, 0个数值),不支持穿透、联动"
+  }
+}

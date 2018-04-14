@@ -1,0 +1,11 @@
+{
+  "name": "simple_text",
+  "version": "0.0.1",
+  "description": "这是一个简单文本组件",
+  "platform": {
+    "name": "简单文本",
+    "icon": "/platform/icon/simpletext.png",
+    "previewImg": "/platform/preview/simpletext_sample.jpg",
+    "description": "数据内容手动输入，不支持数据集"
+  }
+}

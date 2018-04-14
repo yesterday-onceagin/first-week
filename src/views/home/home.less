@@ -1,0 +1,76 @@
+.dmp_theme {
+  .home-page {
+    .wrapper {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .title {
+        text-align: center;
+        margin-top: -180px;
+        h4 {
+          color: #C7E0FF;
+          font-size: 20px;
+        }
+        p {
+          line-height: 1;
+          font-size: 14px;
+          color: #6E8CAF;
+        }
+        margin-bottom: 70px;
+      }
+      .navs {
+        width: 910px;
+        margin: 0 auto;
+        button {
+          width: 220px;
+          height: 220px;
+          background-color: transparent;
+          transition: background-color 0.5s;
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+          &:hover, &:focus {
+            background-color: #141E39;
+          }
+          .icon {
+            display: inline-block;
+            width: 54px;
+            height: 54px;
+            margin-bottom: 10px;
+            &.source {
+              background: url(../../static/images/home/source.svg);
+            }
+            &.dataset {
+              background: url(../../static/images/home/dataset.svg);
+            }
+            &.report {
+              background: url(../../static/images/home/report.svg);
+            }
+            &.view {
+              background: url(../../static/images/home/view.svg);
+            }
+          }
+          .name {
+            text-align: center;
+            display: inline-block;
+            width: 220px;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+  &.theme-white,&.theme-gold {
+    .home-page .wrapper .title h4 {
+      color: #000;
+    }
+    .home-page .wrapper .navs {
+      button:hover, button:focus{
+        background: #ededed;
+      }
+    }
+  }
+}

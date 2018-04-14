@@ -1,0 +1,114 @@
+.area-config-dialog {
+  .group-panel {
+    display: inline-block;
+    vertical-align: top;
+    width: 220px;
+    height: 260px;
+    border: 1px solid #222E4F;
+    margin: 10px;
+    .group-list-container {
+      max-height: 230px;
+      width: 220px;
+      overflow-y: scroll;
+      ul {
+        li {
+          cursor: default;
+          line-height: 30px;
+          font-size: 12px;
+          &:hover, &.active {
+            background-color: #202e51;
+          }
+          .group-name {
+            display: inline-block;
+            width: 150px;
+            padding: 0 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            vertical-align: middle;
+            input {
+              background-color: transparent;
+              width: 100%;
+              outline: none;
+              border: none;
+              height: 22px;
+              background-color: #1B2746;
+            }
+          }
+          button {
+            vertical-align: middle;
+            width: 25px;
+            color: #aaa;
+            &:hover {
+              color: #24BBF9;
+            }
+          }
+        }
+      }
+    }
+  }
+  .area-panel {
+    vertical-align: top;
+    display: inline-block;
+    width: 220px;
+    height: 260px;
+    margin: 10px;
+    border: 1px solid #222E4F;
+    .area-list-container {
+      max-height: 230px;
+      width: 220px;
+      overflow: scroll;
+      ul {
+        li {
+          cursor: default;
+          line-height: 30px;
+          font-size: 12px;
+          &:hover, &.active {
+            background-color: #202e51;
+          }
+          .area-name {
+            display: inline-block;
+            width: 180px;
+            padding: 0 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            vertical-align: middle;
+          }
+          .icon-checkbox {
+            margin-left: 10px;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+  .head {
+    background-color: #1E2B4C;
+    line-height: 30px;
+    padding: 0 10px;
+    .search-input {
+      line-height: 30px;
+      vertical-align: middle;
+      margin-bottom: 3px;
+      display: inline-block;
+      margin-left: 16px;
+      width: 125px;
+      .search-input-box {
+        height: 22px;
+        font-size: 12px;
+        padding: 0 25px;
+      }
+      .input-group-addon {
+        font-size: 12px;
+        padding: 5px 0px 4px 7px;
+      }
+      .dmpicon-close {
+        right: 7px;
+      }
+    }
+    button {
+      color: #24BBF9;
+    }
+  }
+}

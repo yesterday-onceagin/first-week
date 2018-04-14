@@ -1,0 +1,354 @@
+.dmp_theme {
+  #dataset-authority-dialog {
+    .title{
+      line-height: 30px;
+      padding: 0 10px;
+      background: #1E2B4C;
+      color: #C7E0FF;
+    }
+    .nothing{
+      text-align: center;
+      line-height: 350px;
+      color: #adc7d0;
+      font-size: 12px;
+    }
+    .scroll-view{
+      height: 350px;
+      overflow-y: scroll;
+    }
+    .checkbox-wrap {
+      display: inline-block;
+      float: left;
+      cursor: pointer;
+      .form-group{
+        float: left;
+        line-height: 1px;
+        margin-top: -1px;
+        display: inline-block;
+        width: 14px;
+        padding-left: 20px;
+        margin-bottom: 0;
+        height: 29px;
+      }
+    }
+
+    .left {
+      float: left;
+      width: 200px;
+      height: 380px;
+      border: 1px solid #222E4F;
+      .title{
+        &:extend(.title);
+        position: relative;
+        .checkbox-wrap{
+          position: absolute;
+          top: 0;
+          right: 1px;
+        }
+      }
+      .scroll-view{
+        &:extend(.title);
+        .item {
+          font-size: 12px;
+          line-height: 24px;
+          padding: 0 30px 0 10px;
+          cursor: pointer;
+          position: relative;
+          .checkbox-wrap {
+            position: absolute;
+            top: 0;
+            right: 0;
+            .form-group{
+              margin-top: -5px;
+              height: 24px;
+            }
+          }
+          &:hover{
+            background: #2A385C;
+          }
+          &.active{
+            background: #2A385C;
+            color: #488DFB;
+          }
+        }
+      }
+    }
+    .right{
+      margin-left: 210px;
+      height: 380px;
+      border: 1px solid #222E4F;
+      .title{
+        &:extend(.title);
+        position: relative;
+        cursor: pointer;
+        .dmpicon-add{
+          position: absolute;
+          top: 5px;
+          right: 7px;
+          font-size: 18px;
+          cursor: pointer;
+          color: #24BBF9;
+          &:hover{
+            color: #1980ab;
+          }
+        }
+        .dmpicon-arrow-down{
+          display: inline-block;
+          transform: scale(.6);
+        }
+      }
+      .scroll-view{
+        &:extend(.title);
+        overflow-y: overlay;
+        padding: 5px 0;
+        .toggle-item {
+          font-size: 12px;
+          .header{
+            background: #27365b;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 30px 0 10px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            > .checkbox-wrap {
+              &:extend(.checkbox-wrap);
+              .form-group{
+                &:extend(.checkbox-wrap .form-group);
+              }
+            }
+            > .dmp-field-icon{
+              color: #488DFB;
+              padding: 0 3px;
+              width: 23px;
+              display: inline-block;
+            }
+            .dmpicon-del {
+              color: #58678E;
+              position: absolute;
+              top: 8px;
+              right: 19px;
+              font-size: 14px;
+              &:hover{
+                color: #24BBF9;
+              }
+            }
+            .dmp-switch-box-wrap{
+              position: absolute;
+              top: 3px;
+              right: 40px;
+              transform: scale(.8);
+            }
+            &.disabled{
+              cursor: auto;
+            }
+          }
+          .body{
+            padding: 10px 5px;
+            background: #121c35;
+            .row{
+              margin-left: 0;
+              margin-right: 0;
+              .row-title{
+                color: #91B1D7;
+                margin: 5px 0;
+                cursor: pointer;
+                .form-group{
+                  &:extend(.form-group);
+                  float: left;
+                  padding-left: 25px;
+                }
+                .checkbox{
+                  position: relative;
+                  display: block;
+                  margin-top: -1px;
+                  margin-bottom: 0px;
+                }
+              }
+              .content {
+                padding: 0 10px 0 25px;
+                margin: 5px 0;
+                > .checkbox-wrap {
+                  &:extend(.checkbox-wrap);
+                  padding-left: 12px;
+                  line-height: 24px;
+                  height: 24px;
+                  .form-group{
+                    &:extend(.checkbox-wrap .form-group);
+                    .checkbox{
+                      margin-top: 6px;
+                      margin-bottom: 0;
+                    }
+                  }
+                }
+                > .number-wrap{
+                  width: 90px;
+                  position: relative;
+                  float: left;
+                  margin-left: 10px;
+                }
+              }
+            }
+
+            .form-group{
+              margin-bottom: 0;
+              padding-bottom: 0;
+            }
+            .item {
+              float: left;
+              margin: 0 5px;
+              height: 24px;
+            }
+            .badge-mark{
+              display: inline-block;
+              background: #222E4F;
+              width: 96px;
+              height: 24px;
+              text-align: center;
+              line-height: 24px;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              padding: 0 5px;
+              overflow: hidden;
+            }
+            .myselect div.myselect-head{
+              font-size: 12px;
+              height: 24px;
+              .dropdown-toggle i{
+                top: 10px;
+              }
+            }
+            .form input.form-control{
+              height: 24px;
+              font-size: 12px;
+            }
+            .selected-date-range-btn.btn.btn-default{
+              height: 24px;
+              line-height: 24px;
+              min-height: auto;
+              font-size: 12px;
+            }
+          }
+          &.unexpand{
+            .header{
+              background: transparent;
+            }
+            .body {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #authority-field-tree-dialog{
+    width: 220px;
+    background: #1E2B4C;
+    opacity: 1;
+    .tooltip-inner{
+      background: #1E2B4C;
+    }
+    .tree-inner-wrap{
+      position: relative;
+      height: 250px;
+      overflow: auto;
+      text-align: left;
+
+      .micro-tree .micro-tree-list .micro-tree-list-item {
+        .micro-tree-list-item-inner{
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          padding-right: 25px;
+        }
+        span{
+          display: inline;
+        }
+        .select-mark{
+          position: absolute;
+          top: 6px;
+          right: 0;
+          width: 16px;
+          height: 16px;
+          line-height: 16px;
+          text-align: center;
+          background: #527DFD;
+          border-radius: 50%;
+
+          i.dmpicon-tick{
+            color: #fff;
+            display: inline-block;
+            transform: scale(0.7);
+            margin-top: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  &.theme-white,&.theme-gold{
+    #dataset-authority-dialog {
+      .title{
+        background: rgba(131, 186, 251, 0.08);
+        color: #666;
+      }
+      .scroll-view{
+        .nothing{
+          color: #666;
+        }
+      }
+      .left {
+        border-color: #EDEDED;
+        .scroll-view{
+          .item {
+            .dmpicon-del {
+              color: #fff;
+            }
+            &:hover,&.active{
+              background: #2196F3;
+              color: #fff;
+            }
+          }
+        }
+      }
+      .right{
+        border-color: #EDEDED;
+        .scroll-view{
+          .toggle-item {
+            .header{
+              background: #efefef;
+            }
+            .body{
+              background: rgba(221, 221, 221, .8);
+              .badge-mark{
+                background: #aaa;
+                color: #000;
+              }
+              .row{
+                .row-title{
+                  color: #666;
+                }
+              }
+            }
+            &.unexpand{
+              .header{
+                background: transparent;
+              }
+            }
+          }
+          .selected-date-range-btn.btn.btn-default{
+            color: #666;
+          }
+        }
+      }
+    }
+    #authority-field-tree-dialog{
+      background: #fff;
+      border: 1px solid #eee;
+      .tooltip-inner{
+        background: #fff;
+      }
+    }
+  }
+}

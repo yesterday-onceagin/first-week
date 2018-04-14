@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>查看报告</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="87.9408419%" y1="100%" x2="100%" y2="4.61197917%" id="linearGradient-1">
+            <stop stop-color="#FA6C47" offset="0%"></stop>
+            <stop stop-color="#FA9D47" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="dmp平台进入首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1026.000000, -379.000000)">
+        <g id="Group-6" transform="translate(943.000000, 313.000000)">
+            <g id="查看报告" transform="translate(83.000000, 66.000000)">
+                <rect id="Rectangle-8" fill="#FFFFFF" style="mix-blend-mode: multiply;" opacity="0" x="0" y="0" width="54" height="54"></rect>
+                <g id="Group-2" transform="translate(1.000000, 8.000000)" fill="url(#linearGradient-1)">
+                    <path d="M3,3 L3,36 L50,36 L50,3 L3,3 Z M53,1 L53,38 C53,38.5522847 52.5522847,39 52,39 L1,39 C0.44771525,39 6.76353751e-17,38.5522847 0,38 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 L52,0 C52.5522847,-1.01453063e-16 53,0.44771525 53,1 Z M10,10 L21,10 L21,13 L10,13 L10,10 Z M10,17 L18,17 L18,20 L10,20 L10,17 Z M10,24 L16,24 L16,27 L10,27 L10,24 Z M35.5,26.5149356 C30.8055796,26.5149356 27,22.7093559 27,18.0149356 C27,15.6654214 27.9532636,13.5385538 29.4941237,12 C30.8313746,13.3432904 32.8333333,15.3482689 35.5,18.0149356 C35.5,21.3482689 35.5,24.1816022 35.5,26.5149356 Z" id="Combined-Shape" fill-rule="nonzero"></path>
+                    <circle id="Oval" opacity="0.300000012" cx="35.5" cy="18.5" r="8.5"></circle>
+                    <path d="M35.5,27 C35.5,24.6666667 35.5,21.8333333 35.5,18.5 C38.1666667,16.1666667 40.1971843,14.1906137 41.5915528,12.5718411 C40.0473846,10.985381 37.8887663,10 35.5,10 C30.8055796,10 27,13.8055796 27,18.5 C27,23.1944204 30.8055796,27 35.5,27 Z" id="Oval-Copy" opacity="0.229999989"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

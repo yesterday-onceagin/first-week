@@ -1,0 +1,43 @@
+.dmp_theme {
+  .number-value-wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    .number-value-inner-wrap{
+      display: block;
+      margin: 0;
+      .title{
+        font-size: 16px;
+        white-space: nowrap;
+        color: #c8c9c9;
+        line-height: 1;
+      }
+      .value{
+        white-space: nowrap;
+      }
+      .number-value-content {
+        display: inline-block;
+        vertical-align: bottom;
+        .number-value-letter {
+          display: inline-block;
+        }
+      }
+      .number-value-prefix {
+        margin-right: 5px;
+        display: inline-block;
+        line-height: 1;
+        vertical-align: top;
+      }
+      .number-value-suffix {
+        margin-left: 5px;
+        display: inline-block;
+        line-height: 1;
+        vertical-align: bottom;
+      }
+    }
+  }
+}

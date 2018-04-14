@@ -1,0 +1,15 @@
+.DS_Store
+.idea/
+npm-debug.log*
+package-lock.json
+
+node_modules/
+dist/
+pack/
+chartlibs/lib/
+build/chartsdk/
+.cache/
+.vscode/
+
+
+devtools/chartlibs/chartlink

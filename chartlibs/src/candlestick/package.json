@@ -1,0 +1,11 @@
+{
+  "name": "candlestick",
+  "version": "0.0.1",
+  "description": "Dmp数据可视化平台内置K线图图表组件",
+  "platform": {
+    "name": "K线图",
+    "icon": "/platform/icon/candlestick.svg",
+    "previewImg": "/platform/preview/sample.jpg",
+    "description": "指标支持(1个日期维度，4-5个数值)"
+  }
+}

@@ -1,0 +1,117 @@
+.multi-screen-container {
+    height: 100%;
+
+    .screen-list, .screen-view, .multi-screen-info {
+        height: 100%;
+    }
+
+    .screen-list {
+        float: left;
+        width: 160px;
+        background-color: #141E39;
+
+        .screen-list-wrap {
+            height: 100%;
+            padding-bottom: 100px;
+
+            .screen-list-inner {
+                max-height: 100%;
+                overflow: auto;
+
+                li {
+                    text-align: center;
+                    padding: 9px 0 11px 0;
+                    margin-bottom: 1px;
+                    cursor: pointer;
+
+                    &.active, &:active, &:hover {
+                        background-color: #1F2B4B;
+                    }
+
+                    img, .img {
+                        display: inline-block;
+                        width: 120px;
+                        height: 80px;
+                        overflow: hidden;
+                        background-color: #36415D;
+                    }
+
+                }
+
+            }
+
+            .import-screen {
+                height: 80px;
+                margin: 10px 20px;
+                border: 2px solid #54648B;
+                -webkit-opacity: 0.6;
+                opacity: 0.6;
+                position: relative;
+                cursor: pointer;
+
+                .horizontal-line, .vertical-line {
+                    position: absolute;
+                    display: inline-block;
+                    background-color: #58678E;
+                }
+
+                .horizontal-line {
+                    height: 1px;
+                    width: 30px;
+                    top: 39px;
+                    left: 45px;
+                }
+
+                .vertical-line {
+                    height: 30px;
+                    width: 1px;
+                    left: 59px;
+                    top: 25px;
+                }
+
+            }
+
+        }
+
+    }
+
+    .multi-screen-info {
+        float: right;
+        width: 240px;
+        background-color: #141E39;
+        padding: 14px;
+    }
+
+    .screen-view {
+        overflow: hidden;
+        &-inner {
+            height: 100%;
+            img, .img {
+                width: 100%;
+                height: 100%;
+                background-color: #141E39;
+            }
+            .remark-wrap {
+                clear: both;
+
+                .btn-del {
+                    float: right;
+                    margin-left: 10px;
+                }
+
+                .remark {
+                    overflow: hidden;
+                    font-size: 14px;
+                    color: #91B1D7;
+                    margin-top: 40px;
+                    word-wrap: break-word;
+                    word-break: break-all;
+                }
+
+            }
+
+        }
+
+    }
+
+}

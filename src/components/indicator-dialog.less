@@ -1,0 +1,268 @@
+.dmp_theme {
+  .indicator-select-dialog{
+    .modal-body{
+      clear: both;
+      overflow: hidden;
+      .panel{
+        border: 1px solid rgba(131,186,251,0.08);
+        background: transparent;
+        margin-bottom: 0;
+        height: 100%;
+        .panel-heading{
+          border-bottom: none;
+          color: #fff;
+          background: rgba(131,186,251,0.08);
+          .dropdown {
+            margin-left: -10px;
+          }
+          .pull-right{
+            position: relative;
+            .form-group{
+              position: absolute;
+              right: 0;
+              top: -5px;
+              width: 180px;
+              height: 30px;
+              padding-bottom: 0;
+              .input-group{
+                width: 100%;
+                input{
+                  height: 28px;
+                  border-radius: 28px;
+                  border-bottom-right-radius: 28px;
+                  border-top-right-radius: 28px;
+                  padding-right: 35px;
+                }
+                .input-group-addon{
+                  z-index: 1;
+                  background: transparent;
+                  color: #fff;
+                  border: none;
+                  position: absolute;
+                  top: 0;
+                  right: 15px;
+                  line-height: 17px;
+                }
+              }
+            }
+          }
+        }
+        .panel-body{
+          padding: 0;
+        }
+      }
+    }
+    .left{
+      width: 350px;
+      height: 390px;
+      float: left;
+      .dropdown > .dropdown-toggle{
+        background: transparent;
+      }
+      .btn.btn-default{
+        height: auto;
+        line-height: 18px;
+        font-size: inherit;
+        min-width: auto;
+        min-height: auto;
+        &:hover{
+          border-color: none;
+        }
+      }
+      .btn-default:hover,
+      .btn-default:active:hover, 
+      .btn-default.active:hover, 
+      .open>.dropdown-toggle.btn-default:hover, 
+      .btn-default:active:focus, 
+      .btn-default.active:focus, 
+      .open>.dropdown-toggle.btn-default:focus, 
+      .btn-default:active.focus, 
+      .btn-default.active.focus, 
+      .open>.dropdown-toggle.btn-default.focus{
+        background-color: transparent;
+        border-color: transparent;
+        color: #24BCFA;
+      }
+      .tree-wrap{
+        overflow: auto;
+        padding: 10px;
+        height: 350px;
+        .rt-tree-panel{
+          overflow: inherit;
+          .rt-tree{
+            >li {
+              > a {
+                color: #4b76a7;
+                &:hover{
+                  color: #4b76a7;
+                }
+              }
+              > ul > li > a{
+                color: #fff;
+                &:hover{
+                  color: #378cef;
+                }
+              }
+            }
+          }
+        }
+        .nothing{
+          text-align: center;
+          line-height: 100px;
+        }
+      }
+    }
+    &.sql{
+      .left{
+        .tree-wrap{
+          overflow: auto;
+          padding: 10px;
+          height: 350px;
+          .rt-tree-panel{
+            overflow: inherit;
+            .rt-tree{
+              >li {
+                > a {
+                  color: #fff;
+                  &:hover{
+                    color: #378cef;
+                  }
+                }
+              }
+            }
+          }
+          .nothing{
+            text-align: center;
+            line-height: 100px;
+          }
+        }
+      }
+    }
+    .right{
+      width: 290px;
+      height: 390px;
+      float: right;
+      .result-body{
+        padding: 20px;
+        overflow-y: auto;
+        position: relative;
+        height: 346px;
+      }
+    }
+    .selection-button{
+      position: relative;
+      .btn-default{
+        background: transparent;
+        margin: 5px 8px; 
+        padding: 0 25px 0 15px;
+        font-size: 14px;
+      }
+    }
+  }
+  &.theme-white{
+    .indicator-select-dialog{
+      .modal-body{
+        .panel{
+          border: 1px solid #EDEDED;
+          .panel-heading{
+            color: #666;
+            .pull-right{
+              .form-group{
+                .input-group{
+                  input{
+                    border-color: #ededed;
+                    background-color: transparent;
+                  }
+                  .input-group-addon{
+                    color: #333;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .left{
+        .dropdown > .dropdown-toggle{
+          color: #333;
+        }
+        .btn.btn-default{
+          height: auto;
+          line-height: 18px;
+          font-size: inherit;
+          min-width: auto;
+          min-height: auto;
+          &:hover{
+            border-color: none;
+          }
+        }
+        .btn-default:hover,
+        .btn-default:active:hover, 
+        .btn-default.active:hover, 
+        .open>.dropdown-toggle.btn-default:hover, 
+        .btn-default:active:focus, 
+        .btn-default.active:focus, 
+        .open>.dropdown-toggle.btn-default:focus, 
+        .btn-default:active.focus, 
+        .btn-default.active.focus, 
+        .open>.dropdown-toggle.btn-default.focus{
+          color: #488DFB;
+        }
+        .tree-wrap{
+          .rt-tree-panel{
+            .rt-tree{
+              >li {
+                > a {
+                  color: #999;
+                  &:hover{
+                    color: #999;
+                  }
+                }
+                > ul > li > a{
+                  color: #333;
+                  &:hover{
+                    color: #488DFB;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &.sql{
+        .left{
+          .tree-wrap{
+            .rt-tree-panel{
+              .rt-tree{
+                >li {
+                  > a {
+                    color: #333;
+                    &:hover{
+                      color: #488DFB;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.theme-gold {
+    .indicator-select-dialog {
+      .modal-body .panel .panel-heading,
+      .left .tree-wrap .rt-tree-panel .rt-tree>li>a,
+      .left .tree-wrap .rt-tree-panel .rt-tree>li>ul>li>a {
+        color: #666;
+      }
+      .left .tree-wrap .rt-tree-panel .rt-tree>li>a,
+      .left .tree-wrap .rt-tree-panel .rt-tree>li>ul>li>a {
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+/* 均值曲线配置对话框 */
+.moving-average-config-dialog {
+  .moving-average-line-list-container {
+    width: 100%;
+    height: 240px;
+    padding: 15px 11px 0;
+    margin: 0;
+    position: relative;
+  }
+  // 标题
+  .container-title {
+    line-height: 22px;
+    height: 22px;
+    position: relative;
+    font-size: 14px;
+    color: #C7E0FF;
+    padding-left: 10px;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-image: linear-gradient(0deg, #488DFB 0%, #0DCDDB 100%);
+    }
+    .err-box {
+      transition-duration: 300ms;
+      transition-property: opacity;
+      color: #CB3333;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      line-height: 22px;
+      height: 22px;
+      font-size: 14px;
+      transform: translateX(-50%);
+    }
+    .add-btn {
+      float: right;
+      line-height: 22px;
+      font-size: 18px;
+      color: #24BBF9;
+      cursor: pointer;
+      transition-duration: 300ms;
+      transition-property: color;
+      &:hover {
+        color: rgb(36, 242, 249);
+      }
+    }
+  }
+  // 曲线配置列表
+  .line-items-box {
+    position: absolute;
+    top: 45px;
+    right: 11px;
+    bottom: 0;
+    left: 11px;
+    .hint-text-box {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #58678E;
+    }
+    > ul {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+    }
+    .line-item {
+      height: 46px;
+      padding: 8px 0 8px 10px;
+      .day-count {
+        width: 160px;
+        height: 30px;
+        float: left;
+      }
+      .item-des {
+        padding-left: 10px;
+        float: left;
+        height: 30px;
+        line-height: 30px;
+        color: #F2F2F2;
+      }
+      .del-btn {
+        float: right;
+        line-height: 30px;
+        font-size: 16px;
+        color: #58678E;
+        cursor: pointer;
+        transition-duration: 300ms;
+        transition-property: color;
+        &:hover {
+          color: #24BBF9;
+        }
+      }
+    }
+  }
+}

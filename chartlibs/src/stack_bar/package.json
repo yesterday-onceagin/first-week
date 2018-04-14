@@ -1,0 +1,11 @@
+{
+  "name": "stack_bar",
+  "version": "0.0.1",
+  "description": "Dmp数据可视化平台内置堆叠柱状图图表组件",
+  "platform": {
+    "name": "堆叠柱形图",
+    "icon": "/platform/icon/table_light.png",
+    "previewImg": "/platform/preview/table_sample.jpg",
+    "description": "指标支持(2个以内维度，1个或多个数值),支持穿透、联动"
+  }
+}

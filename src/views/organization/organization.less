@@ -1,0 +1,329 @@
+.dmp_theme {
+  @import '../../static/css/themes/theme-black.less';
+
+  .userlog-page-container {
+    display: flex;
+    flex-direction: column;
+    .form-inline {
+      // position: absolute;
+      // top: 0;
+    }
+    .table-wrapper {
+      border: 1px solid rgba(9, 46, 73, 1);
+      // position: absolute;
+      overflow: scroll;
+      // max-height: calc(~"100% - 80px");
+    }
+    .control-container {
+      button, input {
+        margin: 10px 10px 10px 0;
+      }
+    }
+  }
+  // 用户组编辑页
+  .user-page {
+    // 用户组列表容器
+    .user-group-list-container {
+      background-color: rgba(9, 46, 73, .3);
+
+      // 用户组列表标题
+      .user-group-list-title {
+        border-color: #0D2342;
+        color: #8EA4B0;
+      }
+      // 用户组列表区域
+      .user-group-list-scroll {
+        .dmp-tree-node-box {
+          .user-group-item-action-bar {
+            i[class*='dmpicon-'] {
+              &:hover {
+                color: rgba(255, 255, 255, .7);
+              }
+            }
+          }
+          &.active {
+            color: #fff;
+            background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+
+            .dmp-tree-node-icon-box {
+              i.dmpicon-triangle {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+    // 用户列表容器
+    .user-list-container {
+      background-color: rgba(9, 46, 73, .3);
+      
+      // 用户列表标题栏
+      .user-list-title {
+        .single-search-form {
+          padding: 11px 0;
+
+          .form-group {
+            .input-group {
+              .search-input-box {
+                height: 24px;
+                font-size: 12px;
+                padding-right: 30px;
+              }
+              .input-group-addon {
+                font-size: 14px;
+                padding: 5px 8px;
+              }
+            }
+          }
+        }
+        .user-add-btn {
+          .icon-btn-box {
+            background: none;
+          }
+          i.dmpicon-add {
+            color: #24BBF9;
+            font-weight: 300;
+          }
+          .btn-text {
+            color: #C7E1FF;
+            transition: color .3s;
+          }
+          &:hover {
+            .btn-text {
+              color: #24BBF9;
+            }
+          }
+        }
+      }
+      // 用户列表表格区域
+      .user-list-box {
+        .user-list-action-bar {
+          i[class*='dmpicon-'] {
+            color: #79A1D0;
+
+            &:hover {
+              color: #24BCFA;
+            }
+          }
+        }
+      }
+    }
+  }
+  // 权限管理页
+  .auth-page {
+    // 用户组列表容器
+    .user-group-list-container {
+      background-color: rgba(9, 46, 73, .3);
+
+      // 用户组列表标题
+      .user-group-list-title {
+        border-color: #0D2342;
+        color: #8EA4B0;
+      }
+      // 用户组列表区域
+      .user-group-list-scroll {
+        .dmp-tree-node-box {
+          &.active {
+            color: #fff;
+            background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+
+            .dmp-tree-node-icon-box {
+              i.dmpicon-triangle {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+    // 权限管理容器
+    .auth-container {
+      background-color: rgba(9, 46, 73, .3);
+
+      .auth-content-box {
+        .auth-box-title {
+          border-color: #0A2940;
+
+          i[class*='dmpicon-'] {
+            color: #488DFB;
+
+            &:hover {
+              color: #24BCFA;
+            }
+          }
+        }
+        &:last-child {
+          max-height: initial!important;
+          flex: 1;
+        }
+      }
+    }
+  }
+  // 权限、用户组配置对话框的树
+  .data-view-organ-config-dialog .user-group-organ-tree,
+  .data-view-func-config-dialog .user-group-func-tree {
+    overflow: hidden;
+  }
+
+  &.theme-white {
+    @import '../../static/css/themes/theme-white.less';
+    .user-page {
+      // 用户组列表容器
+      .user-group-list-container {
+        background-color: #fff;
+        // 用户组列表标题
+        .user-group-list-title {
+          border-color: #E1E9F0;
+          color: #333;
+        }
+      }
+      .user-list-container {
+        background-color: #fff;
+        .user-add-btn {
+          i.dmpicon-add {
+            color: #488DFB;
+          }
+          .btn-text {
+            color: #666;
+            transition: color .3s;
+          }
+          &:hover {
+            .btn-text {
+              color: #488DFB;
+            }
+          }
+        }
+      }
+    }
+
+    // 权限管理页
+    .auth-page {
+      // 用户组列表容器
+      .user-group-list-container {
+        background-color: #fff;
+
+        // 用户组列表标题
+        .user-group-list-title {
+          border-color: #E1E9F0;
+          color: #333;
+        }
+        // 用户组列表区域
+        .user-group-list-scroll {
+          .dmp-tree-node-box {
+            &.active {
+              color: #fff;
+              background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+
+              .dmp-tree-node-icon-box {
+                i.dmpicon-triangle {
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+      // 权限管理容器
+      .auth-container {
+        background-color: #fff;
+
+        .auth-content-box {
+          .auth-box-title {
+            border-color: #E1E9F0;
+
+            i[class*='dmpicon-'] {
+              color: #ABB5C3;
+
+              &:hover {
+                color: #488DFB;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.theme-gold {
+    @import '../../static/css/themes/theme-gold.less';
+    .user-page {
+      .user-list-container .user-list-box .user-list-action-bar {
+        i[class*='dmpicon-'] {
+          color: @color-icon-default;
+        }
+        .icon-btn-dmp:hover i[class*='dmpicon-'],
+        i[class*='dmpicon-']:hover {
+          color: #fff;
+        }
+      }
+      .user-group-list-container {
+        .user-group-list-title {
+          border-color: #eee;
+          color: @color-text-primary;
+        }
+        .user-group-list-scroll .dmp-tree-node-box {
+          &.active {
+            background: #fff;
+            color: @color-text-primary;
+            .dmp-tree-node-icon-box i.dmpicon-triangle {
+              color: @color-icon-default;
+            }
+          }
+          .user-group-item-action-bar i[class*='dmpicon-'] {
+            color: @color-icon-default;
+            &:hover {
+              color: @color-icon-hover;
+            }
+          }
+        }
+      }
+    }
+
+    .user-page,
+    .auth-page {
+      .auth-container,
+      .user-list-container,
+      .user-group-list-container {
+        background: #fff;
+        .user-list-title {
+          .icon-btn-box {
+            background: #fff;
+          }
+          .icon-btn-dmp {
+            .btn-text,
+            i.dmpicon-add {
+              color: @color-icon-default;
+            }
+            &:hover {
+              .btn-text,
+              i.dmpicon-add {
+                color: @base-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .auth-page {
+      .auth-container .auth-content-box .auth-box-title {
+        border-color: #eee;
+        i[class*='dmpicon-'] {
+          color: @color-icon-default;
+          &:hover {
+            color: @color-icon-hover;
+          }
+        }
+      }
+      .user-group-list-container .user-group-list-title {
+        border-color: #eee;
+        color: @color-text-primary;
+      }
+      .user-group-list-container .user-group-list-scroll .dmp-tree-node-box.active {
+        background: #fff;
+        color: @color-text-primary;
+      }
+    }
+  }
+}

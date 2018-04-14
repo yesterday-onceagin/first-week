@@ -1,0 +1,104 @@
+.dmp_theme {
+  .dataset-list-page {
+    // 文件夹列表
+    .dataset-explorer {
+      border-color: transparent;
+      background-color: rgb(20, 30, 57);
+      // 搜索框容器
+      .dataset-explorer-search-box {
+        .main-menu-btn {
+          color: #698EBB;
+          &:hover {
+            color: #24BCFA;
+          }
+        }
+      }
+    }
+  
+    .dmp-tree-container .dmp-tree-node-container .dmp-tree-node-sub-line-y-hider{
+      background-color: #141e39;
+    }
+
+    .dataset-add-item-box{
+      margin: 0 -5px;
+      margin-bottom: 15px;
+      height: 100px;
+      display: flex;
+      flex-direction: row;
+      > .dataset-add-item{
+        background: #141E39;
+        .description{
+          color: #6E8CAF;
+        }
+        &:hover{
+          box-shadow: 1px 1px 3px #101010;
+        }
+      }
+    }
+
+    .page-list-main{
+      display: flex;
+      flex: 1;
+
+      .title{
+        font-size: 16px;
+        margin-bottom: 5px;
+        height: 30px;
+      }
+
+      .page-list-content{
+        flex: 1;
+        margin-left: 10px;
+      }
+    }
+
+    .dataset-side-menu{
+      background: #141e39;
+      .dataset-side-menu-item:hover{
+        background: rgba(8, 45, 73, 0.6);
+      }
+    }
+  }
+
+  &.theme-white,&.theme-gold{
+    .dataset-list-page {
+      // 文件夹列表
+      .dataset-explorer {
+        background-color: #fff;
+        // 搜索框容器
+        .dataset-explorer-search-box {
+          .main-menu-btn {
+            color: #698EBB;
+            &:hover {
+              color: #24BCFA;
+            }
+          }
+        }
+      }
+      .dmp-tree-container .dmp-tree-node-container .dmp-tree-node-sub-line-y-hider{
+        background-color: #fff;
+      }
+      // 颜色
+      .dataset-add-item-box{
+        > .dataset-add-item{
+          background: #fff;
+          .description{
+            color: #999;
+          }
+          &:hover{
+            box-shadow: 1px 1px 3px #ccc;
+          }
+        }
+      }
+
+      .dataset-side-menu{
+        background: #fff;
+        color: #333;
+        .dataset-side-menu-item:hover{
+          background: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+          color: #fff;
+        }
+      }
+    }
+  } 
+}

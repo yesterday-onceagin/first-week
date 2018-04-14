@@ -1,0 +1,11 @@
+{
+  "name": "circle_rose_pie",
+  "version": "0.0.1",
+  "description": "环形玫瑰图",
+  "platform": {
+    "name": "环形玫瑰图",
+    "icon": "/platform/icon/circle_rose_pie.jpg",
+    "previewImg": "/platform/preview/circle_rose_pie1.jpg",
+    "description": "指标支持(1个维度 1个数值，0个维度2个以上数值),支持穿透、联动"
+  }
+}

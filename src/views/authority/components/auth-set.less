@@ -1,0 +1,43 @@
+.sub-wrap{
+  display: flex;
+  flex: 1;
+  margin-bottom: 15px;
+  flex-direction: column;
+  .category-tabs{
+    border-bottom: 1px solid rgba(73, 143, 225, 0.12);
+    margin-bottom: 10px;
+    .item{
+      line-height: 32px;
+      height: 32px;
+      float: left;
+      padding: 0 15px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      &.active{
+        border-color: #24BBF9;
+        color: #24BBF9;
+      }
+    }
+  }  
+  .table-panel{
+    padding: 0 15px;
+  }
+  .checkbox-wrap{
+    float: left;
+    padding: 0 20px;
+    cursor: pointer;
+    .form-group{
+      margin: 0;
+      .radio, .checkbox{
+        position: relative;
+        margin-top: 0px;
+        float: left;
+        display: inline-block;
+        margin-bottom: 0px;
+      }
+    }
+    &.disabled{
+      cursor: not-allowed;
+    }
+  }
+}

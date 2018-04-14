@@ -1,0 +1,11 @@
+{
+  "name": "line",
+  "version": "0.0.1",
+  "description": "折线图",
+  "platform": {
+    "name": "折线图",
+    "icon": "/platform/icon/line.png",
+    "previewImg": "/platform/preview/line_sample.jpg",
+    "description": "指标支持(1个或2个维度，1个或多个数值),支持穿透"
+  }
+}

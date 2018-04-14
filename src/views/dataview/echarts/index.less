@@ -1,0 +1,81 @@
+@text-color: #698EBB;
+.dmp_theme {
+  .graph-wrapper{
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+    .graph-inner-box{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 0px;
+      color: @text-color;
+      z-index: 0; // 给定层级为0，不然默认层级高级上方的操作栏。
+      &.map {
+        margin: 30px;
+        width: calc(~"100% - 60px");
+        height: calc(~"100% - 60px");
+      }
+      .graph-inner-box-wrap{
+        width: 100%;
+        height: 100%;
+        h4 {
+          font-size: 14px !important;
+          color:#24BBF9 !important;
+        }
+      }
+      > i{
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .selected-date-range-btn.btn.btn-default{
+        background: transparent;
+        border: 1px solid rgba(73, 143, 225, 0.12);
+      }
+    }
+    .error-tips{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      font-size: 12px;
+      color: #999;
+    }
+    .loading-text{
+      text-align: center;
+      color: #fff;
+      line-height: 100px;
+    }
+  }
+
+  .graph-inner-box-wrap {
+    transform-origin: left top;
+  }
+  
+  &.theme-white,&.theme-gold{
+    .graph-wrapper{
+      .graph-inner-box{
+        color: #666;
+        .graph-inner-box-wrap {
+          h4 {
+            font-size: 14px !important;
+            color:#333 !important;
+          }
+        }
+        .selected-date-range-btn.btn.btn-default{
+          background-color: #FAFBFE;
+          border: 1px solid #F0F4FA;
+          color: #333;
+        }
+      }
+      .loading-text{
+        color: #666;
+      }
+    }
+  }
+}

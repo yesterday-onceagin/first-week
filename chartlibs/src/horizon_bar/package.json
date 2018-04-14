@@ -1,0 +1,11 @@
+{
+  "name": "horizon_bar",
+  "version": "0.0.1",
+  "description": "Dmp数据可视化平台内置条形图图表组件",
+  "platform": {
+    "name": "条形图",
+    "icon": "/platform/icon/horizon_bar.svg",
+    "previewImg": "/platform/preview/sample.jpg",
+    "description": "指标支持(2个以内维度，1个或多个数值)，支持穿透、联动"
+  }
+}

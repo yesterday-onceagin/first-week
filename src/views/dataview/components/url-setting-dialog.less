@@ -1,0 +1,121 @@
+
+.dmp_theme {
+    .url-settings-dialog-wrapper{
+      .modal-body{
+        clear: both;
+        overflow: hidden;
+      }
+      .panel{
+        border: 1px solid rgba(131,186,251,0.08);
+        background: transparent;
+        margin-bottom: 0;
+        height: 100%;
+        .panel-body{
+          padding: 0;
+          height: 90px;
+        }
+      }
+      .right{
+        width: 100%;
+        height: 90px;
+        float: left;
+        .nothing{
+          text-align: center;
+          line-height: 60px;
+        }
+        .z-axis-list {
+          padding: 1px;
+          position: relative;
+          height: 100%;
+          overflow-y: auto;
+          overflow-x: hidden;
+          .z-axis-item {
+            cursor: pointer;
+            padding-top: 9px;
+            .z-index-detail {
+              height: 30px;
+              line-height: 30px;
+              padding: 0 10px 0 10px;
+            }
+          }
+    
+          .line {
+            border: 1px solid #186d94;
+          }
+        }
+      }
+    }
+    &.theme-white,&.theme-gold{
+      .url-settings-dialog-wrapper{
+        .modal-body{
+          .panel{
+            border: 1px solid #EDEDED;
+            .panel-heading{
+              color: #666;
+              .pull-right{
+                .form-group{
+                  .input-group{
+                    input{
+                      border-color: #ededed;
+                      background-color: transparent;
+                    }
+                    .input-group-addon{
+                      color: #333;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .left{
+          .btn.btn-default{
+            height: auto;
+            line-height: 18px;
+            font-size: inherit;
+            min-width: auto;
+            min-height: auto;
+            &:hover{
+              border-color: none;
+            }
+          }
+          .btn-default:hover,
+          .btn-default:active:hover, 
+          .btn-default.active:hover, 
+          .open>.dropdown-toggle.btn-default:hover, 
+          .btn-default:active:focus, 
+          .btn-default.active:focus, 
+          .open>.dropdown-toggle.btn-default:focus, 
+          .btn-default:active.focus, 
+          .btn-default.active.focus, 
+          .open>.dropdown-toggle.btn-default.focus{
+            color: #488DFB;
+          }
+        }
+        .right{
+            .btn.btn-default{
+              height: auto;
+              line-height: 18px;
+              font-size: inherit;
+              min-width: auto;
+              min-height: auto;
+              &:hover{
+                border-color: none;
+              }
+            }
+            .btn-default:hover,
+            .btn-default:active:hover, 
+            .btn-default.active:hover, 
+            .open>.dropdown-toggle.btn-default:hover, 
+            .btn-default:active:focus, 
+            .btn-default.active:focus, 
+            .open>.dropdown-toggle.btn-default:focus, 
+            .btn-default:active.focus, 
+            .btn-default.active.focus, 
+            .open>.dropdown-toggle.btn-default.focus{
+              color: #488DFB;
+            }
+          }
+      }
+    }
+  }

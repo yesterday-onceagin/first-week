@@ -1,0 +1,11 @@
+{
+  "name": "label_map",
+  "version": "1.0.0",
+  "description": "Dmp数据可视化平台内置标签地图图表组件",
+  "platform": {
+    "name": "标签地图",
+    "icon": "",
+    "previewImg": "",
+    "description": ""
+  }
+}

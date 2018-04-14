@@ -1,0 +1,11 @@
+{
+  "name": "treemap",
+  "version": "0.0.1",
+  "description": "树图",
+  "platform": {
+    "name": "树图",
+    "icon": "/platform/icon/table_light.png",
+    "previewImg": "/platform/preview/table_sample.jpg",
+    "description": "指标支持(0个或多个维度，0个或多个数值),不支持穿透、联动"
+  }
+}

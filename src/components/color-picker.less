@@ -1,0 +1,103 @@
+.dmp_theme {
+  .dmp-color-picker-container {
+    // 该组件所有的样式均为行内样式 重置必须加important
+    .sketch-picker {
+      box-shadow: none!important;
+      background: transparent!important;
+      // 颜色与透明度调整面板
+      > div:nth-child(2) {
+        padding-bottom: 4px;
+        // 左侧颜色与透明图调整滑动条 
+        > div:first-child {
+          padding: 6px 0 2px!important;
+          > div:first-child {
+            overflow: visible!important;
+            div.hue-horizontal {
+              > div > div {
+                margin-top: -1px!important;
+                height: 12px!important;
+              }
+            }
+          }
+          > div:last-child {
+            overflow: visible!important;
+            > div {
+              > div:first-child > div {
+                background-color: #fff!important;
+              }
+              > div:last-child {
+                margin: 0 0 0 1px!important;
+                > div > div {
+                  margin-top: -1px!important;
+                  height: 12px!important;
+                }
+              }
+            }
+          }
+        }
+        // 右侧颜色展示
+        > div:last-child {
+          overflow: hidden;
+          margin-top: 6px!important;
+          > div:first-child {
+            background-color: #fff!important;
+          }
+        }
+      }
+      // 文字面板
+      > div:nth-child(3) {
+        input {
+          width: 100%!important;
+          padding: 3px 2px!important;
+          box-shadow: none!important;
+          border: 1px solid rgba(73, 143, 225, 0.12)!important;
+          text-align: center!important;
+        }
+        input + span {
+          color: #adc7d0!important;
+        }
+      }
+      // 颜色快速选择面板
+      > div:last-child {
+        display: none!important;
+      }
+    }
+
+    .dmp-color-picker-btns-container {
+      .reset-color-btn {
+        &:hover {
+          color: #24BBF9;
+        }
+      }
+    }
+  }
+
+  &.theme-white, &.theme-gold {
+    .dmp-color-picker-container {
+      // 该组件所有的样式均为行内样式 重置必须加important
+      .sketch-picker {
+        // 文字面板
+        > div:nth-child(3) {
+          input {
+            width: 100%!important;
+            padding: 3px 2px!important;
+            box-shadow: none!important;
+            border: 1px solid #ededed!important;
+            text-align: center!important;
+          }
+          input + span {
+            color: #666!important;
+          }
+        }
+      }
+
+      .dmp-color-picker-btns-container {
+        .reset-color-btn {
+          &:hover {
+            color: #488DFB;
+          }
+        }
+      }
+    }
+  }
+}

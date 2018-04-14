@@ -1,0 +1,283 @@
+.chart-icon-pos (@rank: 0, @isDisable: 0) {
+  background-position: @rank * -32px @isDisable * -32px;
+}
+
+.chart-diagramChooser {
+  position: relative;
+  padding: 0;
+  margin-left: 0px;
+  padding-right: 0;
+  margin-bottom: 0;
+  color: rgba(11, 19, 32, 0.64);
+}
+.chart-diagramChooser.selector {
+  border-top: 1px solid rgba(73, 143, 225, 0.08);
+}
+.chart-diagramChooser .hd {
+  line-height: 32px;
+}
+.chart-diagramChooser .bd {
+  word-wrap: break-word;
+  padding-right: 8px;
+}
+.chart-diagramChooser ul {
+  list-style: none;
+  width: 176px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.chart-diagramChooser li {
+  display: inline-block;
+  position: relative;
+  width: 38px;
+  height: 38px;
+  margin: 0 3px 5px 0; 
+}
+.chart-diagramChooser li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgba(11,19,32,.64);
+  transition: all .2s ease-in-out;
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+.chart-diagramChooser li a:hover,
+.chart-diagramChooser li a.active,
+.chart-diagramChooser li a.switching {
+  background: rgba(139,202,255,0.08);
+  border: 1px solid rgba(55,154,232,0.35);
+}
+
+.chart-diagramChooser li a.disabled:hover {
+  background: none;
+  border-color: transparent;
+}
+.chart-type-icon {
+  background-image: url(../../../static/images/chart-icon.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  font-style: normal;
+
+  // 表格
+  &.C200 { .chart-icon-pos(0, 0) }
+  &.disabled.C200 { .chart-icon-pos(0, 1) }
+  // 数值图
+  &.C310 { .chart-icon-pos(1, 0) }
+  &.disabled.C310 { .chart-icon-pos(1, 1) }
+  // 仪表盘
+  &.split_gauge{ .chart-icon-pos(2, 0) }
+  &.disabled.split_gauge{ .chart-icon-pos(2, 1) }
+  // 树图
+  &.treemap{ .chart-icon-pos(3, 0) }
+  &.disabled.treemap{ .chart-icon-pos(3, 1) }
+  // 堆叠折线图
+  &.stack-line{ .chart-icon-pos(4, 0) }
+  &.disabled.stack-line{ .chart-icon-pos(4, 1) }
+  // 折线图
+  &.C220 { .chart-icon-pos(5, 0) }
+  &.disabled.C220 { .chart-icon-pos(5, 1) }
+  // 面积图
+  &.C350 { .chart-icon-pos(6, 0) }
+  &.disabled.C350 { .chart-icon-pos(6, 1) }
+  // 堆叠面积图
+  &.stack-area{ .chart-icon-pos(7, 0) }
+  &.disabled.stack-area{ .chart-icon-pos(7, 1) }
+  // 簇状柱形图
+  &.C210 { .chart-icon-pos(8, 0) }
+  &.disabled.C210 { .chart-icon-pos(8, 1) }
+  // 堆叠柱状图
+  &.stack-bar{ .chart-icon-pos(9, 0) }
+  &.disabled.stack-bar{ .chart-icon-pos(9, 1) }
+  // 条形图
+  &.horizon-bar{ .chart-icon-pos(10, 0) }
+  &.disabled.horizon-bar{ .chart-icon-pos(10, 1) }
+  // 堆叠条形图
+  &.horizon-stack-bar{ .chart-icon-pos(11, 0) }
+  &.disabled.horizon-stack-bar{ .chart-icon-pos(11, 1) }
+  // 阶梯瀑布图
+  &.C320 { .chart-icon-pos(12, 0) }
+  &.disabled.C320 { .chart-icon-pos(12, 1) }
+  // 双轴图
+  &.double-axis { .chart-icon-pos(13, 0) }
+  &.disabled.double-axis { .chart-icon-pos(13, 1) }
+  // 散点图
+  &.C280 { .chart-icon-pos(14, 0) }
+  &.disabled.C280 { .chart-icon-pos(14, 1) }
+  // 普通饼图
+  &.C230 { .chart-icon-pos(15, 0) }
+  &.disabled.C230 { .chart-icon-pos(15, 1) }
+  // 环形饼图
+  &.circle-pie { .chart-icon-pos(27, 0) }
+  &.disabled.circle-pie { .chart-icon-pos(27, 1) }
+  // 玫瑰饼图
+  &.rose-pie { .chart-icon-pos(16, 0) }
+  &.disabled.rose-pie { .chart-icon-pos(16, 1) }
+  // 环形玫瑰饼图
+  &.circle-rose-pie { .chart-icon-pos(28, 0) }
+  &.disabled.circle-rose-pie { .chart-icon-pos(28, 1) }
+  // 漏斗图
+  &.funnel{ .chart-icon-pos(17, 0) }
+  &.disabled.funnel{ .chart-icon-pos(17, 1) }
+  // 雷达图
+  &.C290 { .chart-icon-pos(18, 0) }
+  &.disabled.C290 { .chart-icon-pos(18, 1) }
+  // 散点地图
+  &.C272 { .chart-icon-pos(20, 0) }
+  &.disabled.C272 { .chart-icon-pos(20, 1) }
+  // 热力图
+  &.ico-gis-heatmap{ .chart-icon-pos(21, 0) }
+  &.disabled.ico-gis-heatmap{ .chart-icon-pos(21, 1) }
+  
+  // 列表筛选
+  &.checkbox_select{ .chart-icon-pos(22, 0) }
+  &.disabled.checkbox_select{ .chart-icon-pos(22, 1) }
+  // 下拉筛选
+  &.indicator_select{ .chart-icon-pos(23, 0) }
+  &.disabled.indicator_select{ .chart-icon-pos(23, 1) }
+  // 时间筛选
+  &.indicator_time{ .chart-icon-pos(24, 0) }
+  &.disabled.indicator_time{ .chart-icon-pos(24, 1) }
+  // 时间区间筛选
+  &.indicator_date { .chart-icon-pos(25, 0) }
+  &.disabled.indicator_date { .chart-icon-pos(25, 1) }
+  // 数值型筛选
+  &.indicator_number { .chart-icon-pos(26, 0) }
+  &.disabled.indicator_number{ .chart-icon-pos(26, 1) }
+  // 时间轴筛选
+  &.timeline { .chart-icon-pos(29, 0) }
+  &.disabled.timeline{ .chart-icon-pos(29, 1) }
+  // TAB栏
+  &.tablist {.chart-icon-pos(30, 0)}
+  &.disabled.tablist {.chart-icon-pos(30, 1)}
+
+  // 占比饼图
+  &.gauge {.chart-icon-pos(31, 0)}
+  &.disabled.gauge {.chart-icon-pos(31, 1)}
+
+  // 标签地图
+  &.label_map {.chart-icon-pos(32, 0)}
+  &.disabled.label_map {.chart-icon-pos(32, 1)}
+
+  // 水位图
+  &.liquid_fill {.chart-icon-pos(33, 0)}
+  &.disabled.liquid_fill {.chart-icon-pos(33, 1)}
+  // 区域地图
+  &.area_map {.chart-icon-pos(34, 0)}
+  &.disabled.area_map {.chart-icon-pos(34, 1)}
+
+  &.candlestick { background-image: url(../../../static/images/icon-candlestick.svg) }
+  &.disabled.candlestick { background-image: url(../../../static/images/icon-candlestick-disabled.svg) }
+}
+
+
+.chart-type-view{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 220px;
+  top: 0;
+  color: rgba(11, 19, 32, 0.64);
+  ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .form-wapper{
+    position: relative;
+    padding-left: 15px;
+    line-height: 32px;
+    font-weight: normal;
+    .group-row{
+      padding: 12px 0;
+      label{
+        margin-bottom: 0;
+        font-weight: normal;
+        display: block;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 10px;
+      }
+      input{
+        width: 100%;
+        border: 0;
+        color: rgba(11, 19, 32, 0.87);
+        box-shadow: 0 -1px 0 0 rgba(81, 130, 228, 0.6) inset;
+        background: transparent;
+        font-size: 12px;
+        box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        height: 24px;
+        padding: 0;
+        transition: all .3s;  
+        &:hover{
+          box-shadow: 0 -2px 0 0 rgba(81, 130, 228, 0.9) inset;
+        }
+      }
+    }
+    .chart-view{
+      button{
+        position: absolute;
+        right: 0px;
+        top: -36px;
+        .glyphicon{
+          margin-right: 5px;
+        }
+      }  
+    }
+  }
+  .chart-view{
+    display: block;
+  }
+  .chart-type-sub-view{
+    display: none;
+  }
+  &.sub-show{
+    .chart-view{
+      display: none;
+    }
+    .chart-type-sub-view{
+      display: block;
+    }
+    .btn-wraps{
+      position: absolute;
+      bottom: 30px;
+      width: 100%;
+    }
+    .btn-wrap{
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+
+@text-color: #698EBB;
+@btn-background: #103054;
+@btn-border-color: rgba(73,143,225,0.20);
+
+#popover-chart-type{
+  background-color: @btn-background;
+  max-width: 500px;
+  font-size: 12px;
+  color: @text-color;
+  .popover-title{
+    background: @btn-background;
+    border-color: @btn-border-color;
+    color: @text-color;
+  }
+  .popover-content{
+    p{
+      margin: 0;
+    }
+  }
+  &.popover.left>.arrow:after{
+    border-left-color: @btn-background;
+  }
+}

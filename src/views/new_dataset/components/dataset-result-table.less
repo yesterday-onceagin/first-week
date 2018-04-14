@@ -1,0 +1,228 @@
+.dmp_theme{
+  .dataset-result-table {
+    border: 1px solid #222e4f;
+    font-size: 12px;
+    width: 100%;
+    height: calc(~"100% - 40px");
+    overflow: auto;
+    .data-table {
+      > thead > tr > th {
+        min-width: 60px;
+        position: relative;
+        padding: 0 28px 0 8px;
+        line-height: 30px;
+        white-space: nowrap;
+        border-right: 1px solid #222E4F;
+        border-bottom: 1px solid #222E4F;
+        border-top-color: transparent;
+        box-sizing: content-box;
+        &:last-child {
+          border-right-color: transparent;
+        }
+        .dmp-field-icon{
+          position: relative;
+          display: inline-block;
+          width: 27px;
+          vertical-align: middle;
+          line-height: 30px;
+          float: left;
+          &:after{
+            content: '';
+            position: absolute;
+            display: none;
+            top: 13px;
+            right: 5px;
+            border-top: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 4px solid #698EBB;
+          }
+        }
+        &.editable{
+          cursor: pointer;
+          .dmp-field-icon:hover:after{
+            display: block;
+          }
+        }
+        input{
+          border: none;
+          background: transparent;
+          height: 20px;
+          display: inline-block;
+          border-bottom: 1px solid #234674;
+          position: absolute;
+          left: 35px;
+          width: calc(~"100% - 63px");
+          top: 5px;
+        }  
+        .input{
+          width: calc(~"100% - 28px");
+          text-overflow: ellipsis;
+          display: inline-block;
+        }
+
+        .btn-wrap{
+          cursor: pointer;
+          width: 15px;
+          line-height: 30px;
+          display: inline-block;
+          font-size: 12px;
+          text-align: center;
+          i{
+            transform: scale(.7);
+            display: inline-block;
+            &.dmpicon-edit{
+              transform: scale(1);
+            }
+          }
+          &.edit{
+            visibility: hidden;
+          }
+          &:hover{
+            background: #0F182F;
+          }
+        }
+        
+        
+        // 当前 th 是活动的
+        &.editable.active,&.editable:hover{
+          background: #1B2646;
+          .btn-wrap.edit{
+            visibility: visible;
+          }
+          .dmp-field-icon{
+            &:after{
+              display: block;
+            }
+          }
+        }
+      }
+      > tbody > tr > td {
+        line-height: 24px;
+        height: 24px;
+        white-space: nowrap;
+        border-right: 1px solid #222E4F;
+        border-bottom: 1px solid #222e4f;
+        &:last-child{
+          border-right-color: transparent;
+        }
+      }
+    }
+    // 选择框重定义
+    .myselect {
+      display: block;
+      .myselect-head {
+        height: 24px;
+        border: 0 none;
+        line-height: 24px;
+        .dropdown-toggle > i {
+          top: 10px;
+        }
+      }
+      .myselect-body {
+        .myselect-item {
+          height: 24px;
+          line-height: 24px;
+        }
+      }
+    }
+    // 表格为空的提示文字颜色
+    .empty-text-cell {
+      color: #698EBB;
+    }
+    .dmp-field-icon {
+      color: #488DFB;
+    }
+  }
+    
+  // icon trigger overlay
+  #popover-result-table-bottom{
+    margin-left: 19px;
+    margin-top: 0px;
+    color: #C7E0FF;
+    > .arrow{
+      display: none;
+    }
+
+    > .popover-content{
+      padding: 5px 0;
+    }
+
+    ul > li {
+      padding: 0 15px 0 5px;
+      cursor: pointer;
+      height: 24px;
+      line-height: 24px;
+      font-size: 12px;
+      i{
+        color: #488DFB;
+        padding-right: 10px;
+        text-align: right;
+        width: 19px;
+        display: inline-block;
+        margin-right: 6px;
+      }
+
+      &:hover,&:active,&.active{
+        background: #273356;
+      }
+    }
+  }
+
+  &.theme-white, &.theme-gold{
+    // 数据结果表格
+    .dataset-result-table {
+      border-color: #EDEDED;
+      .data-table {
+        > thead > tr > th {
+          border-color: #E4E7EC;
+
+          // 当前 th 是活动的
+          &.editable.active,&.editable:hover{
+            background: linear-gradient(-68deg, #527DFD 0%, #1BA3D8 100%);
+            color: #fff;
+            .dmp-field-icon{
+              color: #fff;
+              &:after{
+                border-bottom-color: #fff;
+              }
+            }
+          }
+          .input-wrap .btn-wrap span:hover{
+            background: linear-gradient(-68deg, #527DFD 0%, #1BA3D8 100%);
+          }
+        }
+        > tbody > tr > td {
+          border-color: #E4E7EC;
+        }
+        .input-wrap{
+          input{
+            border-bottom-color: #fff;
+          }  
+        }
+        // 表格为空的提示文字颜色
+        .empty-text-cell {
+          color: #999;
+        }
+        .dmp-field-icon {
+          color: #488DFB;
+        }
+      }
+    }
+
+    // icon trigger overlay
+    #popover-result-table-bottom{
+      color: #333;
+      box-shadow: none;
+      ul > li {
+        &:hover,&:active,&.active{
+          background: linear-gradient(-68deg, #527DFD 0%, #1BA3D8 100%);
+          color: #fff;  
+          i{
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

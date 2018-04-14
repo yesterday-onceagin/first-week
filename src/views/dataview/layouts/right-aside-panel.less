@@ -1,0 +1,170 @@
+.dmp_theme {
+  @import '../../../static/css/themes/theme-black.less';
+  // 每一类的内容
+  .diagram-design-config-content {
+    border-color: @color-border;
+    // 下拉选择框
+    .myselect {
+      .myselect-head {
+        height: 24px;
+        padding-right: 24px;
+        line-height: 22px;
+        font-size: 12px;
+        .dropdown-toggle {
+          width: 24px;
+          > i {
+            top: 10px;
+          }
+        }
+        .items {
+          >span {
+            display: none;
+          }
+        }
+      }
+      .myselect-body {
+        font-size: 12px;
+        padding: 2px 0;
+        .myselect-item {
+          height: 20px;
+          line-height: 20px;
+          span {
+            line-height: 20px;
+          }
+        }
+      }
+      // 单图标题字体
+      &.diagram-title-select {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      // 单图边框线型
+      &.diagram-border-style-select {
+        float: left;
+      }
+      &.diagram-border-width-select {
+        float: right;
+      }
+    }
+    // 设置项的行容器
+    .layout-config-column {
+      &.disabled {
+        color: #58678E;
+      }
+      .chartbg-show-checkbox {
+        .form-group {
+          margin: 0;
+          .checkbox {
+            margin: 0;
+          }
+        }
+      }
+      .layout-config-color-btn {
+        border-color: #333F5F;
+        background-clip: content-box;
+        .dmpicon-triangle {
+          color: #58678E;
+        }
+
+        &.no-color {
+          background-color: #273459!important;
+          &::after {
+            position: absolute;
+            right: 2px;
+            top: 2px;
+            content: '';
+            display: block;
+            width: 26px;
+            height: 1px;
+            transform-origin: 100% 0;
+            transform: rotateZ(-45deg);
+            background: #CB3333;
+          }
+        }
+      }
+      // 标题字体样式ICON
+      .diagram-title-font-style-icon {
+        color: #58678E;
+        &.bold {
+          font-weight: bold;
+        }
+        &.italic {
+          font-weight: bold;
+          font-style: italic;
+        }
+        &.underline {
+          text-decoration: underline;
+        }
+        &.active {
+          color: #24BBF9;
+        }
+      }
+      // 标题字体对齐方式ICON
+      .diagram-title-font-align-icon {
+        color: #58678E;
+        &.active {
+          color: #24BBF9;
+        }
+      }
+    }
+  }
+  
+
+  &.theme-white, &.theme-gold {
+    .diagram-design-config-content {
+      border-color: #EDEDED;
+      .layout-config-column {
+        &.disabled {
+          color: #9F9F9F;
+        }
+
+        .layout-config-color-btn {
+          border-color: #ededed;
+          .dmpicon-triangle {
+            color: #999;
+          }
+
+          &.no-color {
+            background-color: #f2f6fb!important;
+            &::after {
+              background: #E82626;
+            }
+          }
+        }
+
+        // 标题字体样式ICON
+        .diagram-title-font-style-icon {
+          &.active {
+            color: #488DFB;
+          }
+        }
+        // 标题字体对齐方式ICON
+        .diagram-title-font-align-icon {
+          &.active {
+            color: #488DFB;
+          }
+        }
+      }
+    }
+  }
+
+  &.theme-gold {
+    .diagram-design-config-content {
+      .layout-config-column {
+        // 标题字体样式ICON
+        .diagram-title-font-style-icon {
+          &.active {
+            color: #B48600;
+          }
+        }
+        // 标题字体对齐方式ICON
+        .diagram-title-font-align-icon {
+          &.active {
+            color: #B48600;
+          }
+        }
+      }
+    }
+  }
+}

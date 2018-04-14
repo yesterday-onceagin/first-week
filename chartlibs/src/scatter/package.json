@@ -1,0 +1,11 @@
+{
+  "name": "scatter",
+  "version": "0.0.1",
+  "description": "散点图",
+  "platform": {
+    "name": "散点图",
+    "icon": "/platform/icon/scatter.jpg",
+    "previewImg": "/platform/preview/scatter_sample.jpg",
+    "description": "指标支持(0个或多个维度，2个或3个数值)"
+  }
+}

@@ -1,0 +1,475 @@
+.dmp_theme {
+  @import '../../static/css/themes/theme-black.less';
+  // 业务指标定义列表页
+  .indicator-list-page {
+    .indicator-item {
+      .outer-box {
+        background-color: rgba(9,46,73,.5);
+        border-color: rgba(73,143,225,.15);
+        .indicator-add-box {
+          color: #6E8CAF;
+        }
+        .indicator-item-box {
+          .indicator-item-main {
+            border-bottom-color: #103550;
+            .template-name {
+              color: #fff;
+              .indicator-actions {
+                display: none;
+                i[class*='dmpicon-'] {
+                  color: #698EBB;
+                  transition: color .3s;
+                  &:hover {
+                    color: #24BCFA;
+                  }
+                }
+              }
+            }
+            .indicator-num{
+              color: #C7E1FF;
+            }
+          }
+          .indicator-item-des {
+            color: #C7E1FF;
+          }
+          .item-left-border {
+            background-image: linear-gradient(-45deg, #1FAEC6 0%, #02CEA6 100%);
+          }
+        }
+      }
+      
+
+      &:nth-child(2n+1) {
+        .outer-box {
+          .indicator-item-box {
+            .item-left-border {
+              background-image: linear-gradient(-180deg, #FBDA61 0%, #F76B1C 100%);
+            }
+          }
+        }
+      }
+
+      &:hover, &:focus {
+        .outer-box {
+          cursor: pointer;
+          box-shadow: 0 0 10px 0 rgba(0,0,0,0.50);
+          background-color: rgba(9,46,73,.85);
+          .indicator-actions {
+            display: block!important;
+          }
+          .indicator-add-box {
+            color: #24BCFA;
+          }
+        }
+      }
+    }
+  }
+
+  // 业务指标定义编辑页
+  .indicator-template-page {
+    .indicator-template-view {
+      .indicator-define {
+        .type-list-container {
+          background-color: rgba(11,32,57,.9);
+          .type-add-btn {
+            border-color: rgba(73,143,225,0.09);
+            &:hover {
+              color: #24BCFA;
+            }
+          }
+          .sortable-list {
+            .sortable-item {
+              border-color: rgba(73,143,225,0.09);
+              color: #fff;
+              .sortable-item-action-bar {
+                display: none;
+              }
+              &:hover {
+                background-color: #1B3051;
+                box-shadow: 0 2px 12px 0 rgba(1, 7, 13, 0.53);
+                .sortable-item-action-bar {
+                  display: block;
+                  i[class*='dmpicon-']{
+                    transition: opacity .3s;
+                    &:hover{
+                      opacity: .7;
+                    }
+                  }
+                }
+              }
+              &.active {
+                background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+              }
+            }
+          }
+          .type-define-split-line {
+            background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+          }
+        }
+        .indicator-list-container {
+          .indicator-list-title {
+            color: #C7E1FF;
+            border-color: rgba(73,143,225,0.09);
+            i.dmpicon-add {
+              color: #698EBB;
+              &:hover {
+                color: #24BCFA;
+              }
+            }
+          }
+          .data-table {
+            thead > tr {
+              border-bottom: 1px solid rgba(73, 143, 225, 0.09);
+            }
+            tbody > tr > td {
+              cursor: move;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // 可拖拽项样式
+  >.sortable-item {
+    border-color: rgba(73,143,225,0.09);
+    z-index: 99999;
+    background-color: #1B3051;
+    box-shadow: 0 2px 12px 0 rgba(1, 7, 13, 0.53);
+    color: #fff;
+    cursor: move!important;
+    &.active {
+      background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+    }
+  }
+
+  // 指标弹出框
+  .indicator-option-form {
+    .dimension-table-box {
+      border-color: rgba(73,143,225,0.08);
+      .dimension-table-head {
+        color: #698EBB;
+        background-color: rgba(9,46,73,.5);
+      }
+      .dimension-table-body {
+        > li {
+          border-bottom: 1px solid rgba(73,143,225,0.08);
+          .dimension-name-span {
+            display: none;
+          }
+          .form-group {
+            padding: 3px 0 2px;
+          }
+          &:last-child{
+            border-bottom: 0 none;
+          }
+        }
+      }
+    }
+  }
+
+  &.theme-white {
+    @import '../../static/css/themes/theme-white.less';
+    // 业务指标定义列表页
+    .indicator-list-page {
+      .indicator-item {
+        .outer-box {
+          background-color: #fff;
+          border-color: #fff;
+          .indicator-add-box {
+            color: #999;
+          }
+          .indicator-item-box {
+            .indicator-item-main {
+              border-bottom-color: #DFE3EB;
+              .template-name {
+                color: #333;
+                .indicator-actions {
+                  i[class*='dmpicon-'] {
+                    color: #ABB5C3;
+                    transition: color .3s;
+                    &:hover {
+                      color: #24BCFA;
+                    }
+                  }
+                }
+              }
+              .indicator-num{
+                color: #666;
+              }
+            }
+            .indicator-item-des {
+              color: #666;
+            }
+            .item-left-border {
+              background-image: linear-gradient(-45deg, #1FAEC6 0%, #02CEA6 100%);
+            }
+          }
+        }
+
+        &:nth-child(2n+1) {
+          .outer-box {
+            .indicator-item-box {
+              .item-left-border {
+                background-image: linear-gradient(-180deg, #FBDA61 0%, #F76B1C 100%);
+              }
+            }
+          }
+        }
+
+        &:hover, &:focus {
+          .outer-box {
+            box-shadow: 0 4px 10px 0 rgba(76,117,167,0.34);
+            .indicator-add-box {
+              color: #24BCFA;
+            }
+          }
+        }
+      }
+      .form-tip {
+        color: #999!important;
+      }
+    }
+
+    // 业务指标定义编辑页
+    .indicator-template-page {
+      .indicator-template-view {
+        .indicator-define {
+          .type-list-container {
+            background-color: #Fff;
+            .type-add-btn {
+              border-color: rgba(73,143,225,0.09);
+              color: #333;
+              &:hover {
+                color: #488dfb;
+              }
+            }
+            .sortable-list {
+              .sortable-item {
+                border-color: rgba(73,143,225,0.09);
+                color: #333;
+                .sortable-item-action-bar {
+                  display: none;
+                }
+                &:hover {
+                  background-color: transparent;
+                  box-shadow: 0 2px 12px 0 rgba(1, 7, 13, 0.53);
+                  position: relative;
+                  z-index: 2;
+                  .sortable-item-action-bar {
+                    display: block;
+                    i[class*='dmpicon-']{
+                      transition: opacity .3s;
+                      &:hover{
+                        opacity: .7;
+                      }
+                    }
+                  }
+                }
+                &.active {
+                  background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+                  color: #fff;
+                }
+              }
+            }
+            .type-define-split-line {
+              background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+            }
+          }
+          .indicator-list-container {
+            .indicator-list-title {
+              color: #666;
+              border-color: rgba(73,143,225,0.09);
+              i.dmpicon-add {
+                color: #666;
+                &:hover {
+                  color: #488DFB;
+                }
+              }
+            }
+            .data-table {
+              thead > tr {
+                border-bottom: 1px solid rgba(73, 143, 225, 0.09);
+              }
+              tbody > tr > td {
+                cursor: move;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // 可拖拽项样式
+    >.sortable-item {
+      border-color: rgba(73,143,225,0.09);
+      z-index: 99999;
+      background-color: transparent;
+      box-shadow: 0 2px 12px 0 rgba(1, 7, 13, 0.53);
+      color: #333;
+      cursor: move!important;
+      &.active {
+        background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+        color: #fff;
+      }
+    }
+
+    // 指标弹出框
+    .indicator-option-form {
+      .dimension-table-title {
+        .add-dimension-btn {
+          color: #488DFB;
+          background: #fff;
+          border-color: #488DFB;
+        }
+      }
+      .dimension-table-box {
+        border-color: rgba(73,143,225,0.08);
+        .dimension-table-head {
+          color: #666;
+          background-color: #F6FAFF;
+        }
+        .dimension-table-body {
+          > li {
+            border-bottom: 1px solid rgba(73,143,225,0.08);
+          }
+        }
+      }
+    }
+  }
+
+  &.theme-gold {
+    @import '../../static/css/themes/theme-gold.less';
+    // 业务指标定义列表页
+    .indicator-list-page{
+      .indicator-item {
+        &:hover,
+        &:focus {
+          .outer-box {
+            background: #fff;
+            box-shadow: 0 4px 10px 0 rgba(76,117,167,0.34);
+            .indicator-add-box {
+              color: @base-color;
+            }
+          }
+        }
+        .outer-box {
+          background: #FFFFFF;
+          box-shadow: none;
+          border-color: transparent;
+          .indicator-add-box {
+            color: #8D97A4;
+          }
+          .indicator-item,
+          .idconfig-item {
+            &-box {
+              .indicator-item,
+              .idconfig-item {
+                &-main {
+                  border-color: #eee;
+                  .template-name {
+                    color: @color-text-primary;
+                    .indicator-actions i[class*='dmpicon-'] {
+                      color: #8D97A4;
+                      &:hover {
+                        color: @base-color;
+                      }
+                    }
+                  }
+                  .indicator,
+                  .idconfig {
+                    &-num {
+                      color: @color-text-secondary;
+                    }
+                  }
+                }
+                &-des {
+                  color: @color-text-tip;
+                }
+              }
+            }
+          }
+        }
+      }
+      .form-tip {
+        color: #999!important;
+      }
+    }
+
+    // 业务指标定义编辑页
+    .indicator-template-page {
+      .indicator-define .type-list-container .sortable-list .sortable-item:hover {
+        background: #F6FAFF;
+        box-shadow: none;
+      }
+      .indicator-template-view .indicator-define {
+        .indicator-list-container {
+          .indicator-list-title i.dmpicon-add {
+            color: @color-icon-default;
+            &:hover {
+              color: @color-icon-hover;
+            }
+          }
+          .data-table .data-table-action-bar {
+            .icon-btn-dmp:hover i[class*=dmpicon-] {
+              color: #fff;
+            }
+          }
+          .indicator-list-title {
+            color: @color-text-primary;
+          }
+        }
+        .type-list-container {
+          background: #fff;
+          .type-add-btn:hover {
+            color: @base-color;
+          }
+          .sortable-list .sortable-item {
+            color: @color-text-secondary;
+            &:hover {
+              background-color: #F6FAFF;
+              box-shadow: 0 4px 10px 0 rgba(76,117,167,0.34);
+            }
+            i {
+              color: @color-icon-default;
+              &:hover {
+                color: @color-icon-hover;
+              }
+            }
+          }
+          .sortable-list .sortable-item.active,
+          .type-define-split-line {
+            background: #ECF0F4;
+          }
+          .indicator-list-title {
+            color: @color-text-primary;
+            i.dmpicon-add {
+              color: @color-icon-default;
+              &:hover {
+                color: @color-icon-hover;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // 可拖拽项样式
+    >.sortable-item {
+      border-color: rgba(73,143,225,0.09);
+      background-color: transparent;
+      box-shadow: 0 2px 12px 0 rgba(1, 7, 13, 0.53);
+      color: #333;
+      &.active {
+        background: #ECF0F4;
+        color: #333;
+      }
+    }
+
+    // 指标弹出框
+    .indicator-option-form .dimension-table-box .dimension-table-head {
+      background: #F6FAFF;
+      color: @color-text-secondary;
+    }
+  }
+}

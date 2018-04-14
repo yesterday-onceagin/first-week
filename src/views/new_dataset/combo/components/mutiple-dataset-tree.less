@@ -1,0 +1,116 @@
+.dmp_theme {
+  .multiple-tree-wrap{
+    border: 1px solid #1C2745;
+    padding: 5px;
+    min-height: 32px;
+    cursor: pointer;
+    position: relative;
+    &:after{
+      content: "";
+      position: absolute;
+      right: 6px;
+      top: 50%;
+      margin-top: -2px;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 5px solid #698EBB;
+    }
+
+    .item{
+      padding: 0 25px 0 10px;
+      border: 1px solid #243258;
+      font-size: 12px;
+      line-height: 24px;
+      display: inline-block;
+      border-radius: 12px;
+      position: relative;
+      margin: 3px;
+      .delete-btn{
+        background: #496180;
+        color: #141E39;
+        transform: rotate(45deg);
+        display: inline-block;
+        position: absolute;
+        top: 4px;
+        right: 5px;
+        width: 16px;
+        height: 16px;
+        text-align: center;
+        line-height: 18px;
+        border-radius: 50%;
+      }
+
+      &:hover{
+        border-color: #3d5490;
+        .delete-btn{
+          background: #698EBB;
+        }
+      }
+    }
+  }
+  #multiple-dataset-dialog{
+    background-color: #1E2948;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px 0px;
+    .dmp-tree-container {
+      height: 286px;
+      .form input{
+        height: 26px;
+        line-height: 26px;
+        width: 100%;
+        padding: 0 5px;
+      }
+      .dmp-tree-node-box.active{
+        background: #273356;
+      }
+
+      .file-tree-item {
+        &.disabled{
+          cursor: not-allowed;
+        }
+        .select-mark{
+          position: absolute;
+          top: 6px;
+          right: 0;
+          width: 16px;
+          height: 16px;
+          line-height: 16px;
+          text-align: center;
+          background: #527DFD;
+          border-radius: 50%;
+          i.dmpicon-tick{
+            color: #fff;
+            display: inline-block;
+            transform: scale(0.7);
+            margin-top: 2px;
+          }
+        } 
+      }
+    } 
+  }
+
+  &.theme-white, &.theme-gold{
+    .multiple-tree-wrap{
+      border-color: #ededed;
+
+      .item{
+        border-color: #ededed;
+        .delete-btn{
+          background: #999;
+          color: #fff;
+        }
+
+        &:hover{
+          border-color: #3d5490;
+          .delete-btn{
+            background: #698EBB;
+          }
+        }
+      }
+    }
+    #multiple-dataset-dialog{
+      background: #fff;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 4px;
+    }
+  }
+}
+

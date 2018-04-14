@@ -1,0 +1,11 @@
+{
+  "name": "time_interval_filter",
+  "version": "1.0.0",
+  "description": "Dmp数据可视化平台内置时间区间筛选组件",
+  "platform": {
+    "name": "时间区间筛选",
+    "icon": "",
+    "previewImg": "",
+    "description": ""
+  }
+}

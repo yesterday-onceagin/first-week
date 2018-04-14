@@ -1,0 +1,110 @@
+.dmp_theme {
+  @import '../../../static/css/themes/theme-black.less';
+  .third-process{
+    margin-top: 20px;
+    .main-container{
+      width: 80%;
+      margin: 0 auto;
+      min-height: 220px;
+      padding: 20px;
+      border: 1px solid #193459;
+      .indicator-row{
+        margin-top: 50px;
+        min-height: 30px;
+        clear: both;
+        .row-name{
+          float: left;
+          span,i{
+            float: left;
+            color: #f3f3f3;
+            line-height: 30px;
+            font-size: 14px;
+          }
+          > span{
+            padding-right: 10px;
+          }
+          i{
+            font-size: 20px;
+            color: #3BB4E3;
+            cursor: pointer;
+            &:hover{
+              color: #fff;
+            }
+          }
+        }
+        .section-wrap{
+          margin-left: 130px;
+          .selection-button{
+            margin-top: 2px;
+          }
+        }
+      }
+      .tip{
+        color: #698EBB;
+        font-size: 14px;
+        vertical-align: top;
+        margin-top: 40px;
+        i,span{
+          float: left;
+          display: inline-block;
+          line-height: 20px;
+        }
+        i{
+          padding-right: 10px;
+        }
+        b{
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+
+  &.theme-white {
+    @import '../../../static/css/themes/theme-white.less';
+    .third-process .main-container{
+      border: 1px solid #F2F7FF;
+      background: #FBFDFF;
+      .indicator-row{
+        .row-name{
+          span, i{
+            color: #333;
+          }
+          i {
+            color: #488DFB;
+            &:hover{
+              color: #488DFB;
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+      .tip{
+        color: #999;
+      }
+    }
+  }
+
+  &.theme-gold {
+    @import '../../../static/css/themes/theme-gold.less';
+    .third-process .main-container {
+      border-color: #ededed;
+      .indicator-row .row-name {
+        span {
+          color: @color-text-primary;
+        }
+        i {
+          color: @base-color;
+          &:hover {
+            color: @assist-color;
+          }
+        }
+      }
+      .tip {
+        color: @color-text-tip;
+        b {
+          color: @base-color !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.dmp_theme {
+  @import '../../static/css/themes/theme-black.less';
+  .feeds-list-page{
+    overflow: hidden;
+    .dataview-tab {
+      background: rgba(9, 46, 73, 0.3);
+      .form{
+        float: left;
+        > .col-md-2{
+          width: auto;
+          float: left;
+          line-height: 32px;
+          padding: 0;
+        }
+        > .col-md-10{
+          width: 280px;
+          float: left;
+        }
+        &:first-child{
+          margin-right: 15px;
+        }
+      }
+    }
+    .table-view{
+      background: rgba(9, 46, 73, 0.3);
+      display: flex;
+      flex: 1;
+    }
+  }
+  &.theme-white {
+    @import '../../static/css/themes/theme-white.less';
+    .feeds-list-page{
+      .dataview-tab {
+        background: transparent;
+      }
+      .table-view{
+        background: transparent;
+      }
+    }
+  }
+  &.theme-gold {
+    @import '../../static/css/themes/theme-gold.less';
+    .feeds-list-page {
+      .table-view,
+      .dataview-tab {
+        background: #fff;
+      }
+    }
+  }
+}

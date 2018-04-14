@@ -1,0 +1,177 @@
+.dmp_theme {
+  @import '../../static/css/themes/theme-black.less';
+  .flow-overview-page{
+    height: 100%;
+    margin-top: 10px;
+    overflow-y: auto;
+    .mark-wrap{
+      clear: both;
+      overflow: hidden;
+      .item{
+        float: left;
+        width: 25%;
+        height: 140px;
+        .item-wrap{
+          border-radius: 8px;
+          color: #fff;
+          margin: 0 10px;
+          height: 100%;
+          cursor: pointer;
+          .mark{
+            margin-top: 28px;
+            margin-left: 28px;
+            width: 84px;
+            height: 84px;
+            border-radius: 50%;
+            float: left;
+            transition: transform .3s;
+            transform: rotate(0deg);
+            i{
+              margin-top: 20px;
+              margin-left: 20px;
+              display: block;
+              width: 45px;
+              height: 42px;
+              background-size: contain;
+            }
+          }
+          .context{
+            display: flex;
+            width: auto;
+            margin-left: 112px;
+            flex: 1;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+            .context-wrap{
+              span{
+                display: block;
+                color: #E8E8E8;
+              }
+              b{
+                display: block;
+                color: #fff;
+                font-size: 44px;
+                font-weight: normal;
+                line-height: 44px;
+                margin-top: 5px;
+              }  
+            }
+          }
+        }
+        &:hover{
+          .mark{
+            transform: rotate(60deg) scale(1.05);
+          }
+        }
+        &:nth-child(1) > .item-wrap {
+          background-image: linear-gradient(-45deg, #1FAEC6 0%, #02CEA6 100%);
+          .mark{
+            background-image: linear-gradient(-221deg, #19E0B9 0%, #30C4DD 100%);
+            box-shadow: 10px 10px 8px 0 #0098A6;
+            i{
+              width: 46px;
+              background: url(../../static/images/icon-flow-1.png);
+            }
+          }
+        }
+        &:nth-child(2) > .item-wrap {
+          background-image: linear-gradient(-60deg, #FA4747 0%, #FA6E47 100%);
+          .mark{
+            background-image: linear-gradient(-226deg, #FAA247 0%, #E83C1A 100%);
+            box-shadow: 10px 10px 8px 0 #CC1500;
+            i{
+              background: url(../../static/images/icon-flow-2.png);
+            }
+          }
+        }
+        &:nth-child(3) > .item-wrap {
+          background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+          .mark{
+            background-image: linear-gradient(-235deg, #1BA3D8 0%, #527DFD 100%);
+            box-shadow: 10px 10px 8px 0 #005F92;
+            i{
+              background: url(../../static/images/icon-flow-3.png);
+            }
+          }
+        }
+        &:nth-child(4) > .item-wrap {
+          background-image: linear-gradient(-45deg, #442BAE 0%, #5C35A0 100%);
+          .mark{
+            background-image: linear-gradient(-228deg, #6729D2 0%, #4A2EC1 100%);
+            box-shadow: 10px 10px 8px 0 #231494;
+            i{
+              width: 44px;
+              background: url(../../static/images/icon-flow-4.png);
+            }
+          }
+        }
+      }
+    }
+    
+    .grid-panel{
+      margin-top: 20px;
+      .main-wrap{
+        background: rgba(9, 46, 73, .3);
+        margin: 0 -5px;
+        padding: 15px;
+      }
+    }
+
+    .echarts-panel{
+      .echarts-wrap{
+        height: 300px;
+      }
+    }
+
+    .table-panel{
+      .data-view{
+        margin-top: 15px;
+
+        i.dmpicon-view{
+          cursor: pointer;
+          color: #698EBB;
+          &:hover{
+            color: #24BCFA;
+          }
+        }
+      }
+    }
+  }
+
+  
+  // THEME STYLE
+  // 主题---致雅白 
+  &.theme-white {
+    @import '../../static/css/themes/theme-white.less';
+    .flow-overview-page{
+      .grid-panel{
+        .main-wrap{
+          background: #fff;
+        }
+      }
+    }
+  }
+
+  &.theme-gold {
+    @import '../../static/css/themes/theme-gold.less';
+    .flow-overview-page {
+      .grid-panel .main-wrap {
+        background: #fff;
+      }
+      .table-panel .data-view {
+        .icon-btn-dmp {
+          &:hover {
+            .dmpicon-view {
+              color: #fff;
+            }
+          }
+          .dmpicon-view {
+            color: @color-icon-default;
+          }
+        }
+      }
+    }
+  }
+}

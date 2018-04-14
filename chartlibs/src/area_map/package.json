@@ -1,0 +1,11 @@
+{
+  "name": "area_map",
+  "version": "1.0.0",
+  "description": "Dmp数据可视化平台内置区域地图组件",
+  "platform": {
+    "name": "区域地图",
+    "icon": "/platform/icon/area_map.png",
+    "previewImg": "/platform/preview/area_map_sample.png",
+    "description": "指标支持(1-3个维度，多个数值)"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "table",
+  "version": "1.0.0",
+  "description": "Dmp数据可视化平台内置表格table图表组件",
+  "platform": {
+    "name": "表格",
+    "icon": "/platform/icon/table_light.png",
+    "previewImg": "/platform/preview/table_sample.jpg",
+    "description": ""
+  }
+}

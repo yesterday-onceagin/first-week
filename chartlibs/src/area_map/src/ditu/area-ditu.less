@@ -1,0 +1,189 @@
+
+.dmp_theme {
+  .graph-inner-box.map {
+    .tip-marker {
+      display: inline-block;
+      color: #ddd;
+      background-color: #153367;
+      padding: 10px 20px 0 20px;
+      font-size: 12px;
+      white-space: nowrap;
+      border-radius: 3px;
+      transform: translate(-50%,-110%);
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0;
+        height: 0;
+        border: solid transparent;
+        border-width: 5px 5px;
+        bottom: -10px;
+        border-top-color: #153367
+      }
+      .title {
+        font-size: 14px;
+        line-height: 1;
+        margin-bottom: 5px;
+        // color: #fff;
+        &.link {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+      .content {
+        margin-bottom: 10px;
+      }
+      .item {
+        line-height: 1.5;
+      }
+    }
+
+    .custom-marker-editor {
+      background: #213465;
+      box-shadow: 0 3px 10px #162344;
+      color: #fff;
+      font-size: 12px;
+      .title {
+        line-height: 30px;
+        border-bottom: 1px solid #2A3E71;
+        padding: 0 15px;
+        position: relative;
+        button {
+          position: absolute;
+          color: #6694C0;
+          width: 20px;
+          height: 30px;
+          font-size: 14px;
+          .dmpicon-close {
+            font-size: 10px;
+          }
+          &.del-btn {
+            right: 30px;
+          }
+          &.close-btn {
+            right: 5px;
+          }
+          &:hover {
+            color: #488DFB;
+          }
+        }
+      }
+      input[type="text"] {
+        line-height: 24px;
+        padding: 0 5px;
+        width: 140px;
+      }
+      form {
+        color: #fff;
+        margin: 10px 15px 0 15px;
+        padding-bottom: 15px;
+        line-height: 24px;
+        .sub-title {
+          margin-right: 10px;
+          vertical-align: top;
+        }
+        .types-section {
+          margin-top: 10px;
+        }
+        .types {
+          vertical-align: top;
+          display: inline-block;
+          width: 140px;
+          i {
+            margin-right: 10px;
+            font-size: 16px;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            &:hover, &.checked {
+              outline: 1px solid #488DFB;
+              cursor: pointer;
+            }
+          }
+        }
+        .btn-primary {
+          margin-top: 10px;
+          width: 54px;
+          height: 24px;
+          font-size: 12px;
+          min-width: auto;
+          min-height: auto;
+          line-height: 24px;
+          border-radius: 2px;
+        }
+      }
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0;
+        height: 0;
+        border: solid transparent;
+        border-width: 5px 5px;
+        bottom: -10px;
+        border-top-color: #213465;
+      }
+    }
+
+    .custom-marker {
+      // display: inline-block;
+      // width: 30px;
+      // height: 30px;
+      font-size: 30px;
+    }
+    .amap-marker-label {
+      border: none;
+      border-radius: 2px;
+    }
+
+    .amap-logo {
+      display: none;
+    }
+
+    .amap-copyright {
+      display: none !important;
+    }
+
+    .mark-type(@content, @color) {
+      font-family: 'dmpicon';
+      color: @color;
+      &:before {
+        content: @content;
+      }
+    }
+
+    .A0 {
+      .mark-type("\E976", #E53737);
+    }
+    .A1 {
+      .mark-type("\E976", #FFD417);
+    }
+    .A2 {
+      .mark-type("\E976", #17E5FF);
+    }
+    .A3 {
+      .mark-type("\E976", #29DF47);
+    }
+    .B0 {
+      .mark-type("\E938", #E53737);
+    }
+    .B1 {
+      .mark-type("\E938", #FFD417);
+    }
+    .B2 {
+      .mark-type("\E938", #17E5FF);
+    }
+    .B3 {
+      .mark-type("\E938", #29DF47);
+    }
+  }
+}

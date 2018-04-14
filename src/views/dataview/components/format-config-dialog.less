@@ -1,0 +1,69 @@
+.dmp_theme {
+  .format-config-dialog {
+    // 改写NUMBER INPUT
+    .dmp-number-input-container .form-group .dmp-number-input-box {
+    	height: 30px;
+    	width: 100%;
+    }
+    // 数据格式配置
+    .number-fortmat-form {
+      padding: 0 10px;
+      &.percentage {
+        .form-column.num {
+          color: #577598;
+          .input-box::-webkit-input-placeholder {
+            color: #577598;
+          }
+        }
+      }
+      &.num {
+        .form-column.percentage {
+          color: #577598;
+        }
+      }
+      .form-column {
+        position: relative;
+        padding-bottom: 10px;
+        &.indent {
+          padding-left: 25px;
+        }
+        .form-column-label {
+          float: left;
+          height: 30px;
+          line-height: 30px;
+          padding-right: 10px;
+        }
+        .number-format-input-box {
+          height: 30px;
+          width: 140px;
+          float: left;
+        }
+        .number-format-checkbox {
+          padding-left: 10px;
+          height: 30px;
+          line-height: 30px;
+          float: left;
+        }
+        .input-box {
+          height: 30px;
+          line-height: 30px;
+          width: 180px;
+        }
+      }
+    }
+    .radio, .checkbox {
+      margin: 0;
+      label {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .icon-radio, .icon-checkbox {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+    .form-group {
+      padding: 0;
+    }
+  }
+}

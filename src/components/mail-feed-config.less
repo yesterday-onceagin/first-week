@@ -1,0 +1,35 @@
+.dmp_theme {
+  .mail-feed-config-wrapper {
+    background: #141E39;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    .config-form {
+      width: 400px;
+      .form-group {
+        padding-bottom: 0;
+        margin-bottom: 15px;
+      }
+      .input-wrapper {
+        padding-left: 10px;
+      }
+      .control-label {
+        line-height: 1;
+        height: auto;
+        margin-bottom: 8px;
+        span {
+          line-height: inherit;
+        }
+      }
+      input[type="text"] {
+        height: 30px;
+      }
+    }
+  }
+  &.theme-white, &.theme-gold {
+    .mail-feed-config-wrapper {
+      background: #fff;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "cluster_column",
+  "version": "0.0.1",
+  "description": "Dmp数据可视化平台内置柱状图图表组件",
+  "platform": {
+    "name": "簇状柱形图",
+    "icon": "/platform/icon/cluster_column.png",
+    "previewImg": "/platform/preview/cluster_column_sample.jpg",
+    "description": "指标支持(2个以内维度，1个或多个数值)，支持穿透、联动"
+  }
+}

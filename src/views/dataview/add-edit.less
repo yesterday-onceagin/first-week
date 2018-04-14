@@ -1,0 +1,373 @@
+.data-view-add-edit-page{
+  display: flex;
+  flex: 1;
+  .page-view-wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+    color: #adc7d0;
+    .inner-box-wrap{
+      padding: 15px;
+    }
+    // 左侧样式
+    .left{
+      position: relative;
+      max-width: 300px;
+      min-width: 300px;
+      float: left;
+      height: 100%;
+      background: #141E39;
+      overflow: auto;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      .micro-tree-list .micro-tree-list-item{
+        span{
+          width: auto;
+          max-width: 155px;
+        }
+        > div > div {
+          height: 30px;
+          display: inline-block;
+        }
+      }
+      .form-group .control-label{
+        padding-left: 10px;
+      }
+      .inner-box-wrap{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        padding: 15px;
+      }
+      .tree-wrap{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        overflow: auto;
+        margin-left: 12px;
+        border: 1px solid rgba(73, 143, 225, 0.12);
+        .add-container {
+          position: absolute;
+          top:16px;
+          right: 10px;
+          cursor: pointer;
+          .dmpicon-add {
+            font-size:17px;
+            line-height:22px;
+            vertical-align:middle;
+            color:#24BBF9;
+          }
+        }
+        > div{
+          width: 100%;
+          // 拖动过来后，直接隐藏
+          > .sortable-ghost{
+            display: none;
+            opacity: 0;
+          } 
+        }
+        // 设置 display, opacity, 覆盖 sortable-ghost 的 opacity
+        // 另外禁止 拖拽
+        .tree-inner-wrap{
+          padding: 0 10px 10px;  
+          height: 100%;
+          display: block !important; 
+          opacity: 1 !important; 
+          -webkit-user-drag: none; // 不会出现拖拽的阴影
+          overflow: auto;
+        }
+      }
+      .rt-select > .rt-select-menu .rt-tree-panel .rt-tree li {
+        > i, 
+        > a{
+          color: #adc7d0;
+          &:hover{
+            color: #24BBF9;
+          }
+        }
+        &.rt-tree-node-disabled{
+          > a{
+            cursor: default;
+            color: #adc7d0;
+            &:hover {
+              color: #adc7d0;
+            }
+          }
+        }
+        i.icon-arrow{
+          color: #698EBB;
+          font-size: 12px;
+          display: inline-block;
+        }
+      }
+      .nothing{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%; 
+        .inner-wrap{
+          display: inline-block;
+          i{
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    .main-view-wrap{
+      padding: 15px;
+      display: flex;
+      flex: 1;
+      width: calc(~"100% - 314px");
+      > div{
+        width: 100%;
+        display: flex;
+        flex: 1;
+        // 右侧样式
+        .center{
+          display: flex;
+          flex: 1;
+          width: calc(~"100% - 514px");
+          padding: 0 15px;
+          height: 100%;
+          background: #141E39;
+          flex-direction: column;
+          .filter-wrap {
+            flex-direction: column;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            .title{
+              flex: 1;
+              padding: 15px 0 8px 0;
+              float: left;
+              width: 50px;
+            }
+            .filter-container{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              height: 100%;
+              .chart-filter-sortable {
+                padding: 10px 15px 50px 0;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 100%;
+                .nothing {
+                  height: 100%;
+                  width: 70%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  line-height: 30px;
+                  color: #6E8CAF;
+                  text-align: center;
+                }
+              }
+            }
+          }
+          .form-group.separator{
+            padding-top: 20px;
+            border-top: 1px solid rgba(73, 143, 225, 0.08);
+          }
+          .chart-area-wrap{
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            .chart-left-side {
+              width: 160px;
+              font-size: 12px;
+              border-right: 1px solid rgba(73,143,225,0.08);
+              > div {height: 100%;}
+              .legend-color-wrap {
+                border-top: 1px solid rgba(73,143,225,0.08);
+                .legend-color-container {
+                  height: 100%;
+                }
+                height: 40%;
+                .title {
+                  padding-top: 20px;
+                  padding-bottom: 8px;
+                  padding-right: 15px;
+                }
+                .body {
+                  height: calc(~"100% - 60px");
+                  overflow-y: auto;
+                }
+                .nothing {
+                  padding: 50px 45px 0 25px;
+                  text-align: center;
+                }
+              }
+              .nothing {
+                color: #6E8CAF;
+                line-height: 30px;
+              }
+            }
+            .main-wrap{
+              width: calc(~"100% - 161px");
+              height: 100%;
+              > div {
+                width: 100%;
+                height: 100%;
+              }
+              .inner-box-wrap{
+                width: 100%;
+                height: 100%;
+                &.refresh{
+                  height: calc(~"100% - 80px");
+                }
+                .chart-view-wrap{
+                  width: 100%;
+                  height: 100%;
+                  padding-bottom: 25px;
+                  &.through{
+                    height: calc(~"100% - 60px");
+                  }
+                  &.map{
+                    padding: 0;
+                  }
+                  .error-tip{
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 100%;
+                    color: #999;
+                  }
+                }
+                // 穿透导航
+                .through-nav{
+                  overflow: hidden;
+                  clear: both;
+                  text-overflow: ellipsis;
+                  margin-top: 10px;
+                  font-size: 12px;
+                  > li {
+                    float: left;
+                    cursor: pointer;
+                    padding: 0;
+                    line-height: 60px;
+                    color: #666;
+                    > i {
+                      float: left;
+                      margin-top: 24px;
+                      display: inline-block;
+                      transform: rotate(-90deg) scale(.7);
+                    }
+                    > span{
+                      padding: 0 6px;
+                      float: left;
+                      text-decoration: underline;
+                    }
+                    &.active{
+                      color: #fff;
+                    }
+                    &:last-child{
+                      > span {
+                        text-decoration: none;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .right{
+          width: 202px;
+          height: 100%;
+          background: #141E39;
+          border-left: 1px solid rgba(73,143,225,0.08);
+           // 右侧 图表设置区域
+          .chart-type-wrap{
+            width: 100%;
+            height: 100%;
+            padding: 10px 7px;
+            float: left;
+            overflow-y: auto;
+            .form-group {
+              margin-bottom: 0;
+              > .input-wrapper {
+                padding: 0;
+              }
+              > .title{
+                cursor: pointer;
+                padding: 0 0 10px 0;
+                .control-label {
+                  cursor: pointer;
+                  position: relative;
+                  padding-left: 20px;
+                }
+                .control-label > i.spread-icon{
+                  left: 0;
+                  right: auto;
+                  transform: scale(0.75) translateY(-50%) rotate(0deg); 
+                  &.unspread{ transform: scale(0.75) translateY(-50%) rotate(-90deg); }
+                }
+              }
+              .checkbox label span, 
+              .radio label span{
+                font-size: 12px;
+                vertical-align: -1px;
+              }
+            }
+            .choice-wrap{
+              margin-left: 10px;
+              .checkbox{
+                margin-top: 0;
+                margin-bottom: 0;
+                .checkbox-in-form{
+                  padding: 0;
+                  padding-left: 0;
+                }
+              }
+              .mark-line-list{
+                font-size: 12px;
+                margin-top: 10px;
+                margin-left: 8px;
+                li{
+                  span{
+                    display: inline-block;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    &:first-child{ width: 60px; }
+                    &:last-child{ width: 40px; margin-left: 8px; }
+                  }
+                }
+              }
+            }
+            .block-body {
+              .form-group {
+                padding-bottom: 0;
+              }
+              .header {
+                margin-bottom: 5px;
+              }
+              input, .my-select {
+                font-size: 12px;
+                line-height: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+    // container
+    .container{
+      width: auto;
+    }
+  }
+}
+
+.sortable-ghost{
+  opacity: .4;
+  display: inline-block;
+}

@@ -1,0 +1,11 @@
+{
+  "name": "simple_tab",
+  "version": "1.0.0",
+  "description": "Dmp数据可视化平台内置Tab辅助图形组件",
+  "platform": {
+    "name": "Tab组件",
+    "icon": "",
+    "previewImg": "",
+    "description": ""
+  }
+}

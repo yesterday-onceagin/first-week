@@ -1,0 +1,134 @@
+.dmp_theme {
+  @import '../static/css/themes/theme-black.less';
+  .dmp-tree-container {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    .dmp-tree-node-box {
+      .file-tree-item {
+        &:not(.in-edit) {
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          -webkit-user-drag: none;
+        }
+        .file-tree-item-icon {
+          color: #24BBF9;
+        }
+        .file-tree-item-name {
+          i.dmpicon-tick {
+            color: #698EBB;
+            &:hover {
+              color: #24BCFA;
+            }
+          }
+        }
+        .file-item-menu-btn {
+          display: none;
+          color: #698EBB;
+          &:hover {
+            color: #24BCFA;
+          }
+        }
+
+        &.hover-status {
+          .file-tree-item-name {
+            color: #24BCFA;
+          }
+        }
+      }
+      &:hover,
+      &.active {
+        background: rgba(8,45,73,0.60);
+        z-index: 5;
+        color: #fff;
+        .file-tree-item {
+          padding-right: 30px;
+          &.no-indent{
+            padding-right: 0px;
+          }
+          .file-tree-item-name {
+            color: #fff;
+          }
+          .file-item-menu-btn {
+            display: block;
+          }
+          &.in-edit {
+            padding-right: 0;
+            .file-item-menu-btn {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    &.border {
+      border: 1px solid rgba(73,143,225,0.20);
+    }
+  }
+  &.theme-white, &.theme-gold {
+    @import '../static/css/themes/theme-white.less'; 
+    .dmp-tree-container {
+      .dmp-tree-node-box {
+        .file-tree-item {
+          &:not(.in-edit) {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+          }
+          .file-tree-item-icon {
+            color: #488DFB;
+          }
+          .file-tree-item-name {
+            i.dmpicon-tick {
+              color: #929DAC;
+              &:hover {
+                color: #488DFB;
+              }
+            }
+          }
+          .file-item-menu-btn {
+            display: none;
+            color: #fff;
+            &:hover {
+              color: rgba(255,255,255,.7);
+            }
+          }
+
+          &.hover-status {
+            .file-tree-item-name {
+              color: #488DFB;
+            }
+          }
+        }
+        &:hover,
+        &.active {
+          background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+          box-shadow: 0 2px 14px 0 rgba(36,113,206,0.64);
+          z-index: 5;
+          color: #fff;
+          .file-tree-item {
+            padding-right: 30px;
+            .file-tree-item-icon {
+              color: #fff;
+            }
+            .file-tree-item-name {
+              color: #fff;
+            }
+            .file-item-menu-btn {
+              display: block;
+            }
+            &.in-edit {
+              padding-right: 0;
+              .file-item-menu-btn {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,189 @@
+.dmp_theme {
+
+  .page-list-content {
+    width: calc(~"100% - 250px");
+    .main-content {
+      height: calc(~"100% - 35px");
+      border-color: rgba(73, 143, 225, 0.14);
+      background-color: rgb(20, 30, 57);
+      .header {
+        border-bottom: 1px solid #222E4F;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px; // tab list 
+        .tablist {
+          display: inline-block;
+          span {
+            position: relative;
+            display: inline-block;
+            margin-right: 40px;
+            cursor: pointer;
+            &:after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 0%;
+              height: 2px;
+              background-image: linear-gradient(90deg, #488DFB 0%, #0DCDDB 100%);
+              transition: width .3s;
+            }
+            &.active,
+            &:hover,
+            &:active {
+              color: #24BCFA;
+              &:after {
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        button {
+          float: right;
+          min-width: auto;
+          min-height: auto;
+          height: 24px;
+          line-height: 22px;
+          font-size: 14px;
+          padding: 0 15px;
+          border-radius: 24px;
+          margin-top: 8px;
+        }
+      }
+      .content-wrap {
+        height: calc(~"100% - 40px");
+        padding: 15px 20px;
+        .tab-view {
+          color: #6E8CAF;
+          font-size: 12px;
+          height: 100%;
+  
+          .download{
+            color: #488DFB;
+            text-decoration: underline;
+            float: right;
+            margin-left: 20px;
+            cursor: pointer;
+            &:hover{
+              color: #24BBF9;
+            }
+          }
+        } 
+        // 操作日志
+        .operation-log-tab {
+          .single-search-form {
+            width: 200px;
+            margin-top: -10px;
+            margin-bottom: 5px;
+            clear: both;
+          }
+        }
+      }
+    }
+
+    .empty-panel {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      .arrow-up {
+        &:extend(.bounce);
+        width: 54px;
+        height: 91px;
+        margin-bottom: 20px;
+        background: url(../../../static/images/arrow-up.png);
+      }
+      p {
+        font-size: 20px;
+        color: #6E8CAF;
+      }
+    }
+  }
+  
+  &.theme-white,&.theme-gold {
+    .page-list-content {
+      .main-content {
+        background-color: #fff;
+        .header {
+          border-bottom-color: #EDEDED;
+          button {
+            background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+            color: #fff;
+          }
+        }
+        .content-wrap {
+          .tab-view {
+            color: #999;
+          } 
+        }
+      }
+
+      .empty-panel {
+        p {
+          color: #999;
+        }
+      }
+    }
+  }
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both
+}
+
+.animated.infinite {
+  &:extend(.animated);
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite
+}
+
+.bounce {
+  &:extend(.animated.infinite);
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+
+  40%,
+  43% {
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0)
+  }
+
+  40%,
+  43%,
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+    animation-timing-function: cubic-bezier(.755, .05, .855, .06)
+  }
+
+  70% {
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0)
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0)
+  }
+}

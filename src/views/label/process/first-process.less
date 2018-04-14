@@ -1,0 +1,86 @@
+.dmp_theme {
+  @import '../../../static/css/themes/theme-black.less';
+  .first-process{
+    text-align: center;
+    .item {
+      display: inline-block;
+      text-align: left;
+      width: 400px;
+      margin: 25px;
+      vertical-align: top;
+      .title{
+        position: relative;
+        line-height: 22px;
+        height: 22px;
+        padding-left: 10px;
+        color: #698EBB;
+        margin-bottom: 20px;
+        &:before{
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          width: 2px;
+          height: 100%;
+          background-image: linear-gradient(0deg, #488DFB 0%, #0DCDDB 100%);
+        }
+      }
+      .row{
+        margin-bottom: 10px;
+        .col-md-12{
+          height: 30px;
+          line-height: 30px;
+        }
+        .control-label{
+          width: 100%;
+          text-align: left;
+          height: 30px;
+          line-height: 30px;
+          padding-top: 0;
+        }
+        .col-xs-10{
+          width: 100%;
+          .selection-button .btn.btn-default{
+            margin-top: 10px;
+            margin-bottom: 0;
+          }
+        }
+        &.gap-row{
+          margin-top: -27px;
+        }
+      }
+      .form-group {
+        .input-wrapper{
+          padding-left: 0;
+          input{
+            height: 30px;
+          }  
+        }
+        div.checkbox .checkbox-in-form{
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  &.theme-white {
+    @import '../../../static/css/themes/theme-white.less';
+    .first-process{
+      .item {
+        .title{
+          color: #666;
+        }
+      }
+    }
+  }
+
+  &.theme-gold {
+    @import '../../../static/css/themes/theme-gold.less';
+    .first-process .item .title {
+      color: @color-text-tip;
+      &::before {
+        background-image: linear-gradient(0deg, #bf9b30 0%, #ffe9a4 100%);
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "horizon_stack_bar",
+  "version": "0.0.1",
+  "description": "Dmp数据可视化平台内置条形图图表组件",
+  "platform": {
+    "name": "堆叠条形图",
+    "icon": "/platform/icon/horizon_stack_bar.svg",
+    "previewImg": "/platform/preview/sample.jpg",
+    "description": "指标支持(2个以内维度，2个或多个数值)，支持穿透、联动"
+  }
+}

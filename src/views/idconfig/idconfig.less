@@ -1,0 +1,317 @@
+.dmp_theme {
+  @import '../../static/css/themes/theme-black.less';
+  // 业务指标配置列表页
+  .idconfig-list-page {
+    .idconfig-item {
+      .outer-box {
+        background-color: rgba(9,46,73,.5);
+        border-color: rgba(73,143,225,.15);
+        .idconfig-item-box {
+          .idconfig-item-main {
+            border-bottom-color: #103550;
+            .template-name {
+              color: #fff;
+            }
+            .idconfig-num{
+              color: #698EBB;
+            }
+          }
+          .idconfig-item-des {
+            color: #BAD9FF;
+          }
+          .item-left-border {
+            background-image: linear-gradient(-45deg, #1FAEC6 0%, #02CEA6 100%);
+          }
+        }
+      }
+      
+
+      &:nth-child(2n+1) {
+        .outer-box {
+          .idconfig-item-box {
+            .item-left-border {
+              background-image: linear-gradient(-180deg, #FBDA61 0%, #F76B1C 100%);
+            }
+          }
+        }
+      }
+
+      &:hover, &:focus {
+        .outer-box {
+          box-shadow: 0 0 10px 0 rgba(0,0,0,0.50);
+          cursor: pointer;
+          background-color: rgba(9,46,73,.85);
+        }
+      }
+    }
+  }
+  
+  // 配置主页面
+  .idconfig-config-page {
+    .indicator-template-tab {
+      border-color: rgba(73,143,225,0.20);
+    }
+  }
+
+  // 业务指标配置页
+  .idconfig-indicator-config-page {
+    .type-list-container {
+      background-color: rgba(11,32,57,.9);
+      .type-list-item {
+        border-color: rgba(73,143,225,0.09);
+        color: #fff;
+        &:hover {
+          background-color: #1B3051;
+          box-shadow: 0 2px 12px 0 rgba(1, 7, 13, 0.53);
+        }
+        &.active {
+          background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+        }
+      }
+    }
+    .type-list-split-line {
+      background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+    }
+    .indicator-list-container {
+      .indicator-list-title {
+        border-bottom: 1px solid rgba(73, 143, 225, 0.09);
+        .indicator-list-tab-container {
+          .indicator-list-tab {
+            color: #C7E1FF;
+            &.active {
+              color: #fff;
+              .indicator-list-tab-inner {
+                &::before {
+                  content: '';
+                  display: block;
+                  width: 100%;
+                  height: 2px;
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+                }
+              }
+            }
+          }
+        }
+      }
+      .data-table {
+        thead > tr {
+          border-bottom: 1px solid rgba(73, 143, 225, 0.09);
+        }
+      }
+    }
+  }
+
+  &.theme-white {
+    @import '../../static/css/themes/theme-white.less';
+    // 业务指标配置列表页
+    .idconfig-list-page {
+      .idconfig-item {
+        .outer-box {
+          background-color: #fff;
+          border-color: #fff;
+          .idconfig-item-box {
+            .idconfig-item-main {
+              border-bottom-color: #DFE3EB;
+              .template-name {
+                color: #333;
+              }
+              .idconfig-num{
+                color: #666;
+              }
+            }
+            .idconfig-item-des {
+              color: #666;
+            }
+            .item-left-border {
+              background-image: linear-gradient(-45deg, #1FAEC6 0%, #02CEA6 100%);
+            }
+          }
+        }
+        
+        &:nth-child(2n+1) {
+          .outer-box {
+            .idconfig-item-box {
+              .item-left-border {
+                background-image: linear-gradient(-180deg, #FBDA61 0%, #F76B1C 100%);
+              }
+            }
+          }
+        }
+
+        &:hover, &:focus {
+          .outer-box {
+            box-shadow: 0 4px 10px 0 rgba(76,117,167,0.34);
+            cursor: pointer;
+          }
+        }
+      }
+      .form-tip {
+        color: #999!important;
+      }
+    }
+
+    // 配置主页面
+    .idconfig-config-page {
+      .indicator-template-tab {
+        border-color: rgba(73,143,225,0.09);
+      }
+    }
+
+    // 业务指标配置页
+    .idconfig-indicator-config-page {
+      .type-list-container {
+        background-color: #Fff;
+        .type-list-item {
+          border-color: rgba(73,143,225,0.09);
+          color: #333;
+          &:hover {
+            background-color: transparent;
+            box-shadow: 0 2px 12px 0 rgba(1, 7, 13, 0.53);
+            position: relative;
+            z-index: 2;
+          }
+          &.active {
+            background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+            color: #fff;
+          }
+        }
+      }
+      .type-list-split-line {
+        background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+      }
+      .indicator-list-container {
+        .indicator-list-title {
+          border-bottom: 1px solid rgba(73, 143, 225, 0.09);
+          .indicator-list-tab-container {
+            .indicator-list-tab {
+              color: #666;
+              &.active {
+                color: #333;
+              }
+            }
+          }
+        }
+        .data-table {
+          thead > tr {
+            border-bottom: 1px solid rgba(73, 143, 225, 0.09);
+          }
+        }
+      }
+    }
+  }
+
+  &.theme-gold {
+    @import '../../static/css/themes/theme-gold.less';
+    // 业务指标配置列表页
+    .idconfig-list-page {
+      .idconfig-item {
+        &:hover,
+        &:focus {
+          .outer-box {
+            background: #fff;
+            box-shadow: 0 4px 10px 0 rgba(76,117,167,0.34);
+            .indicator-add-box {
+              color: @base-color;
+            }
+          }
+        }
+        .outer-box {
+          background: #FFFFFF;
+          box-shadow: none;
+          border-color: transparent;
+          .indicator-add-box {
+            i {
+              color: @base-color;
+            }
+          }
+          .indicator-item,
+          .idconfig-item {
+            &-box {
+              .indicator-item,
+              .idconfig-item {
+                &-main {
+                  border-color: #eee;
+                  .template-name {
+                    color: @color-text-primary;
+                    .indicator-actions i[class*='dmpicon-'] {
+                      color: #8D97A4;
+                      &:hover {
+                        color: @base-color;
+                      }
+                    }
+                  }
+                  .indicator,
+                  .idconfig {
+                    &-num {
+                      color: @color-text-secondary;
+                    }
+                  }
+                }
+                &-des {
+                  color: @color-text-tip;
+                }
+              }
+            }
+          }
+        }
+      }
+      .form-tip {
+        color: #999!important;
+      }
+    }
+    // 配置主页面
+    .idconfig-config-page {
+      .indicator-template-tab {
+        border-color: rgba(73,143,225,0.09);
+      }
+    }
+    // 业务指标配置页
+    .idconfig-indicator-config-page {
+      .type-list-container {
+        background: #fff;
+        .type-list-item {
+          color: @color-text-primary;
+          &.active {
+            background: #ECF0F4;
+          }
+          &:hover {
+            background: #F6FAFF;
+          }
+        }
+
+        .indicator-list-title .indicator-list-tab-container .indicator-list-tab {
+          color: @color-text-primary;
+          &.active {
+            color: @base-color;
+            .indicator-list-tab-inner:before {
+              background: @base-color;
+            }
+          }
+        }
+      }
+
+      .type-list-split-line {
+        background:  #ECF0F4;
+      }
+
+      .indicator-list-container .indicator-list-title .indicator-list-tab-container .indicator-list-tab {
+        color: @color-text-primary;
+        &.active {
+          color: @color-text-primary;
+          .indicator-list-tab-inner:before {
+            background: @base-color;
+          }
+        }
+      }
+      .indicator-list-container .data-table .data-table-action-bar i[class*=dmpicon-] {
+        color: @color-icon-default;
+        &:hover {
+          color: @color-icon-hover;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.graph-inner-box.map {
+  .zoom-container {
+    z-index: 10;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 25px;
+    box-shadow: 3px 3px 10px rgba(0,  0,  0,  0.3);
+    // border-radius: 2px;
+    overflow: hidden;
+    button {
+      background-color: #213466;
+      font-size: 18px;
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+      // border-bottom: 1px solid #aaa;
+      color: #aaa;
+      &:hover {
+        color: #fff;
+        background-color: #293f79;
+      }
+      &.active {
+        color: #fff;
+        background-color: #293f79;
+        outline: 1px solid #488DFB;
+        outline-offset: -1px;
+      }
+    }
+  }
+}

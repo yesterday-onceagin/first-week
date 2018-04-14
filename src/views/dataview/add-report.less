@@ -1,0 +1,127 @@
+.add-report-page {
+  > ul > li {
+    height: 100px;
+    padding: 10px 15px;
+    cursor: pointer;
+    .image {
+      width: 120px;
+      height: 80px;
+      background: #36415d;
+      float: left;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .context {
+      margin-left: 135px;
+      height: 80px;
+      position: relative;
+      .title {
+        color: #fff;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .des {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 40px;
+        p {
+          vertical-align: middle;
+          font-size: 12px;
+          color: #c7e0ff;
+          margin-bottom: 0;
+          line-height: 20px;
+          i.dmpicon-mobile {
+            font-size: 16px;
+            line-height: 20px;
+            padding-right: 4px;
+            color: #24bbf9;
+            float: left;
+          }
+        }
+      }
+    }
+
+    &:hover,
+    &:active,
+    &.active {
+      background: #1f2b4b;
+    }
+
+    &.update-tips {
+      line-height: 50px;
+      text-align: center;
+      font-size: 14px;
+      color: #6e8caf;
+      > i {
+        padding-right: 5px;
+        color: #24bbf9;
+      }
+      &:hover {
+        background: none;
+        cursor: auto;
+      }
+    }
+  }
+
+  .main-view {
+    width: 100%;
+    margin: 50px 80px;
+    .image-wrap {
+      height: calc(~"100% - 80px");
+      background-color: #141e39;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: relative;
+      &:hover {
+        .btn-mask {
+          background: rgba(0, 0, 0, .7);
+        }
+        .btn-mask button.btn {
+          display: block;
+        }
+      }
+    }
+    .btn-mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      transition-property: background;
+      transition-duration: 300ms;
+      button.btn {
+        display: none;
+        position: absolute;
+        width: 120px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+      }
+    }
+    .context {
+      font-size: 14px;
+      color: #91b1d7;
+      position: relative;
+      padding-right: 200px;
+      min-height: 60px;
+      max-height: 80px;
+      overflow: hidden;
+      margin-top: 25px;
+      button {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@text-color: #c8c9c9;
+.dmp_theme {
+  .indicator-number-wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    .indicator-number-inner-wrap{
+      display: block;
+      margin: 0 auto;
+      margin-top: 0px;
+      .title{
+        font-size: 16px;
+        border-bottom: 1px solid #3c88b5;
+        padding-bottom: 8px;
+        margin-bottom: 7px;
+        white-space: nowrap;
+        color: @text-color;
+      }
+      .value{
+        color: #00FFFF;
+        .value-wrap{
+          span{
+            float: left;
+          }
+        }
+      }
+      .fl {
+        float:left;
+      }
+      .rc-slider-rail {
+        height:2px;
+      }
+      .rc-slider-handle {
+        background:-webkit-radial-gradient(#1BA3D8,#527DFD);
+        border:none;
+        z-index:60;
+      }
+      .rc-slider-track {
+        background-color: #24BBF9;
+        z-index: 50;
+        height:2px;
+      }
+      .rc-slider-step {
+        background: #58678E;
+        border-radius: 6px;
+        height:2px;
+      }  
+    }
+  }
+  &.theme-white{
+    .number-value-wrap{
+      .number-value-inner-wrap{
+        .title{
+          color: #666;
+          border-bottom-color: #999;
+        }
+
+        .value{
+          color: #000;
+        }
+        .rc-slider-rail {
+          height:2px;
+        }
+        .rc-slider-step {
+          background: #eee;
+          border-radius: 6px;
+          height:2px;
+        }
+        .rc-slider-track {
+          background-color: #488DFB;
+          z-index: 50;
+          height:2px;
+        }   
+      }
+    }
+  }
+
+  &.theme-gold{
+    .number-value-wrap{
+      .number-value-inner-wrap{
+        .title{
+          color: #666;
+          border-bottom-color: #eee;
+        }
+        .rc-slider-handle {
+          background: #bf9b30;
+        }
+        .rc-slider-track {
+          background: #D1AD42;
+        }
+        .rc-slider-step {
+          background: #CBD6E5;
+        }
+      }
+    }
+  }
+}

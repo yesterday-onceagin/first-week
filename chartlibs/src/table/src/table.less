@@ -1,0 +1,132 @@
+@bgColor: transparent;
+@textColor: #fff;
+.dmp_theme {
+  .table-view-wrap{
+    width: 100%;
+    height: 100%;
+    padding-right: 12px;
+    // padding: 0 5px; 
+    padding-bottom: 5px;
+    overflow: hidden;
+    .data-view-table{
+      width: 100%;
+      font-size: 12px;
+      background-color: @bgColor;
+      border: 0 none;
+      thead {
+        tr {
+          th {
+            color: #79A1D0;
+            background-color: rgb(9, 46, 73);
+            // border: 1px solid #062d3e;
+            // padding: 8px 15px;
+            text-align: right;
+            white-space: nowrap;
+          }
+        }
+      }
+      tbody {
+        tr {
+          &:nth-child(2n){
+            td[rowspan="1"] {
+              //background-color: rgba(9, 46, 73, .3);  
+            }
+          }
+          td {
+            // padding: 8px 15px;
+            color: @textColor;
+            background-color: @bgColor;
+            border: 1px solid #062d3e;
+            text-align: center;
+            &.link{
+              text-decoration: underline;
+              cursor: pointer;
+            }
+            &.link:hover {
+              opacity: 0.7;
+            }
+          }
+          &.link{
+            cursor: pointer;
+          }
+        }
+      }
+    }  
+  }
+
+  table.tbody-scroll {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    position: relative;
+    thead {
+      width: 100%;
+    }
+    .mock-border-bottom {
+      display: block;
+      position: absolute;   // 查看英文官方说明
+      bottom: 0;
+      // width: calc(~"100% - 12px");
+    }
+    // 第一个body 用来 固定显示前n
+    // 第二个用来 滚动
+    tbody, .tbody {
+      flex-grow: 0;
+      flex-shrink: 0;
+      display: block;
+      overflow-y: hidden;
+      margin-right: 0;
+      // transform: scale(1);
+      // height: 300px;
+      &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+      }
+      & + tbody, & + .tbody {
+        flex-shrink: 1;
+      }
+      // 解决 缩放的时候会触发滚动的bug
+      &:hover {
+        margin-right: -12px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar-thumb {
+          background-color: #3173b3;
+        }
+      }
+    }
+    thead, tbody .mock-table, .tbody .mock-table, thead .mock-table {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      tr {
+        display: table-row;
+      }
+      td, th {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+        position: relative;
+        .flex-container {
+          text-decoration: inherit;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+      .image-container {
+        white-space: nowrap;
+        overflow: hidden;
+        vertical-align: middle;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .image-wrapper {
+          vertical-align: middle;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

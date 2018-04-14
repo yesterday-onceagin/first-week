@@ -1,0 +1,322 @@
+.dmp_theme {
+  .numeral-indicator-select-dialog{
+    .modal-body{
+      clear: both;
+      overflow: hidden;
+      .indicator-input {
+        .row{
+          margin-left: 0;
+          margin-right: 0;
+        }
+        .col-md-2 {
+          line-height: 32px;  
+          padding-left:0;
+          padding-right: 0;
+          width:12%;
+        }
+        .col-md-10 {
+          padding-left:0;
+          padding-right: 0;
+          width:88%;
+        }
+        .form-control {
+          background: transparent;
+          color:#fff;
+          border-color:#222E4F;
+        }
+      }
+      .panel{
+        border: 1px solid rgba(131,186,251,0.08);
+        background: transparent;
+        margin-bottom: 0;
+        height: 100%;
+        .panel-heading{
+          border-bottom: none;
+          color: #C7E1FF;
+          font-size: 14px;
+          background: rgba(131,186,251,0.08);
+        }
+        .panel-body{
+          padding: 0;
+        }
+        .numeral-selection{
+          .operate-bar{
+            height: 29px;
+            line-height: 29px;
+            background: #102C49;
+            border-bottom: 1px solid rgba(131, 186, 251, 0.08);
+            border-top: 1px solid rgba(131, 186, 251, 0.08);
+            overflow: hidden;
+            .item{
+              float: left;
+              line-height: 27px;
+              padding: 0 10px;
+              text-align: center;
+              font-size: 12px;
+              color: #28C1FF;
+              border-left: 1px solid rgba(131, 186, 251, 0.08);
+              margin-left: -1px;
+              cursor: pointer;
+              &:last-child {
+                border-right: 1px solid rgba(131, 186, 251, 0.08);
+              }
+              &:hover{
+                background: transparent;
+                background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+                color: #fff; 
+              }
+            }
+          }
+          .main-body{
+            margin: 15px;
+            .cell{
+              position: relative;
+              float: left;
+              background: #102C49;
+              height: 26px;
+              line-height: 24px;
+              padding: 0 8px;
+              margin: 5px;
+              border: 1px solid rgba(131,186,251,0.04);
+              border-radius: 4px;
+              &.form{
+                padding: 0;
+                border: none;
+                .form-group{
+                  padding-bottom: 0;
+                }
+                input.form-control{
+                  height: 25px;
+                }
+              }
+              .circle-del{
+                display: none;
+                width: 18px;
+                height: 18px;
+                position: absolute;
+                top: -8px;
+                right: -10px;
+                background: #f30;
+                border-radius: 50%;
+                z-index: 2;
+                cursor: pointer;
+                &::after{
+                  display: block;
+                  position: absolute;
+                  content: "";
+                  width: 12px;
+                  height: 2px;
+                  top: 8px;
+                  right: 3px;
+                  background: #fff;
+                }
+              }
+
+              &:hover .circle-del{
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+    .left{
+      width: 165px;
+      height: 340px;
+      float: left;
+      .tree-wrap{
+        overflow: auto;
+        padding: 10px 20px;
+        height: 300px;
+        .micro-tree-list-item {
+          padding:5px 0;
+          font-size: 12px;
+          color:#fff;
+          cursor: pointer;
+          &:hover {
+            color:#488DFB;
+          }
+        }
+        .nothing{
+          text-align: center;
+          line-height: 100px;
+        }
+      }
+    }
+    .right{
+      width: 480px;
+      height: 340px;
+      float: right;
+      .panel-body{
+        width: 100%;
+        height: 350px;
+        overflow: auto;
+      }
+      .result-body{
+        padding: 20px;
+        overflow-y: auto;
+        position: relative;
+        height: 346px;
+      }
+      .row{
+        margin-left: 15px;
+        margin-right: 15px;
+        .form-group{
+          display: inline-block;
+        } 
+        .selected-date-range-btn.btn.btn-default{
+          border: 1px solid rgba(73, 143, 225, 0.12);
+          background-color: transparent;
+        }
+        .myselect div.myselect-head .dropdown-toggle i{
+          top: 10px;
+        }
+        .myselect div.myselect-head,
+        .selected-date-range-btn.btn.btn-default,
+        input.form-control{
+          height: 26px;
+          min-height: 26px;
+          line-height: 24px;
+        }
+      }
+      .nothing{
+        width: 100%;
+        text-align: center;
+        line-height: 340px;
+        color: #698EBB;
+      }
+    }
+    .selection-button{
+      position: relative;
+      .btn-default{
+        background: transparent;
+        margin: 5px 8px; 
+        padding: 0 25px 0 15px;
+        font-size: 14px;
+      }
+    }
+  }
+  &.theme-white,&.theme-gold{
+    .numeral-indicator-select-dialog{
+      .modal-body{
+        .indicator-input {
+          .form-control {
+            background: transparent;
+            color:#333;
+            border-color:#e7e7eb;
+          }
+        }
+        .panel{
+          border: 1px solid #EDEDED;
+          .panel-heading{
+            color: #666;
+            .pull-right{
+              .form-group{
+                .input-group{
+                  input{
+                    border-color: #ededed;
+                    background-color: transparent;
+                  }
+                  .input-group-addon{
+                    color: #333;
+                  }
+                }
+              }
+            }
+          }
+          .number-selection{
+            .operate-bar{
+              background: #f4f5fa;
+              border-bottom-color: #eee;
+              border-top-color: #eee;
+              .item{
+                color: #666;
+                border-left-color: #eee;
+                &:last-child{
+                  width: 66px;
+                }
+                &:hover{
+                  background: transparent;
+                  background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+                  color: #fff; 
+                }
+              }
+            }
+            .main-body{
+              .cell{
+                background: #f4f5fa;
+                border-color: #eee;
+              }
+            }
+          }
+        }
+      }
+      .left{
+        .tree-wrap {
+          .micro-tree-list-item {
+            color:#333;
+            &:hover {
+              color:#488DFB;
+            }
+          }
+        }
+        .dropdown > .dropdown-toggle{
+          color: #333;
+          border: none;
+        }
+        .btn.btn-default{
+          height: auto;
+          line-height: 18px;
+          font-size: inherit;
+          min-width: auto;
+          min-height: auto;
+          &:hover{
+            border-color: none;
+          }
+        }
+        .btn-default:hover,
+        .btn-default:active:hover, 
+        .btn-default.active:hover, 
+        .open>.dropdown-toggle.btn-default:hover, 
+        .btn-default:active:focus, 
+        .btn-default.active:focus, 
+        .open>.dropdown-toggle.btn-default:focus, 
+        .btn-default:active.focus, 
+        .btn-default.active.focus, 
+        .open>.dropdown-toggle.btn-default.focus{
+          color: #488DFB;
+        }
+        .tree-wrap{
+          .rt-tree-panel{
+            .rt-tree{
+              >li {
+                > a {
+                  color: #999;
+                  &:hover{
+                    color: #999;
+                  }
+                }
+                > ul > li > a{
+                  color: #333;
+                  &:hover{
+                    color: #488DFB;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .right{
+        .row{
+          .selected-date-range-btn.btn.btn-default{
+            color: #666;
+          }
+        }
+        .nothing{
+          color: #666;
+        }
+      }
+    }
+  }
+}

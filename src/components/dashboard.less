@@ -1,0 +1,527 @@
+.dmp_theme {
+  @import '../static/css/themes/theme-black.less';
+  // DASHBOARD
+  .dashboard-for-view-container {
+    overflow: visible;
+    > .diagram-list {
+      position: relative;
+      transition: height 200ms ease;
+      .diagram-item-container {
+        transition: none;
+        // 选中包围框样式
+        .crosshair i{
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border-color: #9BE2FF;
+          border-width: 0px;
+          border-style: solid;
+          &:nth-child(1) {
+            top: -1px;
+            left: -1px;
+            border-left-width: 1px;
+            border-top-width: 1px;
+          }
+          &:nth-child(2) {
+            top: -1px;
+            right: -1px;
+            border-right-width: 1px;
+            border-top-width: 1px;
+          }
+          &:nth-child(3) {
+            bottom: -1px;
+            right: -1px;
+            border-right-width: 1px;
+            border-bottom-width: 1px;
+          }
+          &:nth-child(4) {
+            bottom: -1px;
+            left: -1px;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+          }
+        }
+        // 位置信息
+        .diagram-layout-info {
+          display: none;
+          position: absolute;
+          left: 0;
+          top: -30px;
+          height: 30px;
+          line-height: 30px;
+          padding: 0 0 0 10px;
+          border: 1px solid rgba(73,143,225,0.20);
+          color: #698EBB;
+          font-size: 12px;
+          white-space: nowrap;
+          > span {
+            padding-right: 10px;
+          }
+        }
+        &.selected {
+          background-color: rgba(63,199,255,0.1);
+          outline: 1px solid rgba(36, 187, 249, 0.5);
+          > .react-resizable-handle {
+            display: block;
+            z-index: 10000;
+            border-color: transparent #24BBF9 #24BBF9 transparent;
+          }
+          .diagram-section .diagram-section-inner .tool-wrap{
+            transform: translateY(0px) scale(1);
+            opacity: 1;
+          }
+          // 已选择的才显示
+          .diagram-layout-info {
+            display: block;
+          }
+        }
+        > .react-resizable-handle {
+          display: none;
+          position: absolute;
+          z-index: 10000;
+          width: 0;
+          height: 0;
+          bottom: 2px;
+          right: 2px;
+          border-width: 6px;
+          border-style: solid;
+          border-color: transparent;
+          cursor: se-resize;
+        }
+        &.cssTransforms {
+          transition-property: transform;
+        }
+        &.react-draggable-dragging {
+          transition: none;
+          z-index: 3;
+          // 这里去掉 否则会在鼠标按住的时候导致item模糊
+          // will-change: transform;
+        }
+        &.react-resizable-resizing {
+          z-index: 1;
+          will-change: width, height;
+        }
+        &.unselected {
+          opacity: 0.75;
+        }
+        &.hidden-by-tab {
+          // tab导致隐藏时的处理
+          display: block!important;
+          z-index: -10000!important;
+          opacity: 0!important;
+          pointer-events: none!important;
+          visibility: hidden!important;
+        }
+      }
+      // ghost
+      > .react-grid-placeholder {
+        background: rgb(9, 46, 73);
+        opacity: 0.3;
+        transition: all 100ms ease;
+        z-index: 2;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        &.cssTransforms {
+          transition-property: transform;
+        }
+      }
+    }
+    &.editing {
+      > .diagram-list {
+        .diagram-item-container:hover, .diagram-item-container.hover {
+          outline: 1px solid rgba(36,187,249, 0.5);
+        }
+      }
+    }
+  }
+  // Diagram Section
+  .diagram-section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // 内部
+    .diagram-section-inner{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      h2 {
+        position: relative;
+        margin: 0 0 10px 0;
+        color: #24BCFA;
+        font-size: 16px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .tool-wrap{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        z-index: 10000;
+        transform: translateY(10px) scale(0);
+        opacity: 0;
+        .i-operate{
+          color: #58678E;
+          position: relative;
+          float: left;
+          font-size: 18px;
+          padding: 6px;
+          &:hover, &:focus {
+            color: #24BBF9;
+          }
+          .popover-content {
+            .item-no-hover {
+              &:hover{
+                color: #698EBB;
+              }
+              span:hover {
+                color: #24BBF9
+              }
+            }
+          }
+        }
+      }
+      .main-wrap{
+        position: absolute;
+        top: 35px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: visible;
+        .graph-wrapper .graph-inner-box{
+          overflow: visible;
+        }
+        .error-tip{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          height: 100%;
+          font-size: 12px;
+          color: #999;
+        }
+      }
+      &.through{
+        .main-wrap{
+          //bottom: 40px;
+        }
+        // 穿透导航
+        .through-nav{
+          overflow: hidden;
+          clear: both;
+          text-overflow: ellipsis;
+          font-size: 12px;
+          // position: absolute;
+          // bottom: 0;
+          // left:0;
+          // top:0;
+          width: 100%;
+          height: 30px;
+          line-height: 30px;
+          > li {
+            cursor: pointer;
+            padding: 0;
+            color: #fff;
+            display: inline-block;
+            overflow: hidden;
+            height: 30px;
+            line-height: 30px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            > i {
+              margin-top: 6px;
+              display: inline-block;
+              transform: rotate(-90deg) scale(.7);
+            }
+
+            > span{
+              padding: 0 6px;
+              // text-decoration: underline;
+            }
+            &:last-child{
+              > span{
+                text-decoration: none;
+              }
+            }
+            &.active{
+              color: #ffffff;
+              cursor: default;
+              .wrap{
+                display: inline-block;
+                background-color: rgba(199,224,255,0.06);
+                line-height: 1;
+                padding: 4px 6px;
+              }
+            }
+
+            .add-through{
+              font-size: 18px;
+              font-weight: bold;
+              vertical-align: top;
+              color:#58678E;
+              cursor: pointer;
+            }
+
+            .del-icon{
+              position: relative;
+              display: inline-block;
+              width: 16px;
+              height: 16px;
+              border-radius: 50%;
+              text-align: center;
+              line-height: 16px;
+              opacity: 1;
+              margin: 0;
+              padding: 0;
+              outline: 0 none;
+              cursor: pointer;
+              vertical-align: middle;
+              margin-left:10px;
+
+              &::before{
+                content: '';
+                width: 1px;
+                height: 11px;
+                background-color: #58678E;
+                position: absolute;
+                left: 7px;
+                top: 1px;
+                transform-origin: 50% 50%;
+                transform: rotateZ(45deg);
+              }
+
+              &::after{
+                content: '';
+                width: 11px;
+                height: 1px;
+                background-color: #58678E;
+                position: absolute;
+                left: 2px;
+                top: 6px;
+                transform-origin: 50% 50%;
+                transform: rotateZ(45deg);
+              }
+            }
+          }
+        }  
+      }
+    }
+    // 保存图片时隐藏工具栏 右下角的缩放标志 选中框
+    &.image-converting {
+      background-color: #141E39;
+      .diagram-section-inner .tool-wrap {
+        transform: translateY(10px) scale(0)!important;
+        opacity: 0!important;
+      }
+      ~ .react-resizable-handle {
+        display: none!important;
+      }
+      ~ .crosshair {
+        display: none!important;
+      }
+    }
+  }
+  // Diagram Section Tool Pop
+  .tool-pop{
+    z-index: 10000;
+    background-color: #103054;
+    max-width: 500px;
+    min-width: auto;
+    width: auto;
+    font-size: 12px;
+    color: #698EBB;
+    // margin-left: -15px;
+    transform: none;
+    left: 0;
+    margin-left: -15px;
+    .popover-title{
+      background: #103054;
+      border-color: rgba(73,143,225,0.20);
+      color: #698EBB;
+    }
+    .popover-content{
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 10px 0 5px 0;
+      .item{
+        margin:0;
+        line-height: 24px;
+        padding: 0 10px;
+        list-style: none;
+        cursor: pointer;
+        &:hover{
+          color: #24bbf9;
+        }
+      } 
+    }
+    &.popover.bottom{
+      width: auto;
+    }
+    &.popover.bottom>.arrow{
+      margin-left: 12px;
+    }
+    &.popover.bottom>.arrow:after{
+      border-bottom-color: #103054;
+    }
+    &.help-tips.popover.bottom{
+      margin-left: -168px;
+      width: 200px;
+      >.arrow {
+        margin-left: 164px;
+      }
+    }
+  }
+
+  &.theme-white {
+    @import '../static/css/themes/theme-white.less';
+    // DASHBOARD
+    .dashboard-for-view-container {
+      > .diagram-list {
+        .diagram-item-container {
+          &.selected {
+            > .react-resizable-handle {
+              border-color: transparent #488DFB #488DFB transparent;
+            }
+            .diagram-section .diagram-section-inner .tool-wrap{
+              transform: translateY(0px) scale(1);
+              opacity: 1;
+            }
+          }
+          
+          &:hover {
+            box-shadow: 0 4px 10px 0 rgba(76, 117, 167, 0.34);
+            outline: 1px solid rgba(72,141,251, 0.25)
+          }
+          .crosshair i{
+            border-color: #333;
+          }
+        }
+        // ghost
+        > .react-grid-placeholder {
+          background: rgba(0, 0, 0, .2);
+        }
+      }
+    }
+    // Diagram Section
+    .diagram-section{
+      .diagram-section-inner{
+        h2{
+          color: #333;
+        }
+        .main-wrap{
+          .error-tip{
+            color: #666;
+          }
+        }
+        &.through{
+          // 穿透导航
+          .through-nav{
+            > li {
+              color: #999;
+              &.active{
+                color: #333;
+              }
+            }
+          }  
+        }
+      }
+    }
+    // Diagram Section Tool Pop
+    .tool-pop.popover.bottom{
+      background-color: #FAFBFE;
+      border: 1px solid #EEF0F7;
+      color: #666;
+      box-shadow: 0 2px 10px 0 #EEF0F7;
+      .popover-title{
+        background-color: #FAFBFE;
+        border-color: #EEF0F7;
+        color: #666;
+      }
+      .popover-content{
+        .item{
+          &:hover{
+            background-color: #488DFB;
+            color: #fff;
+          }
+        } 
+      }
+      >.arrow{
+        border-bottom-color: #EEF0F7;
+      }
+    }
+  }
+
+  &.theme-gold {
+    @import '../static/css/themes/theme-gold.less';
+    // DASHBOARD
+    .dashboard-for-view-container {
+      > .diagram-list {
+        .diagram-item-container {
+          &.selected {
+            > .react-resizable-handle {
+              border-color: transparent #bf9b30 #bf9b30 transparent;
+            }
+            .diagram-section .diagram-section-inner .tool-wrap{
+              transform: translateY(0px) scale(1);
+              opacity: 1;
+            }
+          }
+          &:hover {
+            box-shadow: 0 4px 10px 0 rgba(76, 117, 167, 0.34);
+            outline: 1px solid rgba(191,155,48, .25)
+          }
+          .crosshair i{
+            border-color: #333;
+          }
+        }
+        // ghost
+        > .react-grid-placeholder {
+          background: rgba(0, 0, 0, .2);
+        }
+      }
+    }
+    // Diagram Section
+    .diagram-section .diagram-section-inner {
+      h2 {
+        color: @color-text-primary;
+        .tool-wrap .i-operate {
+          color: @color-icon-default;
+          &:hover {
+            color: @color-icon-hover;
+          }
+        }
+      }
+      .data-view-table thead tr {
+        background: #F6FAFF !important;
+      }
+      .data-view-table {
+        tbody tr td,
+        thead tr th {
+          color: @color-text-secondary;
+          border-color: #eee;
+        }
+      }
+      &.through{
+        // 穿透导航
+        .through-nav{
+          > li {
+            color: #999;
+            &.active{
+              color: #333;
+            }
+          }
+        }  
+      }
+    }
+    // Diagram Section Tool Pop
+    .tool-pop .popover-content .item:hover {
+      color: @base-color;
+    }
+  }
+}

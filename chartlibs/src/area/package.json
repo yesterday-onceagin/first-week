@@ -1,0 +1,11 @@
+{
+  "name": "area",
+  "version": "0.0.1",
+  "description": "面积图",
+  "platform": {
+    "name": "面积图",
+    "icon": "/platform/icon/area.jpg",
+    "previewImg": "/platform/preview/area_sample.jpg",
+    "description": "指标支持(1个维度，1个或多个数值),支持穿透、联动"
+  }
+}

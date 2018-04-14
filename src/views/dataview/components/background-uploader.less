@@ -1,0 +1,96 @@
+.dmp_theme {
+  .dataview-background-uploader {
+    .upload-btn-image-wrapper {
+      // 无图片 上传按钮
+      .upload-btn-add {
+        border-color: #3C4B72;
+        color: #C7E1FF;
+        .dmpicon-add {
+          color: #58678E;
+        }
+        &:hover {
+          color: #24BBF9;
+        }
+      }
+      // 有图片
+      .upload-image-container {
+        img {
+          border-color: #1C2745;
+          box-shadow: 0 0 4px 0px #1C2745;
+        }
+        .dmpicon-close {
+          color: #414E74;
+          &:hover {
+            color: #24BBF9;
+          }
+        }
+      }
+      // loading
+      .loading-container {
+        border-color: #3C4B72;
+        color: #58678E;
+      }
+    }
+  }
+
+  &.theme-white, &.theme-gold {
+    .dataview-background-uploader {
+      .upload-btn-image-wrapper {
+        // 无图片 上传按钮
+        .upload-btn-add {
+          border-color: #ededed;
+          color: #999;
+          .dmpicon-add {
+            color: #999;
+          }
+          &:hover {
+            color: #488DFB;
+          }
+        }
+        // 有图片
+        .upload-image-container {
+          img {
+            border-color: #1C2745;
+            box-shadow: 0 0 4px 0px #1C2745;
+          }
+          .dmpicon-close {
+            color: #999;
+            &:hover {
+              color: #488DFB;
+            }
+          }
+        }
+        // loading
+        .loading-container {
+          border-color: #ededed;
+          color: #488DFB;
+        }
+      }
+    }
+  }
+
+  &.theme-gold {
+    .dataview-background-uploader {
+      .upload-btn-image-wrapper {
+        // 无图片 上传按钮
+        .upload-btn-add {
+          &:hover {
+            color: #B48600;
+          }
+        }
+        // 有图片
+        .upload-image-container {
+          .dmpicon-close {
+            &:hover {
+              color: #B48600;
+            }
+          }
+        }
+        // loading
+        .loading-container {
+          color: #B48600;
+        }
+      }
+    }
+  }
+}

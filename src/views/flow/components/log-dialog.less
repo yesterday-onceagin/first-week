@@ -1,0 +1,76 @@
+.dmp_theme {
+  .node-log-dialog{
+    .modal-header{
+      cursor: move;
+    }
+    .modal-body{
+      word-break: break-all;
+      word-wrap: break-word;
+      padding: 0;
+      font-size: 13px;
+      overflow-y: auto;
+      position: relative;
+      height: 448px;
+      .log-loading{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      .log-body{
+        .log-body-wrap{
+          height: 100%;
+        }
+        padding: 10px 5px;
+        .row{
+          padding: 0 5px;
+          margin-left: 0px;
+          margin-right: 0px;
+          clear: both;
+          overflow: hidden;
+          position: relative;
+          .time{
+            display: inline-block;
+            width: 152px;
+            position: absolute;
+            color: #999;
+          }
+          .msg{
+            padding-left: 155px;
+            color: #999;
+          }
+          p{
+            margin-bottom: 0;
+          }
+          &.error{
+            .msg{
+              color: #f30;
+            }
+          }
+        }
+      }
+      .nothing{
+        line-height: 100px;
+        text-align: center;
+      }
+    }
+    .x_y_drag{
+      width: 0px;
+      height: 0px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid #054b63;
+      position: absolute;
+      transform: rotate(135deg);
+      bottom: 2px;
+      right: -1px;
+      cursor: nw-resize;
+    }
+  }
+  &.theme-white {
+    .node-log-dialog{
+      .x_y_drag{
+        border-bottom: 8px solid #aaa;
+      }
+    }
+  }
+}

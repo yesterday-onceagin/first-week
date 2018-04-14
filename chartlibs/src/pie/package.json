@@ -1,0 +1,11 @@
+{
+  "name": "pie",
+  "version": "0.0.1",
+  "description": "普通饼图",
+  "platform": {
+    "name": "普通饼图",
+    "icon": "/platform/icon/pie.png",
+    "previewImg": "/platform/preview/pie01.jpg",
+    "description": "指标支持(1个维度 1个数值，0个维度10个或10个以内数值),支持穿透、联动"
+  }
+}

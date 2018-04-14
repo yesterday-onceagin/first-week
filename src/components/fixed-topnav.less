@@ -1,0 +1,60 @@
+// DASHBOARD
+.fixed-topnav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 0 none;
+  height: 50px;
+  width: 100%;
+  margin: 0;
+  z-index: 1000;
+  background: #141E39;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+
+  .nav-title{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: -1;
+    font-size: 16px;
+    color: #fff;
+    margin:16px 0 0;
+  }
+
+  .dmpicon-return{
+    position: absolute;
+    display: inline-block;
+    font-size: 22px;
+    cursor: pointer;
+    line-height: 50px;
+    margin-left: 30px;
+    color: #24BBF9;
+    transition: transform .3s;
+    z-index: 100;
+    &:hover{
+      opacity: 0.9;
+      transform: scale(0.9);
+    }
+  }
+
+  button.icon-btn-dmp:hover .icon-btn-box, 
+  button.icon-btn-dmp.fixed .icon-btn-box {
+    background: none;
+    background-image: none;
+    padding: 0;
+    border: none;
+  }
+  button.icon-btn-dmp.fixed:disabled .btn-icon{
+    color: #577598;
+  }
+  button.icon-btn-dmp.fixed:disabled .btn-text{
+    color: #C7E0FF;
+  }
+  button.icon-btn-dmp.fixed i[class*='dmpicon-']{
+    color: #24BCFA;
+  }
+}
+
+  

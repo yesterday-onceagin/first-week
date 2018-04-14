@@ -1,0 +1,11 @@
+{
+  "name": "funnel",
+  "version": "0.0.1",
+  "description": "漏斗图",
+  "platform": {
+    "name": "漏斗图",
+    "icon": "/platform/icon/funnel.jpg",
+    "previewImg": "/platform/preview/funnel1.jpg",
+    "description": "指标支持(1个维度 1个数值，0个维度2个以上数值),支持穿透、联动"
+  }
+}

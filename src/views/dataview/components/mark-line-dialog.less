@@ -1,0 +1,70 @@
+.markline-dialog .markline-container{
+  color: #C7E1FF;
+  margin-bottom: 30px;
+  // title
+  .title{
+    position: relative;
+    height: 22px;
+    line-height: 22px;
+    padding-left: 10px;
+    &:after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 22px;
+      background-image: linear-gradient(0deg, #488DFB 0%, #0DCDDB 100%);
+    }
+    .dmpicon-add{
+      position: absolute;
+      top: 2px;
+      right: 0;
+      color: #24BBF9;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  }
+  > ul.form{
+    margin-top: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  > .form li{
+    height: 32px;
+    margin-top: 20px;
+    clear: both;
+    &:first-child {
+      margin-top: 10px;
+    }
+    .col{
+      float: left;
+      margin-right: 10px;
+      > .form-group {
+        padding-bottom: 0;
+        > input{ height: 32px; }
+      }
+      &.opreator{
+        margin-right: 0;
+        line-height: 32px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // tip 为空提示
+  > .tip{
+    padding: 30px 10px;
+    color: #999;
+
+    span{
+      font-size: 12px;
+      &:last-child{
+        margin-left: 40px;
+        color: #5182E4;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.dmp_theme {
+  @import '../../static/css/themes/theme-black.less';
+  .user-log-page{
+    height: 100%;
+    .search-panel{
+      padding: 20px;
+      height: 114px;
+      background: rgba(9, 46, 73, .3);
+      .left{
+        width: auto;
+        label{
+          font-weight: normal;
+          margin-bottom: 0;
+          line-height: 30px;
+        }
+
+        .item{
+          float: left;
+          margin-right: 20px;
+        }
+        .fl{
+          float: left;
+          line-height: 30px;
+        }
+        .grid-row{
+          .selected-date-range-btn.btn.btn-default{
+            height: 26px;
+            line-height: 26px;
+            min-height: 26px;
+            width: 160px;
+          }
+          .btn{
+            border: 1px solid rgba(73, 143, 225, 0.1);
+            background: transparent;
+            color: #fff;
+          }
+
+          .btn-group{
+            .btn:focus,.btn:active,.btn.active{
+              background-image: linear-gradient(-55deg, #1BA3D8 0%, #527DFD 100%);
+              border: 1px solid rgba(73,143,225,0.07);
+              color: #fff;
+            }
+          }
+        }
+      }
+      /* .right{
+        margin-top: -20px;
+        width: 200px;
+        float: right;
+        padding-left: 20px;
+        height: 178px;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid rgba(25, 74, 110, .3);
+      } */
+    }
+    .table-panel{
+      height: calc(~"100% - 134px");
+      margin-top: 20px;
+      overflow: auto;
+      .flex-data-table{
+        background: rgba(9, 46, 73, .3);
+      }
+    }
+  }
+
+  
+  // THEME STYLE
+  // 主题---致雅白 
+  &.theme-white {
+    @import '../../static/css/themes/theme-white.less';
+    .user-log-page{
+      .search-panel{
+        background: #fff;
+        .left {
+          .grid-row{
+            .btn{
+              border: 1px solid rgba(73, 143, 225, 0.1);
+              background: transparent;
+              color: #333;
+            }
+            .btn-group{
+              .btn:focus,.btn:active,.btn.active{
+                background-image: linear-gradient(-55deg, #1BA3D8 0%, #527DFD 100%);
+                border: 1px solid rgba(73,143,225,0.07);
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+      .table-panel{
+        .flex-data-table{
+          background: #fff;
+        }
+      }
+    }
+  }
+
+  &.theme-gold {
+    @import '../../static/css/themes/theme-gold.less';
+    .user-log-page {
+      .search-panel,
+      .table-panel .flex-data-table {
+        background: #fff;
+      }
+      .search-panel .left .grid-row {
+        .btn {
+          color: @color-text-primary;
+        }
+        .btn-group .btn:focus,
+        .btn-group .btn:active,
+        .btn-group .btn.active {
+          background: @base-color;
+        }
+      }
+    }
+  }
+}

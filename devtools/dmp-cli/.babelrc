@@ -1,0 +1,41 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false,
+        "debug": false
+      }
+    ],
+    "react"
+  ],
+  "plugins": [
+    "transform-runtime",
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "transform-decorators-legacy"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        [
+          "react-transform",
+          {
+            "transforms": [
+              {
+                "transform": "react-transform-hmr",
+                "imports": [
+                  "react"
+                ],
+                "locals": [
+                  "module"
+                ]
+              }
+            ]
+          }
+        ],
+        "transform-react-jsx-source"
+      ]
+    }
+  }
+}

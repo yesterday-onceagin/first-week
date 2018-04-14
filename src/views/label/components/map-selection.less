@@ -1,0 +1,100 @@
+@color: #bf9b31;
+@hover-color: #a58527;
+.dmp_theme {
+  .amap-wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .amap-inner-wrapper{
+      width: 100%;
+      height: 100%;
+      .amap-logo{
+        display: none;
+        width: 0;
+        height: 0;
+      }
+      .amap-marker-label{
+        background: transparent;
+        border: none;
+      }
+      .amap-markers {
+        .amap-marker .amap-icon{
+          background-color: #FA6C47;
+          border-radius: 50%;
+          img{
+            display: none;
+          }
+        }  
+        .amap-marker:first-child{
+          visibility: hidden; // 去掉中心的标示
+        }
+      }
+      .dmpicon-map-mark{
+        font-size: 24px;
+        color: #FA6C47;
+      }
+      .amap-copyright{
+        display: none;
+        width: 0;
+        height: 0;
+      }
+    }
+    .pull-right{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      .form-group{
+        position: absolute;
+        right: 0;
+        top: 0px;
+        width: 180px;
+        height: 30px;
+        padding-bottom: 0;
+        .input-group{
+          width: 100%;
+          input{
+            height: 28px;
+            border-radius: 28px;
+            border-bottom-right-radius: 28px;
+            border-top-right-radius: 28px;
+            padding-right: 35px;
+            background: rgba(4, 24, 39, 0.8);
+          }
+          .input-group-addon{
+            z-index: 1;
+            background: transparent;
+            color: #fff;
+            border: none;
+            position: absolute;
+            z-index: 999;
+            top: 0;
+            right: 28px;
+            line-height: 17px;
+            padding: 6px 0;
+            i{
+              padding: 5px;
+              padding-right: 15px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.theme-white,&.theme-gold{
+    .amap-wrapper{
+      .pull-right{
+        .form-group{
+          .input-group{
+            input{
+              background: rgba(255, 255, 255, 0.8);
+            }
+            .input-group-addon{
+              color: #666;
+            }
+          }
+        }
+      }
+    }
+  }
+}

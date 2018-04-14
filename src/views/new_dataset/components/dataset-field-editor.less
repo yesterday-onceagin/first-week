@@ -1,0 +1,180 @@
+.dmp_theme{
+  .dataset-field-edit-table {
+    border: 1px solid #222e4f;
+    font-size: 12px;
+    width: 100%;
+    height: calc(~"100% - 40px");
+    overflow: auto;
+    .data-table {
+      display: block;        
+      > thead > tr > th,
+      > tbody > tr > td {
+        line-height: 24px;
+        height: 24px;
+      }
+      > thead {
+        border-bottom: 1px solid #222E4F;
+        > tr > th {
+          border-right: 1px solid #222E4F;
+          height: 30px;
+          line-height: 30px;
+          &:last-child {
+            border-right: 0 none;
+          }
+        }
+      }
+      > tbody {
+        > tr {
+          border-bottom: 1px solid #222E4F;
+          > td {
+            border-right: 1px solid #222E4F;
+            &:last-child {
+              border-right: 0 none;
+            }
+            &.data-field-col-name-td {
+              padding: 0 10px 0 40px;
+              .myselect.single {
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 0;
+                .myselect-head {
+                  .items {
+                    display: none;
+                  }
+                }
+                .myselect-body {
+                  padding: 2px 0;
+                  font-size: 12px;
+                  .myselect-item {
+                    line-height: 20px;
+                    height: 20px;
+                    padding: 0;
+                    text-align: center;
+                    span {
+                      line-height: 20px;
+                    }
+                  }
+                }
+              }
+              &:hover {
+                padding: 0 40px;
+                &.locked {
+                  padding: 0 10px 0 40px;
+                }
+                .myselect.single {
+                  display: block;
+                }
+              }
+            }
+
+            .dmp-field-icon{
+              width: 17px;
+              display: inline-block;
+            }
+
+            .link-btn{
+              font-size: 12px;
+              color: #24BBF9;
+              position: absolute;
+              top: 0;
+              right: 10px;
+              cursor: pointer;
+              display: none;
+            }
+
+            &:hover{
+              .link-btn{
+                display: block;
+              }
+            }
+          }
+          &.dataset-field-key-tr {
+            i.dmpicon-triangle {
+              color: #698EBB;
+            }
+            i.folder-icon {
+              color: #24BBF9;
+            }
+          }
+        }
+      }
+    }
+    // 选择框重定义
+    .myselect {
+      display: block;
+      .myselect-head {
+        height: 24px;
+        border: 0 none;
+        line-height: 24px;
+        .dropdown-toggle > i {
+          top: 10px;
+        }
+      }
+      .myselect-body {
+        .myselect-item {
+          height: 24px;
+          line-height: 24px;
+        }
+      }
+    }
+    // 表格为空的提示文字颜色
+    .empty-text-cell {
+      color: #698EBB;
+    }
+    .dmp-field-icon {
+      color: #488DFB;
+    }
+  } 
+
+  &.theme-white, &.theme-gold{
+     // 表头编辑表格
+    .dataset-field-edit-table {
+      border-color: #EDEDED;
+      .data-table {
+        > thead {
+          border-bottom: #E4E7EC;
+          > tr > th {
+            border-right: #E4E7EC;
+          }
+        }
+        > tbody {
+          > tr {
+            border-bottom-color: #E4E7EC;
+            > td {
+              border-right-color: #E4E7EC;
+              .link-btn{
+                color: #fff;
+              }
+            }
+            &.dataset-field-key-tr {
+              i.dmpicon-triangle {
+                color: #999;
+              }
+              i.folder-icon {
+                color: #488dfb;
+              }
+            }
+            &:hover {
+              .dmp-field-icon {
+                color: #fff;
+              }
+              i.dmpicon-triangle,
+              i.folder-icon {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+      .myselect {
+        .myselect-head {
+          background: transparent;
+        }
+      }
+    } 
+  }
+ 
+}
+
+

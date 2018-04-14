@@ -1,0 +1,75 @@
+// 维度选择 
+.dmp_theme {
+  .dim-selection{
+    margin: 20px 10px;
+    .row{
+      margin-bottom: 8px;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      position: relative;
+      .cell{
+        display: inline-block;
+        margin-right: 10px;
+        float: left;
+        height: 26px;
+        border-radius: 4px;
+        .myselect div.myselect-head .items input{
+          color: #fff;
+        }
+        &.indicator > span{
+          color: #fff;
+          display: inline-block;
+          width: 80px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          padding: 0 5px;
+          text-align: center;
+          overflow: hidden;
+          line-height: 24px;
+          border: 1px solid rgba(73, 143, 225, 0.12);
+        }
+      }
+      .circle-del{
+        display: none;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        top: 4px;
+        right: -4px;
+        background: #f30;
+        border-radius: 50%;
+        z-index: 2;
+        cursor: pointer;
+        &::after{
+          display: block;
+          position: absolute;
+          content: "";
+          width: 12px;
+          height: 2px;
+          top: 8px;
+          right: 3px;
+          background: #fff;
+        }
+      }
+
+      &:hover .circle-del{
+        display: block;
+      }
+    }
+  }
+  &.theme-white,&.theme-gold{
+    .dim-selection{
+      .row{
+        .cell{
+          .myselect div.myselect-head .items input{
+            color: #666;
+          }
+          &.indicator > span{
+            color: #666;
+            border-color: #eee;
+          }
+        }
+      }
+    }
+  }
+}

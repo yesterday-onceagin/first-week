@@ -1,0 +1,37 @@
+.dmp_theme {
+  .datasouce-select {
+    .rt-tree {
+      li {
+        margin: 1px 0;
+        &.rt-tree-node-selected, &:hover {
+          background: #1E2948;
+          a {
+            line-height: 20px;
+            color: #fff!important;
+          }
+        }
+      }
+      li > i[class^="dmpicon-"] {
+        color: #24BBF9!important;
+      }
+    }
+  }
+  &.theme-white, &.theme-gold {
+    .datasouce-select {
+      li {
+        &.rt-tree-node-selected, &:hover {
+          box-shadow: 0 2px 14px 0 rgba(36, 113, 206, 0.64);
+          background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+          // background: red;
+          i[class^="dmpicon-"], a {
+            color: #fff!important;
+          }
+        }
+      }
+    }
+  }
+
+  &.theme-gold {
+
+  }
+}

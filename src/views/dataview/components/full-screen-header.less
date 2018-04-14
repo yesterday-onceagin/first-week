@@ -1,0 +1,103 @@
+.dmp_theme {
+  .dmp-full-screen-header {
+    background: #141E39;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+    height: 50px;
+    opacity: 1;
+    transform: translateY(0px);
+    a {
+      color: #fff;
+      text-decoration: none;
+      &:hover {
+        color: #24BBF9;
+      }
+    }
+    .report-return {
+      display: inline-block;
+      width: 30px;
+      line-height: 20px;
+      height: 28px;
+      font-size: 22px;
+      vertical-align: middle;
+      cursor: pointer;
+      &:hover {
+        color: #24BBF9;
+      }
+    }
+    &.hide-header {
+      transform: translateY(-70px);
+      height: 70px;
+      // opacity: 0;
+      .side-btn.left {
+        left: -40px;
+        transform: translateY(70px);
+      }
+      .side-btn.right {
+        right: -40px;
+        transform: translateY(70px);
+      }
+    }
+    .dmp-full-screen-header-btns {
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+      }
+    }
+    .time-value {
+      vertical-align: middle;
+      display: inline-block;
+      border: 1px solid #1C2745;
+      padding: 5px 8px;
+      height: 24px;
+      font-size: 12px;
+    }
+    .side-btn {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 40px;
+      position: fixed;
+      top: 45vh;
+      color: #698EBB;
+      opacity: 0.4;
+      transition: all .3s;
+      cursor: pointer;
+      &.left {
+        left: 20px;
+      }
+      &.right {
+        right: 20px;
+      }
+      .reverse {
+        display: inline-block;
+        transform: rotate(180deg);
+      }
+      &:hover, &.active{
+        color: #24BBF9;
+        opacity: 1;
+      }
+    }
+  }
+  .btn.btn-spin {
+    min-width: 24px;
+    height: 24px;
+    min-width: auto;
+    min-height: auto;
+    font-size: 16px;
+    line-height: 1;
+    padding: 0 7px;
+    background-color: transparent;
+    border-color: #1C2745;
+  }
+  &.theme-white {
+    .dmp-full-screen-header {
+      background: linear-gradient(90deg, #527dfd 0%, #1ba3d8 100%);
+    }
+  }
+  &.theme-gold {
+    .dmp-full-screen-header {
+      background: #bf9b30;
+    }
+  }
+}

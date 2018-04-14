@@ -1,0 +1,11 @@
+{
+  "name": "stack_area",
+  "version": "0.0.1",
+  "description": "堆叠面积图",
+  "platform": {
+    "name": "堆叠面积图",
+    "icon": "/platform/icon/stack_area.jpg",
+    "previewImg": "/platform/preview/stackarea_sample.jpg",
+    "description": "指标支持(1个维度，2个或多个数值),支持穿透、联动"
+  }
+}

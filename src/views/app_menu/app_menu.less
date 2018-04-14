@@ -1,0 +1,681 @@
+.dmp_theme {
+  @import '../../static/css/themes/theme-black.less';
+  // 应用列表页
+  .application-list-page {
+    .application-item {
+      .outer-box {
+        background-color: #141E39;
+        cursor: pointer;
+        .application-add-box {
+          color: #58678E;
+        }
+        .platform-icon {
+          color: #fff;
+          i[class^="dmpicon-"] {
+            position: absolute;
+            z-index: 1;
+            right: 2px;
+            top: 4px;
+            font-size: 18px;
+          }
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            width: 42px;
+            height: 42px;
+            background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+            transform-origin: 0 0;
+            transform: skewX(45deg);
+            line-height: 0;
+          }
+        }
+        .application-item-box {
+          .application-name {
+            color: #fff;
+            .application-actions {
+              display: none;
+              .application-btn-enable {
+                color: #79A1D0;
+                &:hover {
+                  color: #24BCFA;
+                }
+              }
+              i[class*='dmpicon-'] {
+                color: #79A1D0;
+                transition: color .3s;
+                &:hover {
+                  color: #24BCFA;
+                }
+              }
+            }
+          }
+        }
+        .application-item-des {
+          color: #C7E1FF;
+          > div {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+            display: inline-block;
+          }
+        }
+      }
+
+      &:hover, &:focus {
+        .outer-box {
+          background-color: #1A2646;
+          .application-add-box {
+            color: #24BCFA;
+          }
+          .application-item-box {
+            .application-name {
+              .name-text {
+                padding-right: 90px;
+              }
+              .application-actions {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 拖动中的app item
+  >.sortable-application-item.application-item {
+    .outer-box {
+      cursor: move!important;
+      background-color: #1A2646;
+      .platform-icon {
+        color: #fff;
+        i[class^="dmpicon-"] {
+          position: absolute;
+          z-index: 1;
+          right: 2px;
+          top: 4px;
+          font-size: 18px;
+        }
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          right: 0px;
+          top: 0px;
+          width: 42px;
+          height: 42px;
+          background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+          transform-origin: 0 0;
+          transform: skewX(45deg);
+          line-height: 0;
+        }
+      }
+      .application-item-box {
+        .application-name {
+          color: #fff;
+          .application-actions {
+            display: none;
+          }
+        }
+      }
+      .application-item-des {
+        color: #C7E1FF;
+        > div {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+  
+  // 应用定义详情页
+  .application-detail-page {
+    // 左侧容器
+    .left {
+      background: #141E39;
+      .application-config-title {
+        color: #C7E1FF;
+        .add-menu-btn {
+          color: #58678E;
+          &:hover {
+            color: #24BCFA;
+          }
+        }
+      }
+      .application-config-app {
+        border-color: #1B2644;
+        .application-item {
+          &:hover {
+            color: #24BCFA;
+          }
+          &.active {
+            background: #1D2948;
+            color: #fff;
+          }
+        }
+      }
+      // 菜单容器
+      .application-menu-tree-container {
+        .application-menu-item {
+          .application-menu-action-bar {
+            display: none;
+            i[class*='dmpicon-'] {
+              color: #58678E;
+              &:hover {
+                color: #24BCFA;
+              }
+            }
+          }
+          &:hover {
+            color: #24BCFA;
+            .application-menu-action-bar {
+              display: block;
+            }
+            &.application-root-menu-item {
+              padding-right: 78px!important;
+            }
+            &.application-sub-menu-item {
+              padding-right: 46px!important;
+            }
+          }
+          &.active {
+            background: #1D2948;
+            color: #fff;
+          }
+        }
+      }
+    }
+    // 右侧容器
+    .right {
+      background: #141E39;
+      // 应用设置
+      .application-edit-form {
+        padding: 30px 0 0 30px;
+        max-width: 500px;
+        .my-form-upload {
+          padding-left: 0;
+          .upload-btn-box {
+            .circle-btn {
+              width: 28px;
+              height: 28px;
+              padding: 5px;
+              i[class*='dmpicon-'] {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+        .input-wrapper {
+          padding-left: 0;
+          .empty-input-wrapper-inner-box {
+            text-align: center;
+            line-height: 30px;
+            height: 32px;
+            border: 1px solid rgba(73, 143, 225, 0.12);
+            background: transparent;
+            &:hover {
+              background: rgba(4, 24, 39, 0.5);
+            }
+          }
+        }
+        .link-mode {
+          >.form-group {
+            padding-bottom: 0;
+          }
+        }
+        .copy-btn {
+          line-height: 30px;
+          position: absolute;
+          right: 5px;
+          top: 0;
+          cursor: pointer;
+          font-size: 12px;
+          transition: color .3s;
+          color: #fff;
+          &:hover {
+            color: #24BCFA;
+          }
+        }
+        // 二维码图片容器
+        #application-qrcode-container {
+          background-color:#1B2646;
+          display: none;
+          position: absolute;
+          right: -195px;
+          top: -75px;
+          padding: 10px;
+          box-shadow: 0 2px 10px 0 #121C33;
+          border-radius: 4px;
+          > canvas {
+            display: block;
+          }
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            margin-top: -10px;
+            border-width: 10px;
+            border-color: transparent #1B2646 transparent transparent;
+            border-style: solid;
+          }
+        }
+        &.menu-edit-form {
+          .menu-icon-box {
+            color: #adc7d0;
+          }
+          .myselect.menu-icon-select {
+            .myselect-head {
+              .search-input {
+                display: none;
+              }
+            }
+          }
+          .rt-select > .rt-select-menu .rt-tree-panel .rt-tree li {
+            > i, 
+            > a{
+              color: #adc7d0;
+              &:hover{
+                color: #24BBF9;
+              }
+            }
+            &.rt-tree-node-disabled{
+              > a{
+                cursor: default;
+                color: #adc7d0;
+                &:hover {
+                  color: #adc7d0;
+                }
+              }
+            }
+          }
+          .rt-select > .rt-select-menu .rt-tree-panel .rt-tree li  i.icon-arrow{
+            color: #698EBB;
+            font-size: 12px;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+     
+  // 拖动中的menu item
+  >.sortable-menu-item {
+    &.active {
+      background: #1D2948;
+    }
+    .application-menu-action-bar {
+      display: none;
+    }
+  }
+
+  &.theme-white {
+    @import '../../static/css/themes/theme-white.less';
+    // 应用列表页
+    .application-list-page {
+      .application-item {
+        .outer-box {
+          background-color: #fff;
+          border-color: #fff;
+          .application-add-box {
+            color: #999;
+          }
+          .platform-icon {
+            &::after {
+              background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+            }
+          }
+          .application-item-box {
+            .application-name {
+              color: #333;
+              .application-actions {
+                .application-btn-enable {
+                  color: #ABB5C3;
+                  &:hover {
+                    color: #488DFB;
+                  }
+                }
+                i[class*='dmpicon-'] {
+                  color: #ABB5C3;
+                  transition: color .3s;
+                  &:hover {
+                    color: #488DFB;
+                  }
+                }
+              }
+            }
+          }
+          .application-item-des {
+            color: #999;
+          }
+        }
+
+        &:hover, &:focus {
+          .outer-box {
+            box-shadow: 0 4px 10px 0 rgba(76,117,167,0.34);
+            .application-add-box {
+              color: #488DFB;
+            }
+          }
+        }
+      }
+    }
+    
+    // 拖动中的app item
+    >.sortable-application-item.application-item {
+      .outer-box {
+        cursor: move!important;
+        box-shadow: 0 4px 10px 0 rgba(76,117,167,0.34);
+        background-color: #fff;
+        border-color: #fff;
+        .platform-icon {
+          &::after {
+            background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+          }
+        }
+        .application-item-box {
+          .application-name {
+            color: #333;
+          }
+        }
+        .application-item-des {
+          color: #999;
+        }
+      }
+    }
+
+    // 应用定义详情页
+    .application-detail-page {
+      // 左侧容器
+      .left {
+        background: #fff;
+        .application-config-title {
+          color: #999;
+          .add-menu-btn {
+            color: #ABB5C3;
+            &:hover {
+              color: #488DFB;
+            }
+          }
+        }
+        .application-config-app {
+          border-color: rgba(73, 143, 225, 0.09);
+          .application-item {
+            &:hover {
+              color: #488DFB;
+            }
+            &.active {
+              background: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+              color: #fff;
+            }
+          }
+        }
+        // 菜单容器
+        .application-menu-tree-container {
+          .application-menu-item {
+            .application-menu-action-bar {
+              i[class*='dmpicon-'] {
+                color: #ABB5C3;
+                &:hover {
+                  color: #488DFB;
+                }
+              }
+            }
+            &:hover {
+              color: #488DFB;
+            }
+            &.active {
+              background: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+              color: #fff;
+            }
+          }
+        }
+      }
+      // 右侧容器
+      .right {
+        background: #fff;
+        // 应用设置
+        .application-edit-form {
+          .copy-btn {
+            color: #ABB5C3;
+            &:hover {
+              color: #488DFB;
+            }
+          }
+          // 二维码图片容器
+          #application-qrcode-container {
+            background-color:#FFFFFF;
+            box-shadow: 0 2px 10px 0 #8B94A1;
+            &::after {
+              border-color: transparent #FFFFFF transparent transparent;
+            }
+          }
+          .input-wrapper {
+            .empty-input-wrapper-inner-box {
+              background-color: #EEF0F7;
+              border-color: #F0F4FA;
+              &:hover {
+                background-color: #FAFBFE;
+                border-color: #488DFB;
+              }
+            }
+          }
+          &.menu-edit-form {
+            .menu-icon-box {
+              color: #666;
+            }
+            .rt-select > .rt-select-menu .rt-tree-panel .rt-tree li {
+              > i, 
+              > a{
+                color: #ABB5C3;
+                &:hover {
+                  color: #488DFB;
+                }
+              }
+              &.rt-tree-node-disabled{
+                > a{
+                  color: #ABB5C3;
+                  &:hover {
+                    color: #488DFB;
+                  }
+                }
+              }
+            }
+            .rt-select > .rt-select-menu .rt-tree-panel .rt-tree li  i.icon-arrow{
+              color: #999;
+            }
+          }
+        }
+      }
+    }
+
+    // 拖动中的menu item
+    >.sortable-menu-item {
+      &.active {
+        background: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+        box-shadow: 0 4px 10px 0 rgba(76,117,167,0.34);
+        color: #fff;
+      }
+    }
+  }
+
+  &.theme-gold {
+    @import '../../static/css/themes/theme-gold.less';
+    // 应用列表页
+    .application-list-page .application-item {
+      &:hover,
+      &:focus {
+        .outer-box {
+          background: #fff;
+          .application-add-box {
+            color: @color-icon-hover;
+          }
+          .application-item-des > div {
+            background: #fff;
+            box-shadow: 0 0 5px 10px #fff;
+          }
+        }
+      }
+      .outer-box {
+        background: #fff;
+        &:hover {
+          background: #fff;
+          box-shadow: 0 4px 10px 0 rgba(76,117,167,0.34);
+        }
+        .application-add-box {
+          color: #8D97A4;
+        }
+        .platform-icon {
+          &::after {
+            background: #bf9b30;
+          }
+        }
+        .application-item-box {
+          .application-name {
+            color: @color-text-primary;
+            .application-actions .application-btn-enable {
+              color: @color-icon-default;
+              &:hover {
+                color: @color-icon-hover;
+              }
+            }
+          }
+          .application-item-main .template-name {
+            color: @color-text-primary;
+            .application-actions {
+              .application-btn-enable,
+              i[class*='dmpicon-'] {
+                color: @color-icon-default;
+                &:hover {
+                  color: @color-icon-hover;
+                }
+              }
+            }
+          }
+        }
+        .application-item-des {
+          color: @color-text-secondary;
+        }
+      }
+    }
+
+    // 拖动中的app item
+    >.sortable-application-item.application-item {
+      .outer-box {
+        cursor: move!important;
+        box-shadow: 0 4px 10px 0 rgba(76,117,167,0.34);
+        background-color: #E2EAF3;
+        border-color: #fff;
+        .platform-icon {
+          &::after {
+            background: #bf9b30;
+          }
+        }
+        .application-item-box {
+          .application-name {
+            color: @color-text-primary;
+          }
+        }
+        .application-item-des {
+          color: @color-text-secondary;
+        }
+      }
+    }
+    
+    // 应用定义详情页
+    .application-detail-page {
+      .left,
+      .right {
+        background: #fff;
+      }
+      .left {
+        .application-config {
+          &-title {
+            color: @color-text-primary;
+            b {
+              background: linear-gradient(0deg, #bf9b30 0%, #ffe9a4 100%)!important;
+            }
+            .add-menu-btn {
+              color: @color-icon-default;
+              &:hover {
+                color: @color-icon-hover;
+              }
+            }
+          }
+          &-app {
+            border-color: #ededed;
+            .application-item {
+              &:hover {
+                color: @base-color;
+              }
+              &.active {
+                background: #ECF0F4;
+                color: @color-text-primary;
+              }
+            }
+          }
+        }
+        .application-menu-tree-container .application-menu-item {
+          &:hover,
+          &.active {
+            background: #ECF0F4;
+            color: @color-text-primary;
+          }
+          .application-menu-action-bar i[class*='dmpicon-'] {
+            color: @color-icon-default;
+            &:hover {
+              color: @color-icon-hover;
+            }
+          }
+        }
+      }
+      .right {
+        .application-edit-form {
+          .copy-btn {
+            color: #ABB5C3;
+            &:hover {
+              color: #bf9b30;
+            }
+          }
+          // 二维码图片容器
+          #application-qrcode-container {
+            background-color:#FFFFFF;
+            box-shadow: 0px 2px 10px 0 #8B94A1;
+            &::after {
+              border-color: transparent #FFFFFF transparent transparent;
+            }
+          }
+          .input-wrapper {
+            .empty-input-wrapper-inner-box {
+              background-color: #fff;
+              border-color: #F0F4FA;
+              &:hover {
+                background-color: #fff;
+                border-color: #bf9b30;
+              }
+            }
+          }
+        }
+        .my-form-upload p {
+          color: @color-text-tip;
+        }
+      }
+    }
+
+    // 拖动中的menu item
+    >.sortable-menu-item {
+      &.active {
+        background: #ECF0F4;
+      }
+      .application-menu-action-bar {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>链接数据源</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="98.6629232%" y2="29.1145833%" id="linearGradient-1">
+            <stop stop-color="#527DFD" offset="0%"></stop>
+            <stop stop-color="#1BA3D8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="dmp平台进入首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-337.000000, -379.000000)">
+        <g id="Group-3" transform="translate(253.000000, 313.000000)" fill="url(#linearGradient-1)">
+            <g id="添加数据源" transform="translate(84.000000, 66.000000)">
+                <path d="M45,22 L26,22 C24.8954305,22 24,22.8954305 24,24 L24,27 L5,27 C4.44771525,27 4,26.5522847 4,26 L4,21 C4,20.4477153 4.44771525,20 5,20 L44,20 C44.5522847,20 45,20.4477153 45,21 L45,22 Z M24,35 L24,42 L5,42 C4.44771525,42 4,41.5522847 4,41 L4,36 C4,35.4477153 4.44771525,35 5,35 L24,35 Z M5,5 L44,5 C44.5522847,5 45,5.44771525 45,6 L45,11 C45,11.5522847 44.5522847,12 44,12 L5,12 C4.44771525,12 4,11.5522847 4,11 L4,6 C4,5.44771525 4.44771525,5 5,5 Z M8,7 L8,10 L14,10 L14,7 L8,7 Z M8,22 L8,25 L14,25 L14,22 L8,22 Z M8,37 L8,40 L14,40 L14,37 L8,37 Z M29,26 L50,26 C50.5522847,26 51,26.4477153 51,27 L51,48 C51,48.5522847 50.5522847,49 50,49 L29,49 C28.4477153,49 28,48.5522847 28,48 L28,27 C28,26.4477153 28.4477153,26 29,26 Z M38,36 L31,36 L31,39 L38,39 L38,46 L41,46 L41,39 L48,39 L48,36 L41,36 L41,29 L38,29 L38,36 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

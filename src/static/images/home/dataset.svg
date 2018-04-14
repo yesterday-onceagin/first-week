@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>处理数据集</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#1FC659" offset="0%"></stop>
+            <stop stop-color="#89CE02" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="dmp平台进入首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-566.000000, -379.000000)">
+        <g id="Group-4" transform="translate(483.000000, 313.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="创建数据集" transform="translate(83.000000, 66.000000)">
+                <path d="M4,16 L4,38 C4,39.1045695 4.8954305,40 6,40 L28,40 C29.1045695,40 30,39.1045695 30,38 L30,16 C30,14.8954305 29.1045695,14 28,14 L6,14 C4.8954305,14 4,14.8954305 4,16 Z M22.8928571,33.5714286 L17.9642857,33.5714286 L16.5037857,30.6504286 L14.6785714,33.5714286 L11.3928571,33.5714286 L15.0432857,27.7294286 L11.3928571,20.4285714 L16.3214286,20.4285714 L17.7819286,23.3495714 L19.6071429,20.4285714 L22.8928571,20.4285714 L19.2424286,26.2705714 L22.8928571,33.5714286 Z M49,50 L11,50 C10.4477153,50 10,49.5522847 10,49 L10,43 L13,43 L13,47 L47,47 L47,7 L13,7 L13,11 L10,11 L10,5 C10,4.44771525 10.4477153,4 11,4 L49,4 C49.5522847,4 50,4.44771525 50,5 L50,49 C50,49.5522847 49.5522847,50 49,50 Z M34,17 L43,17 L43,20 L34,20 L34,17 Z M34,25 L43,25 L43,28 L34,28 L34,25 Z M34,33 L43,33 L43,36 L34,36 L34,33 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

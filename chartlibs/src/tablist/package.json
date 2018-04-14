@@ -1,0 +1,11 @@
+{
+  "name": "tablist",
+  "version": "1.0.0",
+  "description": "Dmp数据可视化平台内置Tab筛选器",
+  "platform": {
+    "name": "Tab列表",
+    "icon": "",
+    "previewImg": "",
+    "description": ""
+  }
+}

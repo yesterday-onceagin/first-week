@@ -1,0 +1,725 @@
+.dmp_theme {
+  @import '../../static/css/themes/theme-black.less';
+  // 数据集列表页
+  .dataset-list-page {
+    // 文件夹列表
+    .dataset-explorer {
+      border-color: transparent;
+      background-color: rgb(20, 30, 57);
+      // 搜索框容器
+      .dataset-explorer-search-box {
+        .main-menu-btn {
+          color: #698EBB;
+          &:hover {
+            color: #24BCFA;
+          }
+        }
+      }
+      // 文件浏览容器
+      .dataset-explorer-content {
+
+      }
+    }
+    
+    // 添加数据集的容器
+    .dataset-container {
+      .dataset-add-item {
+        .content {
+          .name {
+            color: #fff;
+          }
+          .description {
+            color: #C7E1FF;
+          }
+        }
+        &:hover, &:focus {
+          background-color: rgba(8,45,73,0.20);
+          box-shadow: 0 0 10px 0 rgba(0,0,0,0.50);
+        }
+      }
+    }
+  }
+
+  // 名称提示
+  .dataset-file-node-tool-tip {
+    margin-left: 33px;
+  }
+
+  // 被拖拽的文件
+  #moving-dataset-file-node {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none; 
+    cursor: default; 
+    line-height: 30px;
+    background: rgba(8,45,73,0.20);
+    .file-tree-item-icon {
+      color: #24BBF9;
+    }
+    .file-item-menu-btn {
+      display: none;
+    }
+  }
+
+  // 操作菜单
+  .dataset-side-menu {
+    background: rgba(8,45,73,0.44);
+    .dataset-side-menu-item {
+      &:hover {
+        background: rgba(8,45,73,0.50);
+      }
+    }
+  }
+  
+  // 数据集详情页(统一)
+  .dataset-detail-page {
+    // 左侧面板
+    .left-panel {
+      background-color: rgba(8,45,73,0.20);
+      .tree-wrap{
+        height: calc(~"100% - 60px");
+        overflow: auto;
+        .dmp-tree-container {
+          width: 100%;
+          height: 100%;
+          .dmpicon-exit{
+            color: #698EBB;
+            &:hover{
+              color: #24BBF9;
+            }
+          }
+        }
+      }
+    }
+  
+    // 中间面板
+    .center-panel {
+      background-color: rgba(8,45,73,0.20);
+    }
+
+    // 右侧面板
+    .right-panel {
+      background-color: rgba(8,45,73,0.20);
+      // 右侧面板头部区
+      .right-panel-title {
+        .right-panel-mode-tab {
+          i[class*='dmpicon-'] {
+            color: #24BBF9;
+            &.active {
+              background: rgba(36,186,249,0.21);
+            }
+          }
+        }
+        // 右侧面板，预览行数调整
+        .preview-length-config {
+          line-height: 28px;
+          .preview-length-number {
+            color: #24BBF9;
+          }
+          .form-group {
+            padding: 2px 0;
+            height: 28px;
+            line-height: 24px;
+            width: 120px;
+            float: right;
+          }
+          .line-valid {
+            .value {
+              color: orange;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      // 右侧面板内容区
+      .right-panel-content {
+        border-color: rgba(73,143,225,0.20);
+      }
+      
+    }
+
+    // SQL数据集
+    &.dataset-detail-sql-page {
+      // 数据源
+      .form-group {
+        .control-label {
+          span {
+            color: #C7E1FF;
+          }
+        }
+      }
+      // 数据表展示
+      .table-container {
+        .table-title {
+          color: #C7E1FF;
+        }
+        .table-content {
+          border: 1px solid rgba(73,143,226,0.24);
+          .flex-data-table-body {
+            .flex-data-table-item {
+              .select-btn {
+                color: #698EBB;
+                &:hover {
+                  color: #24BCFA;
+                }
+              }
+            }
+            .empty-data-table-item {
+              height: 100%!important;
+              color: #698EBB;
+              &:hover {
+                background: transparent;
+                border: 0 none;
+                box-shadow: none;
+              }
+            }
+          }
+        }
+      }
+      // SQL编辑器
+      .sql-ide-container {
+        .sql-ide-title {
+          color: #C7E1FF;
+          .sql-ide-run-btn {
+            color: #698EBB;
+            cursor: pointer;
+            &:hover {
+              color: #24BCFA;
+            }
+            &.disabled {
+              color: #666;
+              cursor: not-allowed;
+              &:hover {
+                color: #666;
+              }
+            }
+          }
+        }
+        .sql-ide-content {
+          border: 1px solid rgba(73,143,226,0.24);
+          .sql-ide-empty-box {
+            color: #698EBB;
+          }
+        }
+      }
+      // 调度控制
+      .dispatch-config-container {
+        .row {
+          margin: 0;
+        }
+        .col-xs-2 {
+          width: 100%;
+          padding: 0 0 8px 0;
+          color: #C7E1FF;
+        }
+        .col-xs-10 {
+          width: 100%;
+          padding: 0;
+          .myselect.multiple {
+            width: 100%!important;
+          }
+          .selection-button {
+            width: 25%;
+          }
+        }
+      }
+    }
+
+    //excel数据集
+    &.dataset-detail-excel-page {
+      .form-group {
+        input[type="text"], input[type="number"] {
+          height: 30px;
+          vertical-align: middle;
+        }
+        button {
+          vertical-align: middle;
+        }
+      }
+      li {
+        .form-group {
+          padding-bottom: 0;
+        }
+      }
+      input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+
+      .file-tooltip {
+        // margin-left: 100px;
+        margin-top: 15px;
+        .tooltip-arrow {
+          margin-left: 47px;
+        }
+      }
+    }   
+  }
+  
+  // 添加数据集对话框
+  .dataset-file-path-dialog {
+    .form-horizontal {
+      .clear-path-btn {
+        color: #698EBB;
+        &:hover {
+          color: #24BBF9;
+        }
+      }
+      .input-wrapper {
+        padding-left: 0;
+      }
+      .path-config-box {
+        border-color: rgba(73,143,225,0.20);
+        .dmp-tree-node-box {
+          color: #fff;
+          .file-tree-item-icon {
+            color: #24BBF9;
+          }
+          &.active {
+            background-color: rgba(15,59,91,.5);
+          }
+        }
+      }
+    }
+  }
+    
+  // 标签页面
+  .dataset-detail-label-page {
+    .dataset-field-edit-table, .dataset-result-table{
+      border: none;
+      height: 100%;
+    }
+  }
+
+  // toggle-pop
+  .toggle-pop{
+    .popover-content{
+      .item{
+        color: #adc7d0;
+        cursor: pointer;
+        &:hover{
+          color: #24BBF9;
+        }
+      }
+    }
+  }
+
+  &.theme-white {
+    @import '../../static/css/themes/theme-white.less'; 
+    // 数据集列表页
+    .dataset-list-page {
+      // 文件夹列表
+      .dataset-explorer {
+        border-color: #E4E7EC;
+        background-color: #fff;
+        // 搜索框容器
+        .dataset-explorer-search-box {
+          .main-menu-btn {
+            color: #929DAC;
+            &:hover {
+              color: #488DFB;
+            }
+          }
+        }
+        // 文件浏览容器
+        .dataset-explorer-content {
+
+        }
+      }
+      
+      // 添加数据集的容器
+      .dataset-container {
+        .dataset-add-item {
+          .content {
+            .name {
+              color: #333;
+            }
+            .description {
+              color: #999;
+            }
+          }
+          &:hover, &:focus {
+            background: transparent;
+            box-shadow: 0 2px 14px 0 rgba(36,113,206,0.64);
+          }
+        }
+      }
+    }
+
+    // 被拖拽的文件
+    #moving-dataset-file-node {
+      background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+      box-shadow: 0 2px 14px 0 rgba(36,113,206,0.64);
+      .file-tree-item-icon {
+        color: #fff;
+      }
+      .file-tree-item-name {
+        color: #fff;
+      }
+    }
+
+    // 操作菜单
+    .dataset-side-menu {
+      background: #fff;
+      box-shadow: 1px 0px 14px 0 rgba(36,113,206,0.64);
+      .dataset-side-menu-item {
+        &:hover {
+          background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+          box-shadow: 0 2px 14px 0 rgba(36,113,206,0.64);
+          color: #fff;
+        }
+      }
+    }
+
+    // 数据集详情页(统一)
+    .dataset-detail-page {
+      // 左侧面板
+      .left-panel {
+        background-color: #fff;
+      }
+      // 中间面板
+      .center-panel {
+        background-color: #fff;
+      }
+      // 右侧面板
+      .right-panel {
+        background-color: #fff;
+        // 右侧面板头部区
+        .right-panel-title {
+          .right-panel-mode-tab {
+            i[class*='dmpicon-'] {
+              color: #999;
+              &.active {
+                color: #488DFB;
+                background: rgb(230,239,246);
+              }
+            }
+          }
+          // 右侧面板，预览行数调整
+          .preview-length-config {
+            .preview-length-number {
+              color: #488DFB;
+            }
+          }
+        }
+        // 右侧面板内容区
+        .right-panel-content {
+          border-color: #E4E7EC;
+          // 表格为空的提示文字颜色
+          .empty-text-cell {
+            color: #999;
+          }
+          .dmp-field-icon {
+            color: #488DFB;
+          }
+        }
+        // 表头编辑表格
+        .dataset-field-edit-table {
+          font-size: 12px;
+          .data-table {
+            > thead {
+              border-bottom: #E4E7EC;
+              > tr > th {
+                border-right: #E4E7EC;
+              }
+            }
+            > tbody {
+              > tr {
+                border-bottom-color: #E4E7EC;
+                > td {
+                  border-right-color: #E4E7EC;
+                }
+                &.dataset-field-key-tr {
+                  i.dmpicon-triangle {
+                    color: #999;
+                  }
+                  i.folder-icon {
+                    color: #488dfb;
+                  }
+                }
+                &:hover {
+                  .dmp-field-icon {
+                    color: #fff;
+                  }
+                  i.dmpicon-triangle,
+                  i.folder-icon {
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+        // 数据结果表格
+        .dataset-result-table {
+          .data-table {
+            > thead > tr > th {
+              border-color: #E4E7EC;
+            }
+            > tbody > tr > td {
+              border-color: #E4E7EC;
+            }
+            // 表格为空的提示文字颜色
+            .empty-text-cell {
+              color: #999;
+            }
+            .dmp-field-icon {
+              color: #488DFB;
+            }
+          }
+        }
+      }
+      
+      // SQL数据集
+      &.dataset-detail-sql-page {
+        // 数据源
+        .form-group {
+          .control-label {
+            span {
+              color: #666;
+            }
+          }
+        }
+        // 数据表展示
+        .table-container {
+          .table-title {
+            color: #666;
+          }
+          .table-content {
+            border-color: #E4E7EC;
+            .flex-data-table-body {
+              .flex-data-table-item {
+                .select-btn {
+                  color: #999;
+                  &:hover {
+                    color: #488dfb;
+                  }
+                }
+              }
+              .empty-data-table-item {
+                color: #999;
+              }
+            }
+          }
+        }
+        // SQL编辑器
+        .sql-ide-container {
+          .sql-ide-title {
+            color: #666;
+            .sql-ide-run-btn {
+              color: #999;
+              &:hover {
+                color: #488dfb;
+              }
+              &.disabled {
+                color: #666;
+                &:hover {
+                  color: #666;
+                }
+              }
+            }
+          }
+          .sql-ide-content {
+            border-color: #E4E7EC;
+            .sql-ide-empty-box {
+              color: #999;
+            }
+          }
+        }
+        // 调度控制
+        .dispatch-config-container {
+          .col-xs-2 {
+            color: #666;
+          }
+        }
+      }
+    }
+    
+    // 添加数据集对话框
+    .dataset-file-path-dialog {
+      .form-horizontal {
+        .clear-path-btn {
+          color: #999;
+          &:hover {
+            color: #488dfb;
+          }
+        }
+        .input-wrapper {
+          padding-left: 0;
+        }
+        .path-config-box {
+          border-color: #E4E7EC;
+          .dmp-tree-node-box {
+            color: #333;
+            .file-tree-item-icon {
+              color: #488dfb;
+            }
+            &.active {
+              color: #fff;
+              background: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+              .file-tree-item-icon {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.theme-gold {
+    @import '../../static/css/themes/theme-gold.less';
+    .dataset-list-page {
+      .dataset-explorer {
+        background: #fff;
+        border-color: #fff;
+        .dataset-explorer-search-box .main-menu-btn {
+          color: #B5BFCB;
+          &:hover {
+            color: @base-color;
+          }
+        }
+        .dataset-explorer-content .dmp-tree-container .dmp-tree-node-box {
+          &:hover {
+            background: #ECF0F4;
+            .file-tree-item .file-tree-item-name {
+              color: @color-text-primary;
+            }
+          }
+          .file-tree-item {
+            .file-tree-item-icon {
+              color: @base-color;
+            }
+            .file-item-menu-btn {
+              color: #B5BFCB;
+              &:hover {
+                color: @base-color;
+              }
+            }
+          }
+        }
+      }
+      .dataset-container {
+        background: #fff;
+        .dataset-add-item {
+          &:hover,
+          &:focus {
+            background: #fff;
+            box-shadow: 0 4px 10px 0 rgba(76,117,167,0.34);
+          }
+          .content {
+            .name {
+              color: @color-text-primary;
+            }
+            .description {
+              color: @color-text-secondary;
+            }
+          }
+        }
+      }
+    }
+
+    .dataset-side-menu {
+      background: #fff;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+      .dataset-side-menu-item {
+        color: @color-text-secondary;
+        &:hover {
+          background: #F6F8FB;
+          color: @color-text-primary;
+        }
+      }
+    }
+
+    #moving-dataset-file-node {
+      background: #ECF0F4;
+      .file-tree-item-icon {
+        color: @base-color;
+      }
+    }
+
+    .dataset-detail-page {
+      .left-panel,
+      .center-panel,
+      .right-panel {
+        background: #fff;
+      }
+      .dmp-tree-container .dmp-tree-node-box .file-tree-item .file-tree-item-icon{
+        color: @base-color;
+      }
+      .dmp-tree-container .dmp-tree-node-box.active,
+      .dmp-tree-container .dmp-tree-node-box:hover{
+        background: #ECF0F4;
+        color: #333;
+        .file-tree-item {
+          .file-item-menu-btn,
+          .file-tree-item-name{
+            color: #333;
+          }
+        }
+      }
+      .right-panel {
+        .right-panel-title .right-panel-mode-tab i[class*=dmpicon-] {
+          color: @color-icon-default;
+          &.active {
+            color: @base-color;
+            background: #E2E2E2;
+          }
+        }
+        .right-panel-content {
+          border-color: #ededed;
+          .empty-text-cell {
+            color: @color-text-tip;
+          }
+        }
+        .dataset-field-edit-table .data-table > tbody > tr {
+          &.dataset-field-key-tr i.folder-icon {
+            color: @base-color;
+          }
+          > td {
+            border-color: #eee;
+          }
+        }
+      }
+      &.dataset-detail-sql-page {
+        .table-container .table-title,
+        .form-group .control-label span,
+        .sql-ide-container .sql-ide-title,
+        .dispatch-config-container .col-xs-2 {
+          color: @color-text-primary;
+        }
+        .sql-ide-container .sql-ide-content .sql-ide-empty-box,
+        .table-container .table-content .flex-data-table-body .empty-data-table-item {
+          color: @color-text-tip;
+        }
+        .table-container .table-content,
+        .sql-ide-container .sql-ide-content {
+          border-color: #ededed;
+        }
+        .sql-ide-container .sql-ide-title .sql-ide-run-btn {
+          color: @color-icon-default;
+          &:hover {
+            color: @base-color;
+          }
+        }
+        .table-container .table-content .flex-data-table-body .flex-data-table-item {
+          .select-btn {
+            color: @color-icon-default;
+          }
+          &:hover .select-btn {
+            color: @base-color;
+          }
+        }
+      }
+    }
+
+    .dataset-file-path-dialog .form-horizontal .path-config-box .dmp-tree-node-box {
+      color: @color-text-secondary;
+      .file-tree-item-icon {
+        color: @base-color;
+      }
+    }
+  }
+}

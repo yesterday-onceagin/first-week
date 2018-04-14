@@ -1,0 +1,47 @@
+.dmp_theme {
+  .user-select-container {
+    position: relative;
+    border: 1px solid rgba(73, 143, 225, 0.12);
+    font-size: 12px;
+    min-height: 35px;
+    .users-list {
+      padding: 6px 12px;
+      max-height: 100px;
+      overflow-y: scroll;
+    }
+    .edit-btn {
+      color: #14ABA9;
+      font-size: 16px;
+      position: absolute;
+      right: 15px;
+      top: 8px;
+      cursor: pointer;
+      transition: color 0.3s;
+      &:hover {
+        color: #24BBF9;
+      }
+    }
+    .user-item {
+      line-height: 1.5;
+      float: left;
+      margin-right: 5px;
+      position: relative;
+      .name {
+
+      }
+      .email {
+        opacity: 0.5
+      }
+      .dmpicon-del {
+        color: pink;
+        cursor: pointer;
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+  &.theme-white, &.theme-gold {
+
+  }
+}

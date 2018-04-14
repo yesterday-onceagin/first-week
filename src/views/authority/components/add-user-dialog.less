@@ -1,0 +1,93 @@
+#add-user-dialog{
+  a{
+    color: #138cf5;
+  }
+  .single-search-form {
+    padding: 11px 0;
+    position: absolute;
+    padding: 0;
+    width: 250px;
+    right: 0;
+    top: 2px;
+
+    .form-group {
+      .input-group {
+        .search-input-box {
+          height: 24px;
+          font-size: 12px;
+          padding-right: 30px;
+        }
+        .input-group-addon {
+          font-size: 14px;
+          padding: 5px 8px;
+        }
+      }
+    }
+  }
+  .left{
+    width: 290px;
+    float: left;
+    height: 370px;
+  }
+  .right{
+    width: 290px;
+    float: left;
+    height: 370px;
+    margin-left: 15px; 
+  }
+
+  .title{
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+  }
+
+  .box-wrap{
+    width: 100%;
+    height: 335px;
+    margin-top: 5px;
+    border: 1px solid #263355;
+    color: #8EA4B0;
+    .header{
+      background: rgba(9, 46, 73, 0.5);
+      height: 30px;
+      line-height: 30px;
+      > div {
+        float: left;
+        &:first-child{
+          padding-left: 10px;
+        }
+        &:last-child{
+          margin-top: 3px;
+        }
+      }
+    }
+    .scroll-body{
+      height: calc(~"100% - 30px");
+      overflow-y: scroll;
+    }
+    .checkbox-wrap{
+      cursor: pointer;
+      line-height: 24px;
+      padding-left: 10px;
+      .form-group{
+        margin: 0;
+        float: right;
+        margin-top: -2px;
+        .radio, .checkbox{
+          position: relative;
+          margin-top: 0px;
+          float: left;
+          display: inline-block;
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+
+  .right .box-wrap{
+    padding-top: 10px;
+    padding-left: 10px;
+    overflow: auto;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "circle_pie",
+  "version": "0.0.1",
+  "description": "环形饼图",
+  "platform": {
+    "name": "环形饼图",
+    "icon": "/platform/icon/circle_pie.jpg",
+    "previewImg": "/platform/preview/circle_pie1.jpg",
+    "description": "指标支持(1个维度 1个数值，0个维度10个或10个以内数值),支持穿透、联动"
+  }
+}

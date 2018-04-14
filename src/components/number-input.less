@@ -1,0 +1,51 @@
+.dmp_theme {
+  // number输入
+  .dmp-number-input-container {
+    .form-group {
+      padding: 0;
+    }
+    .dmp-number-input-box {
+      height: 24px;
+      font-size: 12px;
+      padding: 4px 16px 4px 10px;
+    }
+    .dmp-number-input-btn-container {
+      .dmp-number-input-btn {
+        color: #58678E;
+        cursor: pointer;
+        &:hover {
+          color: #24BBF9;
+        }
+      }
+      &.disabled {
+        .dmp-number-input-btn {
+          cursor: not-allowed;
+          &:hover {
+            color: #58678E;
+          }
+        }
+      }
+    }
+  }
+
+  &.theme-white {
+    .dmp-number-input-container {
+      .dmp-number-input-btn-container {
+        .dmp-number-input-btn {
+          color: #999;
+          &:hover {
+            color: #488DFB;
+          }
+        }
+        &.disabled {
+          .dmp-number-input-btn {
+            cursor: not-allowed;
+            &:hover {
+              color: #999;
+            }
+          }
+        }
+      }
+    }
+  }
+}

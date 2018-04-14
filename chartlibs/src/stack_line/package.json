@@ -1,0 +1,11 @@
+{
+  "name": "stack_line",
+  "version": "0.0.1",
+  "description": "堆叠折线图",
+  "platform": {
+    "name": "堆叠折线图",
+    "icon": "/platform/icon/stack_line.png",
+    "previewImg": "/platform/preview/stack_line02.jpg",
+    "description": "指标支持(1个或2个维度，2个或多个数值),支持穿透、联动"
+  }
+}

@@ -1,0 +1,69 @@
+.dmp_theme {
+  .feeds-add-page{
+    background: rgba(9, 46, 73, 0.3);
+    padding: 20px;
+
+    .left{
+      width: 600px;
+
+      .input-wrapper-group{
+        .form-group{
+          float: left;
+          padding-bottom: 0;
+
+          .checkbox,.radio{
+            padding-top: 0;
+            .checkbox-in-form {
+              padding: 0 12px;
+            }
+          }
+          .radio{
+            margin-left: 16px;
+            cursor: pointer;
+          }
+          > .checkbox{
+            padding-left: 16px;
+            cursor: pointer;
+          }
+        }
+      }
+
+
+      .schedule-panel{
+        .col-md-2{
+          width: 100%;
+          display: block;
+          padding-left: 12px;
+        }
+        .col-md-8{
+          width: 100%;
+          display: block;
+          padding-left: 12px;
+          margin-top: 5px;
+          .week-wrap > span {
+            height: 30px;
+            line-height: 30px;
+
+            &:last-child{
+              margin-top: 10px;
+            }
+          }
+          .month-wrap > span{
+            margin: 2px 9px;
+          }
+        }
+      }
+    }
+  }
+  &.theme-white,&.theme-gold{
+    .feeds-add-page{
+      background: transparent;
+    }
+  }
+}
+
+// 重置 
+.dmp_theme .daterangepicker.single.dropup .left .daterangepicker_input, 
+.dmp_theme .daterangepicker.single.dropup .right .daterangepicker_input {
+  display: block;
+}

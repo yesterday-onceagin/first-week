@@ -1,0 +1,148 @@
+.dmp_theme {
+	@import '../../static/css/themes/theme-black.less';
+	.datasource-page {
+		// 数据源item
+		.data-source-item {
+			background: @color-bg-panel;
+			border-color: @color-border;
+			color: @color-text-primary;
+			// 添加数据源ITEM
+			.datasource-add-box{
+				color: @color-text-hint;
+			}
+
+			.data-source-item-action {
+				background: rgba(0,2,4,0.72);
+				opacity: 0;
+			}
+			.data-source-item-name {
+				&:hover {
+					height: auto!important;
+					white-space: normal!important;
+					padding: 0 14px 10px!important;
+					word-wrap: break-word;
+					word-break: break-all;
+					position: absolute;
+					left: 0;
+					bottom: 34px;
+					z-index: 2;
+				}
+			}
+			.data-source-item-des {
+				color: @color-text-hint;
+				border-top: 1px solid rgba(16,53,80,.5);
+			}
+			&:hover, &:focus {
+				box-shadow: 0 0 10px 0 rgba(0,0,0,0.50);
+				border-color: @color-main;
+				.datasource-add-box{
+					color: @color-text-link;
+				}
+				// 封面上层需要显示按钮时
+				.data-source-item-imgbox{
+					-webkit-filter: blur(3px);
+					filter: blur(3px);
+					background-size: 110% 110%!important;
+				}
+				.data-source-item-action{
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.add-datasource-page {
+		.form-group-set-title .title-btn {
+			display: inline-block;
+			padding-left: 20px;
+			cursor: pointer;
+			transition: color .3s;
+			color: #6E8CAF;
+			i {
+				vertical-align: middle;
+				font-size: 16px;
+			}
+			&:hover {
+				color: @color-text-link;
+			}
+		}
+	}
+	// THEME STYLE
+  // 主题---致雅白 
+  &.theme-white {
+    @import '../../static/css/themes/theme-white.less';
+		.datasource-page {
+			// 数据源item
+			.data-source-item{
+				background: #fff;
+				border-color: #fff;
+				color: #333;
+				// 添加数据源ITEM
+				.datasource-add-box{
+					color: #999;
+				}
+
+				.data-source-item-action {
+					background: rgba(0,2,4,0.24);
+					.data-source-item-btn {
+						color: rgba(255,255,255,.54);
+						border-color: rgba(255,255,255,.54);
+					}
+				}
+				.data-source-item-des {
+					color: #999;
+					border-top: 1px solid #EEEEEE;
+				}
+				&:hover, &:focus {
+					box-shadow: 0 4px 10px 0 rgba(76,117,167,0.34);
+					border-color: #fff;
+					.datasource-add-box{
+						color: #488dfb;
+					}
+				}
+			}
+		}
+		.add-datasource-page {
+			.form-group-set-title .title-btn {
+				color: #999;
+				&:hover {
+					color: #488dfb;
+				}
+			}
+		}
+  }
+	// THEME STYLE
+  // 主题---香槟金
+  &.theme-gold {
+    @import '../../static/css/themes/theme-gold.less';
+    .datasource-page .data-source-item {
+      background: #fff;
+      border-color: #fff;
+      color: @color-text-primary;
+      .data-source-item-des {
+        border-color: #eee;
+        color: @color-text-tip;
+      }
+      .datasource-add-box {
+        color: @color-icon-default;
+      }
+      &:hover {
+        box-shadow: 0 4px 10px 0 rgba(76,117,167,0.34);
+        .datasource-add-box {
+          color: @color-icon-hover;
+        }
+      }
+    }
+		.add-datasource-page {
+		  // 数据源封面文本
+		  .my-form-upload p {
+		    color: @color-text-secondary;
+			}
+			.form-group-set-title .title-btn {
+				color: @color-icon-default;
+				&:hover {
+					color: @color-icon-hover;
+				}
+			}
+		}
+  }
+}

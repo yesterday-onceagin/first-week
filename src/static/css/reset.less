@@ -1,0 +1,370 @@
+/* 
+ * RESET STYLES
+ * 重置组件、浏览器原始样式
+ */
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: transparent;
+  font-family: Arial,'Microsoft YaHei',"宋体",sans-serif;
+}
+
+div#root{
+  -webkit-overflow-scrolling: touch;
+}
+div#root > div {
+  height:100%;
+}
+
+a, input {
+  outline: none;
+  text-decoration: none !important;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+i {
+  font-style: normal;
+}
+
+a:focus, input:focus {
+  outline: none;
+}
+
+input[type="text"]::-ms-clear, 
+input[type="text"]::-ms-reveal {
+  display: none;
+}
+
+button {
+  background: none;
+  outline: 0 none;
+  border: 0 none;
+  padding: 0;
+  margin: 0;
+}
+
+// 表单必填项的*号样式
+.required {
+  color: #FA4747;
+  padding-right: 5px;
+  font-style: normal;
+}
+
+.auto-y {
+  overflow-y: auto;
+}
+
+.hidden-x {
+  overflow-x: hidden;
+}
+
+.auto-x {
+  overflow-x: auto;
+}
+
+// 在流程调度中的ROW组件样式
+#data-view-dispatch-config-dialog .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #698EBB!important;
+}
+
+/* 自定义滚动条 */
+
+// 定义滚动条 滚动区域样式
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+}
+
+// 定义滚动条 滚动bar样式
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  width: 12px;
+  height: 12px;
+  background-clip: content-box;
+
+  &:vertical {
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+  &:horizontal {
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+  }
+}
+
+// 滚动条横竖交界处
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+/* TOOL-TIP */
+.tooltip {
+  &.top {
+    margin-top: 5px;
+  }
+  .tooltip-inner {
+    max-width: none;
+  }
+  &.right .tooltip-inner {
+    text-align: left;
+  }
+}
+
+/* POPOVER弹出层样式 */
+.popover {
+  &.bottom {
+    border: none;
+    border-radius: 0;
+    >.arrow {
+      border-width: 8px;
+      border-top-width: 0px;
+      top: -8px;
+      margin-left: -8px;
+      &::after {
+        content: none;
+      }
+    }
+    // 超出显示数量的应用菜单
+    &.hidden-nav-list {
+      .arrow {
+        display: none;
+      }
+      .popover-content {
+        padding: 0;
+        .hidden-nav-list-item {
+          &.active {
+            &::after {
+              content: '';
+              width: 2px;
+              height: 100%;
+              position: absolute;
+              left: 0;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+    // 用户菜单
+    &.user-menu {
+      .popover-content {
+        padding: 0;
+      }
+    }
+    // 主题切换菜单
+    &.theme-menu {
+      max-width: 340px;
+      .popover-content {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    // 看板下拉菜单
+    &.dashboard-popover {
+      .popover-content {
+        padding: 0;
+      }
+    }
+    &.fixed-top-nav-pop {
+      margin-top: 0;
+    }
+  }
+}
+
+/* TIP弹出样式 */
+.msg-tips-pop {
+  border: 0 none;
+  .tips-content {
+    background-position: left center !important;
+  }
+  &.tips-success {
+    border-radius: 4px;
+  }
+  &.tips-error {
+    border-radius: 4px;
+  }
+}
+
+/* BTN按钮样式 */
+.btn {
+  border-radius: 0;
+  min-width: 120px;
+  min-height: 34px;
+  padding: 0;
+  font-size: 16px;
+  transition: all .3s;
+  outline: 0 none;
+  text-align: center;
+  cursor: pointer;
+  &[disabled] {
+    height: 40px;
+    line-height: 38px;
+    background: #1F344D!important;
+    color: #50637F!important;
+    border: 1px solid #1F344D!important;
+    &:hover {
+      border-color: transparent !important;
+      cursor: not-allowed;
+    }
+  }
+  &.btn-default {
+    height: 40px;
+    line-height: 38px;
+    background: #103054;
+    border: 1px solid transparent;
+    color: #fff;
+
+    &:hover, &:focus, &:active {
+      border: 1px solid #488dfb;
+    }
+
+    &.btn-sm{
+      min-width: 80px;
+      min-height: 28px;
+      font-size: 12px;
+      height: auto;
+      line-height: 20px;
+    }
+  }
+  &.btn-primary, &.btn-success {
+    height: 40px;
+    line-height: 40px;
+    background-image: linear-gradient(-55deg, #527DFD 0%, #1BA3D8 100%);
+    border: 0 none;
+    font-size: 16px;
+    color: #fff;
+
+    &:hover, &:focus, &:active {
+      background-image: linear-gradient(-45deg, #1FAEC6 0%, #02CEA6 100%);
+    }
+    &.btn-sm{
+      min-width: 80px;
+      min-height: 28px;
+      font-size: 12px;
+      height: auto;
+      line-height: 20px;
+    }
+  }
+  &.btn-secondary {
+    height: 40px;
+    line-height: 38px;
+    background: transparent;
+    border: 1px solid #24BBF9;
+    color: #24BBF9;
+
+    &:hover, &:focus, &:active {
+      background: #0D243F;
+      border: 1px solid #24BBF9;
+    }
+
+    &.btn-sm{
+      min-width: 80px;
+      min-height: 28px;
+      font-size: 12px;
+      height: auto;
+      line-height: 20px;
+    }
+  }
+  &.btn-warning {
+    background-image: linear-gradient(-60deg, #FA6C47 0%, #FA9D47 100%);
+    border: 0 none;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+
+    &:hover, &:focus, &:active {
+      background-image: linear-gradient(-60deg, #FA6C47 0%, #FA6C47 100%);
+    }
+    &.btn-sm{
+      min-width: 80px;
+      min-height: 28px;
+      font-size: 12px;
+      height: auto;
+      line-height: 20px;
+    }
+  }
+  &.btn-dataview-tab {
+    background: transparent;
+    color: #fff;
+    border: 0 none;
+    border-radius: 5px;
+    line-height: 34px;
+    height: 34px;
+    font-size: 14px;
+
+    &.active {
+      background: #488DFB;
+    }
+  }
+}
+
+.myselect div.myselect-head.disabled .items {
+  text-indent: 12px;
+}
+
+.tooltip.top.fade.in {
+  margin-top: -5px;
+}
+
+.daterangepicker{
+  // 隐藏 双时间选择的 输入框
+  .left .daterangepicker_input,
+  .right .daterangepicker_input{
+    display: none;
+  }
+}
+
+// THEMES STYLES
+// 利用body上的class进行皮肤样式的控制
+.dmp_theme {
+  // THEME STYLE
+  // 主题---星空蓝(默认主题) 
+  @import './reset-theme-black.less';
+
+  // THEME STYLE
+  // 主题---致雅白 
+  &.theme-white {
+    @import './reset-theme-white.less';
+  }
+  // 主题---土豪金 
+  &.theme-gold {
+    @import './reset-theme-gold.less';
+  }
+}
+
+
+
+// LOADING 样式
+.loading-backdrop {
+  z-index: 2051;
+  background-color: transparent;
+  
+  &.fade.in {
+    opacity: .5;
+    filter: alpha(opacity=50);
+  }
+}
+.loading-wrapper{
+  color: #488DFB;
+}
